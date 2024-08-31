@@ -1,31 +1,15 @@
 ---
-import Base from "@/layouts/Base.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import { Image } from "astro:assets";
-import { getEntryBySlug } from "astro:content";
-import config from "@/config/config.json";
-
-const { logo } = config.site;
-const entry = await getEntryBySlug("pages", "404");
-const { Content } = await entry.render();
+import Container from "@components/container.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
-<Base title={entry.data.title}>
-  <section class="section">
-    <div class="container">
-      <div class="flex h-[40vh] items-center justify-center">
-        <div class="text-center">
-          <Image
-            src="/images/404.png"
-            class="mb-4 inline"
-            alt="logo"
-            height={120}
-            width={120}
-          />
-          <h1 class="mb-4" set:html={markdownify(entry.data.title)} />
-          <Content />
-        </div>
+<Layout title="404 Not Found">
+  <Container>
+    <div class="min-h-[calc(100vh-16rem)] flex items-center justify-center">
+      <div class="mt-16 text-center">
+        <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">404</h1>
+        <p class="text-lg mt-4 text-slate-600">Page not found.</p>
       </div>
     </div>
-  </section>
-</Base>
+  </Container>
+</Layout>
