@@ -1,0 +1,36 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/abstract1.png";
+import { Icon } from "astro-icon/components";
+import { Button } from "./ui/button";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={heroImage}      
+      alt="crystal"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      class="rounded-lg drop-shadow-lg lg:w-[520px] md:w-[400px] w-full transition-all hover:rotate-2 duration-500 hover:scale-105 "
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-4xl md:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Unleashing <span class="bg-gradient-to-r from-cyan-400 to-lime-500 bg-clip-text text-transparent">
+      India  
+      </span>'s Innovation in Software Development
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      A curated directory of tools built by Indian founders for every stage of your software development lifecycle. 
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Button variant={"outline"}> Get Started </Button>
+      <Button>Explore</Button>
+    </div>
+  </div>
+</main>
