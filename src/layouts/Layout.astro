@@ -1,11 +1,11 @@
 ---
 import { SEO } from "astro-seo";
+import "@styles/globals.css";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 import '@fontsource-variable/bricolage-grotesque';
-
-
+import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
   title: string;
@@ -32,7 +32,7 @@ const makeTitle = title
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-
+    <ViewTransitions />
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
@@ -46,11 +46,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: "IndieDevHub",
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "IndieDevHub Screenshot",
         },
       }}
     />

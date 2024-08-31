@@ -11,7 +11,7 @@ import Sectionhead from "@components/sectionhead.astro";
 // });
 
 const softwareEntries = await getCollection("software");
-console.log(softwareEntries);
+// console.log(softwareEntries);
 
 // // Sort content entries by publication date
 // publishedBlogEntries.sort(function (a, b) {
@@ -22,21 +22,21 @@ console.log(softwareEntries);
 <Layout title="Blog">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Our Blog</Fragment>
+      <Fragment slot="title">Tools Page</Fragment>
       <Fragment slot="desc">
         We write about building startups and thoughts going on our mind.
       </Fragment>
     </Sectionhead>
     <main class="mt-16">
-      <!-- <ul class="grid gap-16 max-w-4xl mx-auto">
+      <ul class="grid gap-16 max-w-4xl mx-auto border">
         {
-          publishedBlogEntries.map((blogPostEntry, index) => (
+          softwareEntries.map((toolName:any, index:number) => (
             <li>
-              <a href={`/blog/${blogPostEntry.slug}`}>
+              <a href={`/software/${toolName.id}`}>
                 <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
                   <Picture
-                    src={blogPostEntry.data.image.src}
-                    alt={blogPostEntry.data.image.alt}
+                    src={"https://picsum.photos/400/300"}
+                    alt={toolName.data.Name}
                     sizes="(max-width: 800px) 100vw, 800px"
                     width={800}
                     height={600}
@@ -46,23 +46,19 @@ console.log(softwareEntries);
                   />
                   <div>
                     <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {blogPostEntry.data.category}
+                      {toolName.data.Category}
                     </span>
 
                     <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {blogPostEntry.data.title}
+                      {toolName.data.Name}
                     </h2>
 
                     <div class="flex gap-2 mt-3">
                       <span class="text-gray-400">
-                        {blogPostEntry.data.author}
+                        {toolName.data.Description}
                       </span>
                       <span class="text-gray-400">• </span>
-                      <time
-                        class="text-gray-400"
-                        datetime={blogPostEntry.data.publishDate.toISOString()}>
-                        {blogPostEntry.data.publishDate.toDateString()}
-                      </time>
+                   
                     </div>
                   </div>
                 </div>
@@ -70,7 +66,7 @@ console.log(softwareEntries);
             </li>
           ))
         }
-      </ul> -->
+      </ul>
     </main>
   </Container>
 </Layout>
