@@ -2,7 +2,9 @@
 import { Picture } from "astro:assets";
 import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
+// @ts-expect-error
 import { Icon } from "astro-icon/components";
+import { Button } from "./ui/button";
 ---
 
 <main
@@ -28,16 +30,7 @@ import { Icon } from "astro-icon/components";
       create any website with this starter.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-         Download for Free
-      </Link>
+      <Button> Get Started </Button>
       <Link
         size="lg"
         style="outline"

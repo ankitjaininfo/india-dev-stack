@@ -5,19 +5,19 @@ import Container from "@components/container.astro";
 
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
-  return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
+  const softwareEntries = await getCollection("software");
+  console.log(softwareEntries);
+  return softwareEntries.map((entry) => ({
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
 
-// Get the entry directly from the prop on render
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+console.log(entry);
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={entry.data.Name}>
   <Container>
     <!-- <div class="mx-auto max-w-3xl mt-14">
       <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
@@ -49,7 +49,7 @@ const { Content } = await entry.render();
     </div> -->
 
     <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
-      <Content />
+      <!-- <Content /> -->
     </div>
     <div class="text-center mt-8">
       <a

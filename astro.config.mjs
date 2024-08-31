@@ -8,5 +8,5 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://astrojs.org",
-  integrations: [tailwind(), mdx(), sitemap(), icon(), react()],
+  integrations: [tailwind({ applyBaseStyles: false, }), mdx(), sitemap(), icon(), react()],
 });
