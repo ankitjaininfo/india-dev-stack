@@ -1,17 +1,37 @@
 import { defineCollection, z } from "astro:content";
 
 // Blog collection schema
-const blogCollection = defineCollection({
+const softwareCollection = defineCollection({
   schema: z.object({
-    id: z.string().optional(),
-    title: z.string(),
-    subtitle: z.string().optional(),
-    date: z.date().optional(),
-    image: z.string().optional(),
-    author: z.string().optional(),
-    categories: z.array(z.string()).default(["others"]),
-    draft: z.boolean().optional(),
-    featured: z.boolean().optional(),
+    Name: z.string(),
+    Tagline: z.string(),
+    Description: z.string(),
+    Website: z.string().url(),
+    Features: z.array(
+      z.object({
+        Feature: z.string(),
+      }),
+    ),
+    Logo: z.string(),
+    Demo: z.string().url(),
+    Images: z.array(z.string()),
+    Makers: z.array(z.string().url()),
+    Category: z.string(),
+    Tags: z.array(z.string()),
+    Stage: z.enum(["Active Customers", "In Development"]),
+    HQ: z
+      .object({
+        City: z.string(),
+        Country: z.string(),
+      })
+      .array(),
+    DC: z
+      .object({
+        City: z.string(),
+        Country: z.string(),
+      })
+      .array(),
+    Customers: z.array(z.string()),
   }),
 });
 
@@ -30,6 +50,6 @@ const pagesCollection = defineCollection({
 
 // Export collections
 export const collections = {
-  blog: blogCollection,
+  blog: softwareCollection,
   pages: pagesCollection,
 };

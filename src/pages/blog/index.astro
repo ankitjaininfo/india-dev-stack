@@ -17,7 +17,7 @@ import { getEntryBySlug } from "astro:content";
 const { blog_folder } = config.settings;
 const blogIndex = (await getEntryBySlug<any, string>(
   blog_folder,
-  "-index",
+  "-index"
 )) as TIndexData;
 const posts = await getSinglePage(blog_folder);
 const categories = await getTaxonomy(config.settings.blog_folder, "categories");
