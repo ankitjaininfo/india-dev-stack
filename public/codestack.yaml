@@ -1,0 +1,33 @@
+Name: "CodeStack"
+Tagline: "Streamline your development workflow with advanced AI insights."
+Description: "CodeStack offers cutting-edge AI tools designed to enhance coding efficiency and reduce debugging time."
+Website: "https://codestack.tech"
+Features:
+ - "Real-time code optimization."
+ - "Automated error detection and suggestions."
+ - "Integration with popular IDEs."
+Logo: "assets/logos/codestack_logo.png"
+Demo: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+Images:
+ - "assets/images/codestack_screen1.png"
+ - "assets/images/codestack_screen2.png"
+Makers:
+ - "https://www.linkedin.com/in/john-doe"
+ - "https://www.linkedin.com/in/jane-doe"
+Category: "Development"
+Tags:
+ - "AI"
+ - "Optimization"
+ - "IDE"
+Stage: "Active Customers"
+HQ:
+ City: "Bengaluru"
+ Country: "India"
+DC:
+ - City: "Bengaluru"
+ Country: "India"
+ - City: "Pune"
+ Country: "India"
+Customers:
+ - "TechCorp"
+ - "DevSolutions"
