@@ -27,12 +27,14 @@ const menuitems = [
   {
     title: "Community Hub",
     path: "/community",
-  }
+  },
 ];
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5" id="top">
+  <header
+    class="flex flex-col lg:flex-row justify-between items-center my-5"
+    id="top">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
@@ -48,29 +50,24 @@ const menuitems = [
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item, index) => (
-                  <li>
-                    <a
-                      href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
-                      <span> {item.title}</span>
-                      
-                    </a>
-                  </li>
+              <li>
+                <a
+                  href={item.path}
+                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                  <span> {item.title}</span>
+                </a>
+              </li>
             ))
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Button>
-            Submit
-          </Button>
+          <Button> Submit </Button>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <Button>
-          Submit
-        </Button>
+        <Button> Submit </Button>
       </div>
     </div>
   </header>
