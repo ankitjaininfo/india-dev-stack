@@ -68,6 +68,6 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground selection:text-white selection:bg-emerald-400;
   }
 }

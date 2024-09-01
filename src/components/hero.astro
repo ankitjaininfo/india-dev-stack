@@ -6,19 +6,19 @@ import { Button } from "./ui/button";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
+  class="flex items-center mx-auto place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 md:block basis-1/2">
     <Picture
       src={heroImage}      
       alt="crystal"
       widths={[200, 400, 600]}
       sizes="(max-width: 800px) 100vw, 520px"
-      class="rounded-lg drop-shadow-lg lg:w-[520px] md:w-[400px] w-full transition-all hover:rotate-2 duration-500 hover:scale-105 "
+      class="rounded-lg mx-auto drop-shadow-lg lg:w-[520px] md:w-[400px] w-full transition-all hover:rotate-2 duration-500 hover:scale-105 "
       loading="eager"
       format="avif"
     />
   </div>
-  <div>
+  <div class= "basis-1/2 px-2">
     <h1
       class="text-4xl md:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
       Unleashing <span class="bg-gradient-to-r from-cyan-400 to-lime-500 bg-clip-text text-transparent">
