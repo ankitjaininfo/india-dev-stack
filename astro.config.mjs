@@ -9,5 +9,11 @@ import react from "@astrojs/react";
 export default defineConfig({
   image: sharpImageService(),
   site: "https://astrojs.org",
-  integrations: [tailwind({ applyBaseStyles: false, }), mdx(), sitemap(), icon(), react()],
+  integrations: [
+    tailwind({ applyBaseStyles: false }),
+    mdx(),
+    sitemap(),
+    icon(),
+    react(),
+  ],
 });
