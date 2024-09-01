@@ -12,7 +12,7 @@ import { Button } from "./ui/button";
       src={heroImage}      
       alt="crystal"
       widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
+      sizes="(max-width: 800px) 100vw, 520px"
       class="rounded-lg drop-shadow-lg lg:w-[520px] md:w-[400px] w-full transition-all hover:rotate-2 duration-500 hover:scale-105 "
       loading="eager"
       format="avif"
@@ -29,8 +29,12 @@ import { Button } from "./ui/button";
       A curated directory of tools built by Indian founders for every stage of your software development lifecycle. 
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Button>Explore</Button>
-      <Button variant={"outline"}> Join our Community </Button>
+      <Button>Explore 
+        <Icon name="bx:search-alt" class="size-4 ml-2" />
+      </Button>
+      <Button variant={"outline"}> Join our Community
+        <Icon name="fluent:people-team-16-filled" class="size-4 ml-2" />
+      </Button>
     </div>
   </div>
 </main>
