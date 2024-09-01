@@ -4,8 +4,8 @@ import "@styles/globals.css";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
-import '@fontsource-variable/bricolage-grotesque';
-import { ViewTransitions } from 'astro:transitions';
+import "@fontsource-variable/bricolage-grotesque";
+import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -21,11 +21,11 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "IndieDevHub"
+  : "IndieDevHub - Software directory for indie developers";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,7 +36,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="IndieDevHub - Software directory for indie developers"
       canonical={canonicalURL}
       twitter={{
         creator: "@xevenbiswas",

@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import FeaturedCarousel from "./FeaturedCarousel";
+import Container from "./container.astro";
+
+const softwareEntries = await getCollection("software");
+---
+
+<Container>
+  <section class="w-full py-12 md:py-24 lg:py-32">
+    <div class="container px-4 md:px-6">
+      <div class="space-y-4 text-center">
+        <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl">
+          Spotlight on <span
+            class="bg-gradient-to-br from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">
+            Innovation
+          </span>
+        </h2>
+        <p
+          class="mx-auto max-w-3xl text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          Each month, we feature tools that have made significant impacts or
+          introduced innovative features in the development process.
+        </p>
+      </div>
+      <FeaturedCarousel entries={softwareEntries} client:visible />
+    </div>
+  </section>
+</Container>
