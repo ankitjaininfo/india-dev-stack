@@ -21,6 +21,7 @@
     "@iconify-json/bx": "^1.2.0",
     "@iconify-json/fluent": "^1.2.0",
     "@iconify-json/simple-icons": "^1.2.1",
+    "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/react": "^18.3.5",

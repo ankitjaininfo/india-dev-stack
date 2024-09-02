@@ -11,12 +11,12 @@ const softwareCollection = defineCollection({
     Website: z.string().url(),
     Features: z.array(z.string()),
     Logo: z.string(),
-    Demo: z.string().url(),
+    Demo: z.string().url().optional(),
     Images: z.array(z.string()),
     Makers: z.array(z.string().url()),
     Category: z.string(),
     Tags: z.array(z.string()),
-    Stage: z.enum(["Active Customers", "In Development"]),
+    Stage: z.enum(["Active Customers", "In Development", "Beta", "Launched"]),
     HQ: z
       .object({
         City: z.string(),
@@ -46,8 +46,6 @@ const teamCollection = defineCollection({
   }),
 });
 
-// 3. Export a single `collections` object to register your collection(s)
-//    This key should match your collection directory name in "src/content"
 export const collections = {
   software: softwareCollection,
   team: teamCollection,

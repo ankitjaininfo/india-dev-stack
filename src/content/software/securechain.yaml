@@ -1,0 +1,33 @@
+Name: "SecureChain"
+Tagline: "Blockchain security, simplified."
+Description: "SecureChain delivers advanced blockchain security solutions, protecting digital assets and ensuring the integrity of blockchain networks."
+Website: "https://securechain.io"
+Features:
+  - "End-to-end encryption."
+  - "Smart contract auditing."
+  - "Real-time threat detection."
+Logo: "assets/logos/securechain_logo.png"
+Demo: "https://www.youtube.com/watch?v=lmnop34567"
+Images:
+  - "assets/images/securechain_screen1.png"
+  - "assets/images/securechain_screen2.png"
+Makers:
+  - "https://www.linkedin.com/in/arjun-verma"
+  - "https://www.linkedin.com/in/sneha-patil"
+Category: "Blockchain Security"
+Tags:
+  - "Blockchain"
+  - "Security"
+  - "Encryption"
+Stage: "In Development"
+HQ:
+  - City: "Pune"
+    Country: "India"
+DC:
+  - City: "Pune"
+    Country: "India"
+  - City: "Kolkata"
+    Country: "India"
+Customers:
+  - "CryptoGuard"
+  - "BlockShield"

@@ -1,0 +1,33 @@
+Name: "QueryJet"
+Tagline: "Fast-track your database management and analytics tasks."
+Description: "QueryJet revolutionizes database management with a suite of powerful, user-friendly tools for data analysts and engineers."
+Website: "https://queryjet.tech"
+Features:
+  - "Advanced query optimization."
+  - "Real-time data analytics dashboard."
+  - "Support for multiple database types."
+Logo: "assets/logos/queryjet_logo.png"
+Demo: "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+Images:
+  - "assets/images/queryjet_screen1.png"
+  - "assets/images/queryjet_screen2.png"
+Makers:
+  - "https://www.linkedin.com/in/alice-smith"
+  - "https://www.linkedin.com/in/bob-johnson"
+Category: "Database Management"
+Tags:
+  - "Analytics"
+  - "Optimization"
+  - "Cross-platform"
+Stage: "Beta"
+HQ:
+  - City: "Hyderabad"
+    Country: "India"
+DC:
+  - City: "Hyderabad"
+    Country: "India"
+  - City: "Mumbai"
+    Country: "India"
+Customers:
+  - "DataDrive"
+  - "AnalyticsNow"
