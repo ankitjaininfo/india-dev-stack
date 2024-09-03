@@ -7,6 +7,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@components/ui/popover";
+import { tags } from "@utils/all";
 
 const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
   const [selectedPrice, setSelectedPrice] = useState({
@@ -14,23 +15,6 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
     paid: false,
     freemium: false,
   });
-
-  const tags = [
-    "development",
-    "blockchain",
-    "analytics",
-    "cloud-storage",
-    "saas",
-    "devops",
-    "cloud",
-    "monitoring",
-    "miscellaneous",
-    "productivity",
-    "design",
-    "api",
-    "testing",
-    "security",
-  ];
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
@@ -229,7 +213,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
                     className="hover:underline p-1 items-center gap-2 inline-flex">
                     Visit Site <ArrowRight size={16} />
                   </a>
-                  <Button>
+                  <Button asChild>
                     <a href={`/software/${toolName.id}`}>More Details</a>
                   </Button>
                 </div>
