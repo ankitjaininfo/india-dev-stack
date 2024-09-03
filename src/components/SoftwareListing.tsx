@@ -165,7 +165,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
           </div>
         </div>
       </div>
-      <ul className="grid grid-cols-3 gap-10 mx-auto px-4">
+      <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mx-auto px-4">
         {filteredEntries.map((toolName: any, index: number) => (
           <li
             key={toolName.id}
