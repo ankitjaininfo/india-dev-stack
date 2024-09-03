@@ -12,8 +12,10 @@ Images:
   - "assets/images/securechain_screen1.png"
   - "assets/images/securechain_screen2.png"
 Makers:
-  - "https://www.linkedin.com/in/arjun-verma"
-  - "https://www.linkedin.com/in/sneha-patil"
+  - Name: "Ravi"
+    url: "https://www.linkedin.com/in/ravi-sharma"
+  - Name: "Ravi"
+    url: "https://www.linkedin.com/in/ravi-sharma"
 Category: "Blockchain Security"
 Tags:
   - "Blockchain"

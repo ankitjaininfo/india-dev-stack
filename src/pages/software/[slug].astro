@@ -13,6 +13,7 @@ import {
   StarIcon,
   UsersIcon,
 } from "lucide-react";
+import React from "react";
 
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -92,34 +93,20 @@ const { entry } = Astro.props;
 
         <div class="col-span-2 grid gap-8">
           <div>
-            <h2 class="text-2xl font-bold">About the Makers</h2>
-            <div class="grid md:grid-cols-2 gap-6 mt-6">
-              <div class="flex items-start gap-4">
-                <div>
-                  <h3 class="font-semibold">John Doe</h3>
-                  <p class="text-muted-foreground">Co-founder, CEO</p>
-                  <p class="text-sm text-muted-foreground">
-                    John has over 15 years of experience in the productivity
-                    software industry. He is passionate about building tools
-                    that empower teams to achieve more.
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div>
-                  <h3 class="font-semibold">Jane Smith</h3>
-                  <p class="text-muted-foreground">Co-founder, CTO</p>
-                  <p class="text-sm text-muted-foreground">
-                    Jane is a seasoned software engineer with a passion for
-                    building innovative and user-friendly products. She leads
-                    the technical team at Acme.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p class="lg:text-2xl inline-flex text-lg font-bold mb-2 mr-4">
+              About the Makers:
+            </p>
+            {
+              entry.data.Makers.map((maker, index) => (
+                <React.Fragment>
+                  <a href={maker.url}>{maker.Name}</a>
+                  {index < entry.data.Makers.length - 1 && ", "}
+                </React.Fragment>
+              ))
+            }
           </div>
           <div>
-            <h2 class="text-2xl font-bold">Key Accomplishments</h2>
+            <h2 class="lg:text-2xl text-lg font-bold">Key Accomplishments</h2>
             <div class="grid md:grid-cols-2 gap-6 mt-6">
               <div class="flex items-start gap-4">
                 <AwardIcon className="w-12 h-12 text-primary" />

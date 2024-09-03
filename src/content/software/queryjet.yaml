@@ -12,8 +12,10 @@ Images:
   - "assets/images/queryjet_screen1.png"
   - "assets/images/queryjet_screen2.png"
 Makers:
-  - "https://www.linkedin.com/in/alice-smith"
-  - "https://www.linkedin.com/in/bob-johnson"
+  - Name: "Ravi"
+    url: "https://www.linkedin.com/in/ravi-sharma"
+  - Name: "Ravi"
+    url: "https://www.linkedin.com/in/ravi-sharma"
 Category: "Database Management"
 Tags:
   - "Analytics"
