@@ -3,18 +3,32 @@ import { Image } from "astro:assets";
 import Link from "./ui/link.astro";
 import bg from "@assets/mesh-302.png";
 import { Button } from "./ui/button";
+import { Icon } from "astro-icon/components";
 ---
 
-<div class="relative p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
-  <Image src={bg} alt="abstract" class="absolute inset-0 h-full w-full object-cover rounded-lg -z-10 brightness-90 saturate-150" />
+<div
+  class="relative p-8 md:px-20 border overflow-hidden md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col group items-center text-center">
+  <Image
+    src={bg}
+    alt="abstract"
+    class="absolute inset-0 h-full w-full object-cover duration-1000 transition-all rounded-lg group-hover:scale-125 -z-10 brightness-90 saturate-150 group-hover:saturate-200"
+  />
   <h2 class="text-white text-4xl md:text-6xl tracking-tight font-bold">
-    Build faster websites.
+    Build. Share. Grow.
   </h2>
-  <p class="text-white mt-4 text-lg md:text-xl">
-    Pull content from anywhere and serve it fast with Astro's next-gen island
-    architecture.
+  <p class="text-white mt-4 text-sm md:text-xl max-w-2xl">
+    Join a vibrant community of developers using Indian Dev Tools. Participate
+    in discussions, share experiences, and stay updated with the latest in tech.
   </p>
   <div class="flex mt-5">
-    <Button className="bg-white/20 shadow-md hover:bg-white/40 text-black backdrop-blur" size={"lg"}>Get Started</Button>
+    <Button
+      className="bg-gradient-to-br from-white/40 to-zinc-50/20 bg-transparent shadow-md hover:bg-white/40 text-black backdrop-blur"
+      size={"lg"}
+      >Join the Community
+      <Icon
+        name="fluent:people-team-28-filled"
+        class="size-6 text-blue-500 ml-2"
+      />
+    </Button>
   </div>
 </div>

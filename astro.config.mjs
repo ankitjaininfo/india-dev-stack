@@ -8,6 +8,12 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   image: sharpImageService(),
-  site: "https://astrojs.org",
-  integrations: [tailwind({ applyBaseStyles: false, }), mdx(), sitemap(), icon(), react()],
+  site: "https://india-dev-stack.vercel.app",
+  integrations: [
+    tailwind({ applyBaseStyles: false }),
+    mdx(),
+    sitemap(),
+    icon(),
+    react(),
+  ],
 });

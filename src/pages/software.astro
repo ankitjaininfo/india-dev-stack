@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
+import SoftwareListing from "@components/SoftwareListing";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -11,7 +12,6 @@ import Sectionhead from "@components/sectionhead.astro";
 // });
 
 const softwareEntries = await getCollection("software");
-// console.log(softwareEntries);
 
 // // Sort content entries by publication date
 // publishedBlogEntries.sort(function (a, b) {
@@ -19,54 +19,15 @@ const softwareEntries = await getCollection("software");
 // });
 ---
 
-<Layout title="Blog">
+<Layout title="Softwares">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Tools Page</Fragment>
+      <Fragment slot="title">Find Your Perfect Tool</Fragment>
       <Fragment slot="desc">
-        We write about building startups and thoughts going on our mind.
+        With hundreds of tools to explore, use our search and filters to find
+        the right ones for your needs quickly.
       </Fragment>
     </Sectionhead>
-    <main class="mt-16">
-      <ul class="grid gap-16 max-w-4xl mx-auto border">
-        {
-          softwareEntries.map((toolName:any, index:number) => (
-            <li>
-              <a href={`/software/${toolName.id}`}>
-                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                  <Picture
-                    src={"https://picsum.photos/400/300"}
-                    alt={toolName.data.Name}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    width={800}
-                    height={600}
-                    loading={index <= 2 ? "eager" : "lazy"}
-                    decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md object-cover object-center bg-white"
-                  />
-                  <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {toolName.data.Category}
-                    </span>
-
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {toolName.data.Name}
-                    </h2>
-
-                    <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
-                        {toolName.data.Description}
-                      </span>
-                      <span class="text-gray-400">• </span>
-                   
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </main>
+    <SoftwareListing client:load softwareEntries={softwareEntries} />
   </Container>
 </Layout>

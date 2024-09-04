@@ -6,33 +6,37 @@ import { Button } from "./ui/button";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
+  class="flex flex-wrap-reverse justify-center items-center mx-auto place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 md:basis-1/2">
     <Picture
-      src={heroImage}      
+      src={heroImage}
       alt="crystal"
       widths={[200, 400, 600]}
       sizes="(max-width: 800px) 100vw, 520px"
-      class="rounded-lg drop-shadow-lg lg:w-[520px] md:w-[400px] w-full transition-all hover:rotate-2 duration-500 hover:scale-105 "
+      class="rounded-lg mx-auto drop-shadow-lg lg:w-[520px] md:w-[400px] w-full transition-all hover:rotate-2 duration-500 hover:scale-105"
       loading="eager"
       format="avif"
     />
   </div>
-  <div>
+  <div class="md:basis-1/2 lg:px-2 px-4">
     <h1
       class="text-4xl md:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Unleashing <span class="bg-gradient-to-r from-cyan-400 to-lime-500 bg-clip-text text-transparent">
-      India  
+      Unleashing <span
+        class="bg-gradient-to-r from-cyan-400 to-lime-500 bg-clip-text text-transparent">
+        India
       </span>'s Innovation in Software Development
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      A curated directory of tools built by Indian founders for every stage of your software development lifecycle. 
+      A curated directory of tools built by Indian founders for every stage of
+      your software development lifecycle.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Button>Explore 
+      <Button client:idle
+        >Explore
         <Icon name="bx:search-alt" class="size-4 ml-2" />
       </Button>
-      <Button variant={"outline"}> Join our Community
+      <Button client:idle variant={"outline"}>
+        Join our Community
         <Icon name="fluent:people-team-16-filled" class="size-4 ml-2" />
       </Button>
     </div>
