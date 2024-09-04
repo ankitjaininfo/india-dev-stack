@@ -1,0 +1,40 @@
+Name: "Beeceptor"
+Tagline: "Crafting API Magic, One Request At A Time"
+Description: "Beeceptor is a comprehensive HTTP toolkit designed to streamline the API integration process for developers and QA professionals. It offers features like mock servers, local tunnels, and HTTP debugging to facilitate rapid development and efficient testing. A no-code & no-dependencies Service Virtualization tool."
+Website: "https://beeceptor.com"
+Features:
+  - "Instant API mock server setup."
+  - "Local tunnel for direct internet exposure of local services."
+  - "OpenAPI Specification hosting for effortless API mock creation."
+  - "HTTP request inspection and debugging."
+  - "Build CRUD APIs for your development, testing, "
+  - "No-code interface with CORS support and templating for responses."
+Logo: "assets/beeceptor_logo.png"
+Demo: "https://www.youtube.com/watch?v=eauSgng86ac"
+Images:
+  - "assets/beeceptor_dashboard.png"
+  - "assets/beeceptor_mock_server.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/ankitjaininfo/"
+    Name: Ankit Jain
+  - Profile: "https://www.linkedin.com/in/artibandi/"
+    Name: Arti Bandi
+Category: "Testing"
+Tags:
+  - "API"
+  - "Mocking"
+  - "Service Virtualization"
+  - "Testing"
+  - "AI"
+Stage: "Active Customers"
+HQ:
+  - City: "Hyderabad"
+    Country: "India"
+DC:
+  - City: "Hyderabad"
+    Country: "India"
+Customers:
+  - "Broadridge"
+  - "Freshworks"
+  - "Salesforce"
+  - "Twilio"

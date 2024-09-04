@@ -12,10 +12,10 @@ Images:
   - "assets/images/codestack_screen1.png"
   - "assets/images/codestack_screen2.png"
 Makers:
-  - Name: "Ravi"
-    url: "https://www.linkedin.com/in/ravi-sharma"
-  - Name: "Ravi"
-    url: "https://www.linkedin.com/in/ravi-sharma"
+  - Profile: "https://www.linkedin.com/in/john-doe"
+    Name: Dummy Person
+  - Profile: "https://www.linkedin.com/in/jane-doe"
+    Name: Dummy Person
 Category: "Development"
 Tags:
   - "AI"
