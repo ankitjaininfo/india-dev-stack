@@ -13,11 +13,12 @@ const softwareCollection = defineCollection({
     Logo: z.string(),
     Demo: z.string().url().optional(),
     Images: z.array(z.string()),
-    Makers: z.object({
-      Profile: z.string().url(),
-      Name: z.string(),
-    })
-    .array(),
+    Makers: z.array(
+      z.object({
+        Profile: z.string().url(),
+        Name: z.string(),
+      }),
+    ),
     Category: z.string(),
     Tags: z.array(z.string()),
     Stage: z.enum(["Active Customers", "In Development", "Active Beta"]),
