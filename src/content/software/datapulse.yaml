@@ -13,15 +13,15 @@ Images:
   - "assets/images/datapulse_screen2.png"
 Makers:
   - Name: "Ravi"
-    url: "https://www.linkedin.com/in/ravi-sharma"
+    Profile: "https://www.linkedin.com/in/ravi-sharma"
   - Name: "Ravi"
-    url: "https://www.linkedin.com/in/ravi-sharma"
+    Profile: "https://www.linkedin.com/in/ravi-sharma"
 Category: "Data Synchronization"
 Tags:
   - "Enterprise"
   - "Cross-platform"
   - "Real-time"
-Stage: "Launched"
+Stage: "Active Customers"
 HQ:
   - City: "Bengaluru"
     Country: "India"

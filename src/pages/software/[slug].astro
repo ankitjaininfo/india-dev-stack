@@ -6,13 +6,7 @@ import { Button } from "@components/ui/button";
 import { Icon } from "astro-icon/components";
 import ProductGallery from "@components/ProductGallery";
 import Badge from "@components/ui/badge.astro";
-import {
-  AwardIcon,
-  CheckIcon,
-  ImportIcon,
-  StarIcon,
-  UsersIcon,
-} from "lucide-react";
+import { AwardIcon, ImportIcon, StarIcon, UsersIcon } from "lucide-react";
 import React from "react";
 
 // Generate a new path for every collection entry
@@ -37,7 +31,7 @@ const { entry } = Astro.props;
           <ProductGallery client:idle images={entry.data.Images} />
         </div>
         <div>
-          <h1 class="text-3xl font-bold">{entry.data.Name}</h1>
+          <h1 class="text-3xl lg:text-5xl font-bold">{entry.data.Name}</h1>
           <div class="flex items-center gap-2 mt-2">
             {
               entry.data.Tags.map((tag) => (
@@ -81,8 +75,8 @@ const { entry } = Astro.props;
             <ul class="mt-2 space-y-2 pl-1 text-muted-foreground">
               {
                 entry.data.Features.map((features) => (
-                  <li class="flex items-center gap-2">
-                    <Icon name="fluent:checkmark-24-filled" />
+                  <li class="flex items-start gap-2 border">
+                    <Icon name="fluent:checkmark-24-filled" class="mt-2" />
                     {features}
                   </li>
                 ))
@@ -94,12 +88,14 @@ const { entry } = Astro.props;
         <div class="col-span-2 grid gap-8">
           <div>
             <p class="lg:text-2xl inline-flex text-lg font-bold mb-2 mr-4">
-              About the Makers:
+              The Makers:
             </p>
             {
               entry.data.Makers.map((maker, index) => (
                 <React.Fragment>
-                  <a href={maker.url}>{maker.Name}</a>
+                  <a href={maker.Profile} target="_blank">
+                    {maker.Name}
+                  </a>
                   {index < entry.data.Makers.length - 1 && ", "}
                 </React.Fragment>
               ))
