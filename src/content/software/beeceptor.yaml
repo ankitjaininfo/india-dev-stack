@@ -12,8 +12,7 @@ Features:
 Logo: "assets/beeceptor_logo.png"
 Demo: "https://www.youtube.com/watch?v=eauSgng86ac"
 Images:
-  - "assets/beeceptor_dashboard.png"
-  - "assets/beeceptor_mock_server.png"
+  - "/softwares/beeceptor.png"
 Makers:
   - Profile: "https://www.linkedin.com/in/ankitjaininfo/"
     Name: Ankit Jain
