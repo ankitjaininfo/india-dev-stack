@@ -1,0 +1,34 @@
+Name: "BetterBugs"
+Tagline: "Debug with perfect bug reports"
+Description: "BetterBugs is a Chrome extension that enhances the bug reporting process by allowing users to create visual, detailed bug reports with ease. It features tools for screen capturing, recording, and AI-driven debugging, significantly speeding up the debugging process."
+Website: "https://www.betterbugs.io"
+Features:
+  - "Visual bug reports with screenshots and screen recordings."
+  - "Rewind feature to capture last 2 minutes of activity."
+  - "Developer logs automatically attached to reports."
+  - "AI Assistant for quick bug analysis and diagnosis."
+  - "Integration with project management tools like Jira, Slack, and Trello."
+  - "Supports incognito mode and allows annotations directly in the tool."
+Logo: "assets/images/betterbugs_logo.png"  # Placeholder for actual logo path
+Demo: "https://www.betterbugs.io/demo"  # Placeholder for actual demo link
+Images:
+  - "assets/images/betterbugs_interface.png"  # Placeholder for actual image path
+  - "assets/images/betterbugs_reporting.png"  # Placeholder for actual image path
+Makers:
+  - Profile: "https://www.linkedin.com/in/nishil-p-70639765/"
+    Name: Nishil Patel
+Category: "Testing"
+Tags:
+  - "Bug Reporting"
+  - "AI"
+  - "Software Debugging"
+  - "Chrome Extension"
+Stage: "Active Customers"
+HQ:
+  - City: "Ahmedabad"
+    Country: "India"
+DC:
+  - City: "Ahmedabad"
+    Country: "India"
+Customers:
+  - "N/A"

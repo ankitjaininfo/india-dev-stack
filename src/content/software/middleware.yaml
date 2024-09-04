@@ -1,0 +1,37 @@
+Name: "Middleware"
+Tagline: "Your Engineering Command Center, Total Visibility In One Place"
+Description: "Middleware is designed to optimize engineering workflows by providing DORA Metrics and other actionable insights to enhance software delivery and engineering efficiency. It supports a proactive management style, reducing reactive tasks and promoting a strategic focus within engineering teams."
+Website: "https://www.middlewarehq.com"
+Features:
+  - "Comprehensive DORA Metrics analysis for engineering teams."
+  - "PR management dashboard offering detailed analytics across the entire lifecycle of pull requests."
+  - "Visualization tools to monitor team performance, identify bottlenecks, and improve productivity."
+  - "SOC2 compliant, ensuring data security and compliance with industry standards."
+  - "Open-source core available for greater customization and control over data."
+  - "Integration with popular tools like GitHub, Slack, Jira, and more."
+Logo: "assets/images/middleware_logo.png"  # Placeholder for actual logo path
+Demo: "https://www.middlewarehq.com/demo"  # Placeholder for actual demo link
+Images:
+  - "assets/images/middleware_dashboard.png"  # Placeholder for actual image path
+  - "assets/images/middleware_team_view.png"  # Placeholder for actual image path
+Makers:
+  - Profile: "https://www.linkedin.com/in/dhruv-agarwal"  # Co-Founder & CEO
+    Name: Dhruv Agarwal
+  - Profile: "https://www.linkedin.com/in/jayant-bhawal"  # Co-Founder & CTO
+    Name: Jayant Bhawal
+Category: "Collaboration"
+Tags:
+  - "DORA Metrics"
+  - "Engineering Efficiency"
+  - "Open Source"
+  - "Software Development"
+Stage: "Active Customers"
+HQ:
+  - City: "San Francisco"
+    Country: "USA"
+DC:
+  - City: "San Francisco"
+    Country: "USA"
+Customers:
+  - "Software Development Teams"
+  - "Engineering Managers"

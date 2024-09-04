@@ -6,7 +6,7 @@ import Container from "@components/container.astro";
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
   const softwareEntries = await getCollection("software");
-  console.log(softwareEntries);
+  console.log("Entries: ",softwareEntries);
   return softwareEntries.map((entry) => ({
     params: { slug: entry.id },
     props: { entry },

@@ -12,8 +12,10 @@ Images:
   - "assets/images/codestack_screen1.png"
   - "assets/images/codestack_screen2.png"
 Makers:
-  - "https://www.linkedin.com/in/john-doe"
-  - "https://www.linkedin.com/in/jane-doe"
+  - Profile: "https://www.linkedin.com/in/john-doe"
+    Name: Dummy Person
+  - Profile: "https://www.linkedin.com/in/jane-doe"
+    Name: Dummy Person
 Category: "Development"
 Tags:
   - "AI"
