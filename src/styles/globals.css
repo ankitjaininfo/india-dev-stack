@@ -50,7 +50,17 @@
 }
 
 @layer base {
+  * {
+    @apply border-border;
+  }
   body {
     @apply bg-background text-foreground selection:text-white selection:bg-emerald-500;
   }
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-lg bg-primary/20;
 }

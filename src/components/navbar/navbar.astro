@@ -3,7 +3,7 @@ import Container from "@components/container.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Button } from "@components/ui/button";
 import { ModeToggle } from "@components/modeToggle";
-import { Image, Picture } from "astro:assets";
+import { Picture } from "astro:assets";
 
 const menuitems = [
   // {
@@ -50,17 +50,17 @@ const menuitems = [
           >Stack
         </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+          <MenuIcon class="w-4 h-4 text-secondary-foreground" />
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
-            menuitems.map((item, index) => (
+            menuitems.map((item) => (
               <li>
                 <a
                   href={item.path}
-                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                  class="flex lg:px-3 py-2 items-center hover:opacity-80">
                   <span> {item.title}</span>
                 </a>
               </li>
@@ -68,6 +68,7 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
+          <ModeToggle client:idle />
           <Button> Submit </Button>
         </div>
       </MenuItems>
