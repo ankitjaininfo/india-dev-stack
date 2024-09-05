@@ -6,7 +6,6 @@ import { Button } from "@components/ui/button";
 import { Icon } from "astro-icon/components";
 import ProductGallery from "@components/ProductGallery";
 import Badge from "@components/ui/badge.astro";
-import { AwardIcon, ImportIcon, StarIcon, UsersIcon } from "lucide-react";
 import React from "react";
 
 // Generate a new path for every collection entry
@@ -96,14 +95,20 @@ const { entry } = Astro.props;
               </div>
             </div>
             <div class="col-span-2 gap-8">
-              <p class="inline-flex text-lg font-bold mb-2 mr-4">The Makers:</p>
+              <p
+                class="inline-flex text-base font-bold mb-2 mr-4 text-muted-foreground">
+                The Makers:
+              </p>
               {
                 entry.data.Makers.map((maker, index) => (
                   <React.Fragment>
-                    <a href={maker.Profile} target="_blank">
+                    <a
+                      href={maker.Profile}
+                      target="_blank"
+                      class="text-foreground">
                       {maker.Name}
                     </a>
-                    {index < entry.data.Makers.length - 1 && ", "}
+                    <span class="text-foreground">{index < entry.data.Makers.length - 1 && ", "}</span>
                   </React.Fragment>
                 ))
               }

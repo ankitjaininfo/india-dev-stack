@@ -9,15 +9,15 @@ Features:
   - "SOC2 compliant, ensuring data security and compliance with industry standards."
   - "Open-source core available for greater customization and control over data."
   - "Integration with popular tools like GitHub, Slack, Jira, and more."
-Logo: "assets/images/middleware_logo.png"  # Placeholder for actual logo path
-Demo: "https://www.middlewarehq.com/demo"  # Placeholder for actual demo link
+Logo: "/logos/middleware.png"
+Demo: "https://demo.middlewarehq.com/cockpit"
+pricing: "Freemium"
 Images:
-  - "assets/images/middleware_dashboard.png"  # Placeholder for actual image path
-  - "assets/images/middleware_team_view.png"  # Placeholder for actual image path
+  - "/softwares/middleware.png"
 Makers:
-  - Profile: "https://www.linkedin.com/in/dhruv-agarwal"  # Co-Founder & CEO
+  - Profile: "https://www.linkedin.com/in/dhruv-agarwal"
     Name: Dhruv Agarwal
-  - Profile: "https://www.linkedin.com/in/jayant-bhawal"  # Co-Founder & CTO
+  - Profile: "https://www.linkedin.com/in/jayant-bhawal"
     Name: Jayant Bhawal
 Category: "Collaboration"
 Tags:
