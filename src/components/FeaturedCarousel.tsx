@@ -26,7 +26,10 @@ const FeaturedCarousel = ({ entries }: any) => {
             <CarouselItem key={entry.id} className="lg:basis-1/3 sm:basis-1/2">
               <Card className="h-full hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
                 <img
-                  src={"https://magicui.design/showcase/infisical.png"}
+                  src={
+                    entry.data.Images[0] ||
+                    "https://magicui.design/showcase/infisical.png"
+                  }
                   width={400}
                   height={500}
                   alt={entry.data.Name}

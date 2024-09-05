@@ -21,11 +21,46 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "IndieDevHub"
-  : "IndieDevHub - Software directory for indie developers";
+  ? title + " | " + "India Dev Stack"
+  : "India Dev Stack - Software directory for indie developers";
 ---
 
 <!doctype html>
+<script is:inline>
+  function setDarkMode(document) {
+    const getThemePreference = () => {
+      if (
+        typeof localStorage !== "undefined" &&
+        localStorage.getItem("theme")
+      ) {
+        return localStorage.getItem("theme");
+      }
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "theme-light";
+    };
+    const isDark = getThemePreference() === "dark";
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+    if (typeof localStorage !== "undefined") {
+      const observer = new MutationObserver(() => {
+        const isDark = document.documentElement.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "theme-light");
+      });
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
+  }
+
+  setDarkMode(document);
+
+  document.addEventListener("astro:before-swap", (ev) => {
+    // Pass the incoming document to set the theme on it
+    setDarkMode(ev.newDocument);
+  });
+</script>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,7 +71,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="IndieDevHub - Software directory for indie developers"
+      description="India Dev Stack - Software directory for indie developers"
       canonical={canonicalURL}
       twitter={{
         creator: "@xevenbiswas",
@@ -57,6 +92,7 @@ const makeTitle = title
   </head>
   <body>
     <Navbar />
+
     <slot />
     <Footer />
     <style is:global>

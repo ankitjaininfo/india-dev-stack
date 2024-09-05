@@ -17,7 +17,6 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
   });
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-
   const toggleTag = (tag: string) => {
     setSelectedTags((prevSelectedTags) => {
       if (prevSelectedTags.includes(tag.toLowerCase())) {
@@ -169,10 +168,10 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
         {filteredEntries.map((toolName: any, index: number) => (
           <li
             key={toolName.id}
-            className="border md:p-4 p-2 rounded-lg hover:shadow-md transition-all">
+            className="md:p-4 p-2 border-border border rounded-lg hover:shadow-md transition-all">
             <div className="flex flex-col gap-2">
               <img
-                src={"https://picsum.photos/400/300"}
+                src={toolName.data.Images[0]}
                 alt={toolName.data.Name}
                 sizes="(max-width: 800px) 100vw, 800px"
                 width={800}

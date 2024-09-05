@@ -1,9 +1,9 @@
 ---
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
-import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Button } from "@components/ui/button";
+import { ModeToggle } from "@components/modeToggle";
+import { Image, Picture } from "astro:assets";
 
 const menuitems = [
   // {
@@ -37,10 +37,17 @@ const menuitems = [
     id="top">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
+        <Picture
+          height={18}
+          width={18}
+          src="/officialLogos/logo-base-256x256.png"
+          alt="IndiaDevStack"
+          class="w-8 h-8"
+        />
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Indie</span><span
-            class="text-slate-500">DEV</span
-          >Hub
+          ><span class="font-bold">India</span><span
+            class="text-muted-foreground">DEV</span
+          >Stack
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -65,10 +72,9 @@ const menuitems = [
         </div>
       </MenuItems>
     </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <Button> Submit </Button>
-      </div>
+    <div class="hidden lg:flex items-center gap-4">
+      <ModeToggle client:idle />
+      <Button> Submit </Button>
     </div>
   </header>
 </Container>
