@@ -6,7 +6,6 @@ import { Button } from "@components/ui/button";
 import { Icon } from "astro-icon/components";
 import ProductGallery from "@components/ProductGallery";
 import Badge from "@components/ui/badge.astro";
-import { AwardIcon, ImportIcon, StarIcon, UsersIcon } from "lucide-react";
 import React from "react";
 
 // Generate a new path for every collection entry
@@ -19,19 +18,33 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-// console.log(entry);
 ---
 
 <Layout title={entry.data.Name}>
   <Container>
-    <div class="mx-auto prose prose-lg mt-6 max-w-5xl">
+    <div class="mx-auto prose prose-lg mt-6 max-w-6xl">
       <div
         class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto py-12 px-4 md:px-6">
-        <div class="p-1">
+        <div class="p-1 w-full">
           <ProductGallery client:idle images={entry.data.Images} />
         </div>
         <div>
-          <h1 class="text-3xl lg:text-5xl font-bold">{entry.data.Name}</h1>
+          <div class="flex gap-2 md:gap-4 h-16 md:h-20">
+            {
+              entry.data.Logo && (
+                <img
+                  src={entry.data.Logo}
+                  alt={entry.data.Name}
+                  class="size-10 lg:size-12 mt-2 shadow-sm dark:shadow-orange-600 rounded-lg"
+                />
+              )
+            }
+            <h1
+              class="text-3xl md:text-5xl lg:text-6xl text-foreground font-bold mb-2">
+              {entry.data.Name}
+            </h1>
+          </div>
+
           <div class="flex items-center gap-2 mt-2">
             {
               entry.data.Tags.map((tag) => (
@@ -48,15 +61,24 @@ const { entry } = Astro.props;
             </Button>
           </a>
         </div>
-        <div class="grid gap-2 grid-cols-2 col-span-2">
-          <div>
-            <h2 class="text-xl mb-3 font-semibold">Product Details</h2>
+        <h2
+          class="text-xl col-span-2 text-center lg:text-4xl mb-3 font-semibold underline text-foreground">
+          Software Details
+        </h2>
+        <div class="md:grid col-span-1 gap-2 md:grid-cols-2 md:col-span-2">
+          <div class="mt-2">
+            <h2
+              class="text-xl lg:text-2xl mb-3 my-0 font-semibold text-foreground">
+              Other details
+            </h2>
             <div class="space-y-2 text-muted-foreground">
               {
                 entry.data.Demo && (
                   <div class="flex items-center gap-2">
                     <Icon name="bx:planet" />
-                    <a href={entry.data.Demo}>Demo Link</a>
+                    <a href={entry.data.Demo} class="text-muted-foreground">
+                      Demo Link
+                    </a>
                   </div>
                 )
               }
@@ -64,100 +86,98 @@ const { entry } = Astro.props;
                 <Icon name="bx:rocket" />
                 <span>Stage : {entry.data.Stage}</span>
               </div>
-              <div class="flex items-center gap-2">
-                <Icon name="fluent:people-community-28-regular" />
+              <div class="flex items-start gap-2">
+                <Icon
+                  name="fluent:people-community-28-regular"
+                  class="flex-shrink-0 mt-2"
+                />
                 Customers : {entry.data.Customers.join(", ")}
               </div>
             </div>
+            <div class="col-span-2 gap-8">
+              <p
+                class="inline-flex text-base font-bold mb-2 mr-4 text-muted-foreground">
+                The Makers:
+              </p>
+              {
+                entry.data.Makers.map((maker, index) => (
+                  <React.Fragment>
+                    <a
+                      href={maker.Profile}
+                      target="_blank"
+                      class="text-foreground">
+                      {maker.Name}
+                    </a>
+                    <span class="text-foreground">
+                      {index < entry.data.Makers.length - 1 && ", "}
+                    </span>
+                  </React.Fragment>
+                ))
+              }
+            </div>
           </div>
           <div>
-            <h2 class="text-xl mb-3 font-semibold">Key Features</h2>
+            <h2
+              class="text-xl lg:text-2xl mb-3 my-0 font-semibold text-foreground">
+              Key Features
+            </h2>
             <ul class="mt-2 space-y-2 pl-1 text-muted-foreground">
               {
                 entry.data.Features.map((features) => (
-                  <li class="flex items-start gap-2 border">
-                    <Icon name="fluent:checkmark-24-filled" class="mt-2" />
+                  <li class="flex items-start gap-2">
+                    <Icon
+                      name="fluent:checkmark-24-filled"
+                      class="mt-2 flex-shrink-0"
+                    />
                     {features}
                   </li>
                 ))
               }
             </ul>
           </div>
-        </div>
+          <div class="md:col-span-2 grid md:grid-cols-2 items-start">
+            <div class="flex flex-col gap-2 mt-2">
+              <h3 class="text-sm text-foreground font-semibold mb-0">
+                Headquarters :
+              </h3>
+              {
+                entry.data.HQ.map((hq) => (
+                  <div class="flex items-center text-muted-foreground gap-2">
+                    <Icon
+                      name="fluent:location-16-regular"
+                      class="flex-shrink-0"
+                    />
+                    {hq.City}, {hq.Country}
+                  </div>
+                ))
+              }
+            </div>
 
-        <div class="col-span-2 grid gap-8">
-          <div>
-            <p class="lg:text-2xl inline-flex text-lg font-bold mb-2 mr-4">
-              The Makers:
-            </p>
-            {
-              entry.data.Makers.map((maker, index) => (
-                <React.Fragment>
-                  <a href={maker.Profile} target="_blank">
-                    {maker.Name}
-                  </a>
-                  {index < entry.data.Makers.length - 1 && ", "}
-                </React.Fragment>
-              ))
-            }
-          </div>
-          <div>
-            <h2 class="lg:text-2xl text-lg font-bold">Key Accomplishments</h2>
-            <div class="grid md:grid-cols-2 gap-6 mt-6">
-              <div class="flex items-start gap-4">
-                <AwardIcon className="w-12 h-12 text-primary" />
-                <div>
-                  <h3 class="font-semibold">Productivity App of the Year</h3>
-                  <p class="text-sm text-muted-foreground">
-                    Acme Productivity Suite was awarded the prestigious
-                    "Productivity App of the Year" award by the Software
-                    Productivity Association.
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <UsersIcon className="w-12 h-12 text-primary" />
-                <div>
-                  <h3 class="font-semibold">10,000+ Teams Onboarded</h3>
-                  <p class="text-sm text-muted-foreground">
-                    Acme Productivity Suite has been adopted by over 10,000
-                    teams across various industries, helping them streamline
-                    their workflows and boost productivity.
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <StarIcon className="w-12 h-12 text-primary" />
-                <div>
-                  <h3 class="font-semibold">4.8 out of 5 Star Rating</h3>
-                  <p class="text-sm text-muted-foreground">
-                    Acme Productivity Suite has consistently maintained a high
-                    user satisfaction rating of 4.8 out of 5 stars on popular
-                    software review platforms.
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <ImportIcon className="w-12 h-12 text-primary" />
-                <div>
-                  <h3 class="font-semibold">Seamless Integrations</h3>
-                  <p class="text-sm text-muted-foreground">
-                    Acme Productivity Suite seamlessly integrates with a wide
-                    range of popular productivity and collaboration tools,
-                    allowing users to streamline their workflows.
-                  </p>
-                </div>
-              </div>
+            <div class="flex flex-col gap-2 mt-2">
+              <h3 class="text-sm text-foreground font-semibold mb-0">
+                Data Centers:
+              </h3>
+              {
+                entry.data.DC.map((dc) => (
+                  <div class="flex text-muted-foreground items-center gap-2">
+                    <Icon
+                      name="fluent:location-16-regular"
+                      class="flex-shrink-0"
+                    />
+                    {dc.City}, {dc.Country}
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>
       </div>
+      <Button variant={"outline"}>
+        <a href="/software" class="flex items-center text-foreground">
+          <Icon name="bx:arrow-back" class="size-4 mr-2" />
+          Back To Softwares
+        </a>
+      </Button>
     </div>
-    <Button variant={"outline"}>
-      <a href="/software" class="flex items-center">
-        <Icon name="bx:arrow-back" class="size-4 mr-2" />
-        Back To Softwares
-      </a>
-    </Button>
   </Container>
 </Layout>

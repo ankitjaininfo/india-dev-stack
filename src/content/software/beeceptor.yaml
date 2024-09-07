@@ -9,11 +9,11 @@ Features:
   - "HTTP request inspection and debugging."
   - "Build CRUD APIs for your development, testing, "
   - "No-code interface with CORS support and templating for responses."
-Logo: "assets/beeceptor_logo.png"
+Logo: "/logos/beeceptor_logo.jpeg"
 Demo: "https://www.youtube.com/watch?v=eauSgng86ac"
+pricing: "Freemium"
 Images:
-  - "assets/beeceptor_dashboard.png"
-  - "assets/beeceptor_mock_server.png"
+  - "/softwares/beeceptor.png"
 Makers:
   - Profile: "https://www.linkedin.com/in/ankitjaininfo/"
     Name: Ankit Jain
