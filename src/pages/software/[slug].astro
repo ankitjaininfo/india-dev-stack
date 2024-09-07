@@ -108,7 +108,9 @@ const { entry } = Astro.props;
                       class="text-foreground">
                       {maker.Name}
                     </a>
-                    <span class="text-foreground">{index < entry.data.Makers.length - 1 && ", "}</span>
+                    <span class="text-foreground">
+                      {index < entry.data.Makers.length - 1 && ", "}
+                    </span>
                   </React.Fragment>
                 ))
               }
@@ -135,10 +137,12 @@ const { entry } = Astro.props;
           </div>
           <div class="md:col-span-2 grid md:grid-cols-2 items-start">
             <div class="flex flex-col gap-2 mt-2">
-              <h3 class="text-sm font-semibold mb-0">Headquarters :</h3>
+              <h3 class="text-sm text-foreground font-semibold mb-0">
+                Headquarters :
+              </h3>
               {
                 entry.data.HQ.map((hq) => (
-                  <div class="flex items-center gap-2">
+                  <div class="flex items-center text-muted-foreground gap-2">
                     <Icon
                       name="fluent:location-16-regular"
                       class="flex-shrink-0"
@@ -150,10 +154,12 @@ const { entry } = Astro.props;
             </div>
 
             <div class="flex flex-col gap-2 mt-2">
-              <h3 class="text-sm font-semibold mb-0">Data Centers:</h3>
+              <h3 class="text-sm text-foreground font-semibold mb-0">
+                Data Centers:
+              </h3>
               {
                 entry.data.DC.map((dc) => (
-                  <div class="flex items-center gap-2">
+                  <div class="flex text-muted-foreground items-center gap-2">
                     <Icon
                       name="fluent:location-16-regular"
                       class="flex-shrink-0"

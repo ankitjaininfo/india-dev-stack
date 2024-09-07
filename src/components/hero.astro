@@ -4,11 +4,19 @@ import heroImage from "assets/abstract1.png";
 import { Icon } from "astro-icon/components";
 import { Button } from "./ui/button";
 ---
+
 <main
   class="flex flex-wrap-reverse flex-col min-h-svh justify-start items-center mx-auto place-items-center pt-16 pb-8 md:pt-24 md:pb-24">
   <div
-    class="absolute top-0 z-[-2] h-svh w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,50,20,0.3),rgba(255,255,255,0))] hidden dark:block">
+    class="absolute top-0 z-[-2] h-svh w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,50,20,0.4),rgba(255,255,255,0))]">
   </div>
+  <div
+    class="w-52 h-52 bottom-28 right-32 rounded-full bg-emerald-800/20 blur-3xl absolute">
+  </div>
+  <div
+    class="w-60 h-60 bottom-16 left-40 rounded-full bg-blue-800/15 blur-3xl absolute">
+  </div>
+
   <div
     class="rounded-full p-1 px-2 border text-sm flex items-center cursor-pointer hover:scale-105 transition-all active:scale-95 active:rotate-2 duration-300 glow md:text-base">
     <span class="text-white bg-primary px-2 mr-2 rounded-full">New</span> India Dev
