@@ -6,39 +6,45 @@ import { Button } from "./ui/button";
 ---
 
 <main
-  class="flex flex-wrap-reverse justify-center items-center mx-auto place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 md:basis-1/2">
-    <Picture
-      src={heroImage}
-      alt="crystal"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 520px"
-      class="rounded-lg mx-auto drop-shadow-lg lg:w-[520px] md:w-[400px] w-full transition-all hover:rotate-2 duration-500 hover:scale-105"
-      loading="eager"
-      format="avif"
-    />
+  class="flex flex-wrap-reverse flex-col min-h-svh justify-start items-center mx-auto place-items-center pt-16 pb-8 md:pt-24 md:pb-24">
+  <div
+    class="absolute top-0 z-[-2] h-svh w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,50,20,0.4),rgba(255,255,255,0))]">
   </div>
-  <div class="md:basis-1/2 lg:px-2 px-4">
+  <div
+    class="w-52 h-52 bottom-28 right-32 rounded-full bg-emerald-800/20 blur-3xl absolute">
+  </div>
+  <div
+    class="w-60 h-60 bottom-16 left-40 rounded-full bg-blue-800/15 blur-3xl absolute">
+  </div>
+
+  <div
+    class="rounded-full p-1 px-2 border text-sm flex items-center cursor-pointer hover:scale-105 transition-all active:scale-95 active:rotate-2 duration-300 glow md:text-base">
+    <span class="text-white bg-primary px-2 mr-2 rounded-full">New</span> India Dev
+    Stack <span><Icon name="bx:right-arrow-alt" class="mx-1" /> </span>
+  </div>
+
+  <div class="text-center max-w-6xl">
     <h1
-      class="text-4xl md:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
+      class="text-4xl bg-gradient-to-br from-foreground via-foreground/80 to-background/50 bg-clip-text text-transparent mt-6 md:text-5xl xl:text-7xl scale-105 font-bold lg:tracking-tight xl:tracking-tighter">
       Unleashing <span
         class="bg-gradient-to-r from-cyan-400 to-lime-500 bg-clip-text text-transparent">
-        India
-      </span>'s Innovation in Software Development
+        India</span
+      >'s Innovation in Software Development
     </h1>
-    <p class="md:text-lg text-base mt-4 text-muted-foreground max-w-xl">
+    <p
+      class="md:text-xl text-lg opacity-90 mt-4 text-muted-foreground max-w-2xl mx-auto">
       A curated directory of tools built by Indian founders for every stage of
       your software development lifecycle.
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Button client:idle
-        >Explore
-        <Icon name="bx:search-alt" class="size-4 ml-2" />
-      </Button>
-      <Button client:idle variant={"outline"}>
-        Join our Community
-        <Icon name="fluent:people-team-16-filled" class="size-4 ml-2" />
-      </Button>
-    </div>
+  </div>
+  <div class="mt-8 flex flex-col sm:flex-row gap-3">
+    <Button client:idle size={"lg"}
+      >Explore
+      <Icon name="bx:search-alt" class="size-4 ml-2" />
+    </Button>
+    <Button client:idle variant={"outline"} size={"lg"}>
+      Join our Community
+      <Icon name="fluent:people-team-16-filled" class="size-4 ml-2" />
+    </Button>
   </div>
 </main>

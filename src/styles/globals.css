@@ -64,3 +64,10 @@
 ::-webkit-scrollbar-thumb {
   @apply rounded-lg bg-primary/20;
 }
+
+.glow {
+  box-shadow: 0 2px 15px rgba(226, 130, 20, 0.2);
+}
+.glow:hover {
+  box-shadow: 0 2px 15px rgba(226, 130, 20, 0.4);
+}
