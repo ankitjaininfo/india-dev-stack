@@ -8,13 +8,13 @@ import { Button } from "./ui/button";
 <main
   class="flex flex-wrap-reverse flex-col min-h-svh justify-start items-center mx-auto place-items-center pt-16 pb-8 md:pt-24 md:pb-24">
   <div
-    class="absolute top-0 z-[-2] h-svh w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,50,20,0.4),rgba(255,255,255,0))]">
+    class="absolute top-0 z-[-2] h-svh w-screen dark:brightness-100 dark:opacity-100 brightness-200 opacity-65 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,50,20,0.4),rgba(255,255,255,0))]">
   </div>
   <div
-    class="w-52 h-52 bottom-28 right-32 rounded-full bg-emerald-800/20 blur-3xl absolute">
+    class="w-80 h-80 bottom-0 -right-20 rounded-full bg-green-500/20 dark:bg-emerald-700/15 blur-3xl absolute">
   </div>
   <div
-    class="w-60 h-60 bottom-16 left-40 rounded-full bg-blue-800/15 blur-3xl absolute">
+    class="w-72 h-72 bottom-0 -left-20 rounded-full bg-blue-500/20 dark:bg-blue-700/10 blur-3xl absolute">
   </div>
 
   <div
@@ -38,13 +38,20 @@ import { Button } from "./ui/button";
     </p>
   </div>
   <div class="mt-8 flex flex-col sm:flex-row gap-3">
-    <Button client:idle size={"lg"}
-      >Explore
-      <Icon name="bx:search-alt" class="size-4 ml-2" />
-    </Button>
-    <Button client:idle variant={"outline"} size={"lg"}>
-      Join our Community
-      <Icon name="fluent:people-team-16-filled" class="size-4 ml-2" />
-    </Button>
+    <a href="/software">
+      <Button client:idle size={"lg"}
+        >Explore
+        <Icon name="bx:search-alt" class="size-4 ml-2" />
+      </Button>
+    </a>
+    <a
+      href="https://github.com/ankitjaininfo/india-dev-stack"
+      target="_blank"
+      rel="noopener noreferrer">
+      <Button client:idle variant={"outline"} size={"lg"}>
+        Add your DevTool
+        <Icon name="fluent:people-team-16-filled" class="size-4 ml-2" />
+      </Button>
+    </a>
   </div>
 </main>

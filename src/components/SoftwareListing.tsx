@@ -1,6 +1,6 @@
 import { Input } from "@components/ui/input";
 import { Button } from "@components/ui/button";
-import { ArrowRight, Check, ListFilter, Search, Tag } from "lucide-react";
+import { Check, ListFilter, Search, Tag } from "lucide-react";
 import { useState } from "react";
 import {
   Popover,
@@ -204,11 +204,6 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               </ul>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <a
-                href={"#"}
-                className="hover:underline p-1 items-center gap-2 inline-flex">
-                Visit Site <ArrowRight size={16} />
-              </a>
               <Button asChild>
                 <a href={`/software/${toolName.id}`}>More Details</a>
               </Button>
