@@ -52,9 +52,13 @@ const { entry } = Astro.props;
               ))
             }
           </div>
-          <p class="italic text-foreground/75 text-base">
-            "{entry.data.Tagline}"
-          </p>
+          {
+            entry.data.Tagline && (
+              <p class="italic text-foreground/75 text-base">
+                "{entry.data.Tagline}"
+              </p>
+            )
+          }
           <p class="text-muted-foreground leading-snug mt-4">
             {entry.data.Description}
           </p>
@@ -75,6 +79,18 @@ const { entry } = Astro.props;
               Other details
             </h2>
             <div class="space-y-2 text-muted-foreground">
+              <div class="flex items-center gap-2">
+                <Icon name="bx:link-external" />
+                <span>
+                  Category : {entry.data.Category}
+                </span>
+              </div>
+              <div class="flex items-center gap-2">
+                <Icon name="bx:link-external" />
+                <span>
+                  Pricing : {entry.data.pricing}
+                </span>
+              </div>
               {
                 entry.data.Demo && (
                   <div class="flex items-center gap-2">

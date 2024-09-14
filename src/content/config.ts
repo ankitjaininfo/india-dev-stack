@@ -6,7 +6,7 @@ const softwareCollection = defineCollection({
   type: "data",
   schema: z.object({
     Name: z.string(),
-    Tagline: z.string(),
+    Tagline: z.string().optional(),
     Description: z.string(),
     Website: z.string().url(),
     Features: z.array(z.string()),
@@ -35,14 +35,13 @@ const softwareCollection = defineCollection({
 
 const teamCollection = defineCollection({
   schema: z.object({
-    draft: z.boolean(),
     name: z.string(),
+    link: z.string().url(),
     title: z.string(),
     avatar: z.object({
       src: z.string(),
       alt: z.string(),
-    }),
-    publishDate: z.string().transform((str) => new Date(str)),
+    })
   }),
 });
 
