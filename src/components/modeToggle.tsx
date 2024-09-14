@@ -23,7 +23,7 @@ export function ModeToggle() {
   return (
     <Button
       variant="outline"
-      className="rounded-full"
+      className="rounded-full bg-background/20"
       size="icon"
       onClick={() => {
         setThemeState(theme === "dark" ? "light" : "dark");

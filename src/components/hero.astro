@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import { Button } from "./ui/button";
-import img1 from "@assets/Indian-flag.png";
+import img2 from "@assets/orangebrush.png";
 import { Picture } from "astro:assets";
 ---
 
@@ -17,19 +17,35 @@ import { Picture } from "astro:assets";
     class="w-72 h-72 bottom-0 -left-20 rounded-full bg-blue-500/20 dark:bg-blue-700/10 blur-3xl absolute">
   </div>
 
+  <Picture
+    src={img2}
+    alt="orange brush"
+    height={500}
+    width={600}
+    loading={"lazy"}
+    class="absolute h-52 top-28 left-10 -rotate-45 -translate-x-1/2 z-10"
+  />
+
+  <Picture
+    src={img2}
+    alt="orange brush"
+    height={500}
+    width={600}
+    loading={"lazy"}
+    class="absolute h-52 bottom-28 right-8 -rotate-45 translate-x-1/2 z-10"
+  />
   <div
-    class="rounded-full p-1 px-2 border text-sm flex items-center cursor-pointer hover:scale-105 transition-all active:scale-95 active:rotate-2 duration-300 glow md:text-base">
+    class="rounded-full p-1 px-2 text-sm flex items-center cursor-pointer hover:scale-105 transition-all active:scale-95 active:rotate-2 duration-300 glow md:text-base backdrop-blur">
     <span class="text-white bg-primary px-2 mr-2 rounded-full">New</span> India Dev
     Stack <span><Icon name="bx:right-arrow-alt" class="mx-1" /> </span>
   </div>
-
   <div class="text-center max-w-6xl">
     <h1
       class="text-4xl bg-gradient-to-br from-foreground via-foreground/80 to-background/50 bg-clip-text text-transparent mt-6 md:text-5xl xl:text-7xl scale-105 font-bold lg:tracking-tight xl:tracking-tighter">
       Unleashing <span
         class="bg-gradient-to-r from-cyan-400 to-lime-500 bg-clip-text text-transparent">
-        India</span
-      >'s Innovation in Software Development
+        India
+      </span>'s Innovation in Software Development
     </h1>
     <p
       class="md:text-xl text-lg opacity-90 mt-4 text-muted-foreground max-w-2xl mx-auto">
@@ -54,12 +70,4 @@ import { Picture } from "astro:assets";
       </Button>
     </a>
   </div>
-  <Picture
-    src={img1}
-    alt="orange brush"
-    height={500}
-    width={600}
-    loading={"lazy"}
-    class="absolute h-40 -bottom-6 -translate-x-1/2 z-[-1]"
-  />
 </main>
