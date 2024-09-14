@@ -1,0 +1,137 @@
+---
+import Container from "@components/container.astro";
+import Layout from "../layouts/Layout.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout title="Terms and Conditions">
+  <Container>
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <Sectionhead>
+          <Fragment slot="title">Terms of use</Fragment>
+          <Fragment slot="desc"
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
+            esse atque cumque unde natus!</Fragment
+          >
+        </Sectionhead>
+        <div
+          class="max-h-[70vh] mt-6 rounded-md border md:p-8 p-4 overflow-auto">
+          <div class="space-y-6">
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">
+                1. Acceptance of Terms
+              </h2>
+              <p>
+                By accessing and using India Dev Stack, you accept and agree to
+                be bound by the terms and provision of this agreement.
+                Additionally, when using India Dev Stack's particular services,
+                you shall be subject to any posted guidelines or rules
+                applicable to such services.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">
+                2. Description of Service
+              </h2>
+              <p>
+                India Dev Stack provides users with access to a curated
+                directory of software development tools created by Indian
+                founders. We provide this service to you subject to the
+                following Terms of Use, which may be updated by us from time to
+                time without notice to you.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">3. User Conduct</h2>
+              <p>You agree not to:</p>
+              <ul class="list-disc list-inside mt-2">
+                <li>Use the service for any unlawful purpose</li>
+                <li>
+                  Upload or transmit any content that is unlawful, harmful,
+                  threatening, or obscene
+                </li>
+                <li>Impersonate any person or entity</li>
+                <li>
+                  Interfere with or disrupt the service or servers or networks
+                  connected to the service
+                </li>
+                <li>
+                  Collect or store personal data about other users without their
+                  express permission
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">
+                4. Intellectual Property Rights
+              </h2>
+              <p>
+                The content on India Dev Stack, including without limitation,
+                the text, software, scripts, graphics, photos, sounds, music,
+                videos, interactive features and the like and the trademarks,
+                service marks and logos contained therein, are owned by or
+                licensed to India Dev Stack. You may not copy, reproduce,
+                distribute, transmit, broadcast, display, sell, license, or
+                otherwise exploit any content for any other purposes without the
+                prior written consent of India Dev Stack or the respective
+                licensors of the content.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">
+                5. Disclaimer of Warranties
+              </h2>
+              <p>
+                You expressly understand and agree that your use of the service
+                is at your sole risk and that the service is provided "as is"
+                and "as available." India Dev Stack expressly disclaims all
+                warranties of any kind, whether express or implied.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">
+                6. Limitation of Liability
+              </h2>
+              <p>
+                You expressly understand and agree that India Dev Stack shall
+                not be liable for any direct, indirect, incidental, special,
+                consequential or exemplary damages, including but not limited
+                to, damages for loss of profits, goodwill, use, data or other
+                intangible losses resulting from the use of or the inability to
+                use the service.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">7. Changes to Terms</h2>
+              <p>
+                India Dev Stack reserves the right to modify or replace these
+                Terms at any time. What constitutes a material change will be
+                determined at our sole discretion. By continuing to access or
+                use our Service after those revisions become effective, you
+                agree to be bound by the revised terms.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">8. Contact Us</h2>
+              <p>
+                If you have any questions about these Terms, please contact us
+                at: <a
+                  href="mailto:terms@indiadevstack.com"
+                  class="text-blue-500">terms@indiadevstack.com</a
+                >
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</Layout>
