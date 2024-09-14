@@ -25,7 +25,7 @@ const ProductGallery = ({ images }: { images: string[] }) => {
               width={600}
               height={600}
               alt="Product Image"
-              className="object-cover shadow-lg max-h-[60%] rounded"
+              className="object-cover shadow-lg max-h-[65%] rounded"
             />
           </CarouselItem>
         ))}

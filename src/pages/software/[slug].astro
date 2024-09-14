@@ -22,9 +22,9 @@ const { entry } = Astro.props;
 
 <Layout title={entry.data.Name}>
   <Container>
-    <div class="mx-auto prose prose-lg mt-6 max-w-6xl">
+    <div class="mx-auto prose prose-lg mt-6 max-w-7xl">
       <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto py-12 px-4 md:px-6">
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto py-12 px-4 md:px-6">
         <div class="p-1 w-full max-h-[420px]">
           <ProductGallery client:idle images={entry.data.Images} />
         </div>
@@ -52,18 +52,25 @@ const { entry } = Astro.props;
               ))
             }
           </div>
+          {
+            entry.data.Tagline && (
+              <p class="italic text-foreground/75 text-base">
+                "{entry.data.Tagline}"
+              </p>
+            )
+          }
           <p class="text-muted-foreground leading-snug mt-4">
             {entry.data.Description}
           </p>
-          <a target="_blank" href={entry.data.Website}>
+          <a target="_blank" href={entry.data.Website + "?ref=india-dev-stack"}>
             <Button>
               Visit Wesbite <Icon class="ml-2" name="bx:world" />
             </Button>
           </a>
         </div>
         <h2
-          class="text-xl col-span-2 text-center lg:text-4xl mb-3 font-semibold underline text-foreground">
-          Software Details
+          class="text-xl col-span-2 text-start lg:text-5xl mb-3 font-semibold text-foreground">
+          Product Details
         </h2>
         <div class="md:grid col-span-1 gap-2 md:grid-cols-2 md:col-span-2">
           <div class="mt-2">
@@ -72,12 +79,27 @@ const { entry } = Astro.props;
               Other details
             </h2>
             <div class="space-y-2 text-muted-foreground">
+              <div class="flex items-center gap-2">
+                <Icon name="bx:link-external" />
+                <span>
+                  Category : {entry.data.Category}
+                </span>
+              </div>
+              <div class="flex items-center gap-2">
+                <Icon name="bx:link-external" />
+                <span>
+                  Pricing : {entry.data.pricing}
+                </span>
+              </div>
               {
                 entry.data.Demo && (
                   <div class="flex items-center gap-2">
                     <Icon name="bx:planet" />
-                    <a href={entry.data.Demo} class="text-muted-foreground">
-                      Demo Link
+                    <a
+                      href={entry.data.Demo}
+                      target="_blank"
+                      class="text-muted-foreground">
+                      Quick Demo
                     </a>
                   </div>
                 )
@@ -97,7 +119,7 @@ const { entry } = Astro.props;
             <div class="col-span-2 gap-8">
               <p
                 class="inline-flex text-base font-bold mb-2 mr-4 text-muted-foreground">
-                The Makers:
+                Makers:
               </p>
               {
                 entry.data.Makers.map((maker, index) => (
@@ -138,7 +160,7 @@ const { entry } = Astro.props;
           <div class="md:col-span-2 grid md:grid-cols-2 items-start">
             <div class="flex flex-col gap-2 mt-2">
               <h3 class="text-sm text-foreground font-semibold mb-0">
-                Headquarters :
+                Headquarter At:
               </h3>
               {
                 entry.data.HQ.map((hq) => (
@@ -152,30 +174,13 @@ const { entry } = Astro.props;
                 ))
               }
             </div>
-
-            <div class="flex flex-col gap-2 mt-2">
-              <h3 class="text-sm text-foreground font-semibold mb-0">
-                Data Centers:
-              </h3>
-              {
-                entry.data.DC.map((dc) => (
-                  <div class="flex text-muted-foreground items-center gap-2">
-                    <Icon
-                      name="fluent:location-16-regular"
-                      class="flex-shrink-0"
-                    />
-                    {dc.City}, {dc.Country}
-                  </div>
-                ))
-              }
-            </div>
           </div>
         </div>
       </div>
       <Button variant={"outline"}>
         <a href="/software" class="flex items-center text-foreground">
           <Icon name="bx:arrow-back" class="size-4 mr-2" />
-          Back To Softwares
+          View All Softwares
         </a>
       </Button>
     </div>

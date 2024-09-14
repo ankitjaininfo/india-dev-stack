@@ -1,0 +1,122 @@
+---
+import Container from "@components/container.astro";
+import Layout from "../layouts/Layout.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout title="Privacy Policy">
+  <Container>
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <Sectionhead>
+          <Fragment slot="title">Privacy Policy</Fragment>
+          <Fragment slot="desc"
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
+            esse atque cumque unde natus!</Fragment
+          >
+        </Sectionhead>
+        <div class="rounded-md border p-4 md:p-8 mt-6">
+          <div class="space-y-6">
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">1. Introduction</h2>
+              <p>
+                Welcome to India Dev Stack. We respect your privacy and are
+                committed to protecting your personal data. This privacy policy
+                will inform you about how we look after your personal data when
+                you visit our website and tell you about your privacy rights and
+                how the law protects you.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">2. Data We Collect</h2>
+              <p>
+                We may collect, use, store and transfer different kinds of
+                personal data about you which we have grouped together as
+                follows:
+              </p>
+              <ul class="list-disc list-inside mt-2">
+                <li>
+                  Identity Data: includes first name, last name, username or
+                  similar identifier.
+                </li>
+                <li>
+                  Contact Data: includes email address and telephone numbers.
+                </li>
+                <li>
+                  Technical Data: includes internet protocol (IP) address, your
+                  login data, browser type and version.
+                </li>
+                <li>
+                  Usage Data: includes information about how you use our website
+                  and services.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">
+                3. How We Use Your Data
+              </h2>
+              <p>We use your data to:</p>
+              <ul class="list-disc list-inside mt-2">
+                <li>Provide and maintain our services</li>
+                <li>Notify you about changes to our services</li>
+                <li>Provide customer support</li>
+                <li>
+                  Gather analysis or valuable information so that we can improve
+                  our services
+                </li>
+                <li>Monitor the usage of our services</li>
+                <li>Detect, prevent and address technical issues</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">4. Data Security</h2>
+              <p>
+                We have put in place appropriate security measures to prevent
+                your personal data from being accidentally lost, used or
+                accessed in an unauthorized way, altered or disclosed. In
+                addition, we limit access to your personal data to those
+                employees, agents, contractors and other third parties who have
+                a business need to know.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">5. Your Legal Rights</h2>
+              <p>
+                Under certain circumstances, you have rights under data
+                protection laws in relation to your personal data, including the
+                right to request access, correction, erasure, restriction,
+                transfer, or to object to processing, as well as the right to
+                data portability.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">
+                6. Changes to This Privacy Policy
+              </h2>
+              <p>
+                We may update our Privacy Policy from time to time. We will
+                notify you of any changes by posting the new Privacy Policy on
+                this page and updating the "last updated" date at the top of
+                this Privacy Policy.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-2xl font-semibold mb-2">7. Contact Us</h2>
+              <p>
+                If you have any questions about this Privacy Policy, please
+                contact us at: privacy@indiadevstack.com
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </Container>
+</Layout>

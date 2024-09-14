@@ -1,14 +1,15 @@
 import { Input } from "@components/ui/input";
 import { Button } from "@components/ui/button";
-import { ArrowRight, Check, ListFilter, Search, Tag } from "lucide-react";
+import { Check, ListFilter, Search, Tag } from "lucide-react";
 import { useState } from "react";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@components/ui/popover";
-import { tags } from "@utils/all";
+import { Categories, tags } from "@utils/all";
 import { Card, CardContent, CardFooter, CardTitle } from "./ui/card";
+import { cn } from "@lib/utils";
 
 const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
   const [selectedPrice, setSelectedPrice] = useState({
@@ -16,8 +17,10 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
     paid: false,
     freemium: false,
   });
-
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
   const toggleTag = (tag: string) => {
     setSelectedTags((prevSelectedTags) => {
       if (prevSelectedTags.includes(tag.toLowerCase())) {
@@ -28,14 +31,48 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
     });
   };
 
-  const filteredEntries = softwareEntries.filter((entry) => {
+  const filterByPrice = (entry: any) => {
+    if (selectedPrice.free && entry.data.pricing.toLowerCase() === "free")
+      return true;
+    if (selectedPrice.paid && entry.data.pricing.toLowerCase() === "paid plans")
+      return true;
+    if (
+      selectedPrice.freemium &&
+      entry.data.pricing.toLowerCase() === "freemium"
+    )
+      return true;
+    if (!selectedPrice.free && !selectedPrice.paid && !selectedPrice.freemium)
+      return true;
+    return false;
+  };
+
+  const filterByTags = (entry: any) => {
     if (selectedTags.length === 0) return true;
     return selectedTags.every((tag) => {
       return entry.data.Tags.some((t: string) => {
         return t.toLowerCase() === tag.toLowerCase();
       });
     });
-  });
+  };
+
+  const filterByCategory = (entry: any) => {
+    if (!selectedCategory) return true;
+    return entry.data.Category.toLowerCase() === selectedCategory.toLowerCase();
+  };
+
+  const filterBySearch = (entry: any) => {
+    if (searchQuery === "") return true;
+    return entry.data.Name.toLowerCase().includes(searchQuery.toLowerCase());
+  };
+
+  const filteredEntries = softwareEntries.filter(
+    (entry) =>
+      filterByPrice(entry) &&
+      filterByTags(entry) &&
+      filterByCategory(entry) &&
+      filterBySearch(entry),
+  );
+
   return (
     <main className="mt-10">
       <div className="mx-auto max-w-3xl mb-10">
@@ -44,6 +81,8 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
             type="search"
             placeholder="Search for tools"
             className="w-full p-6"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
           <Button className="p-6">
             Find <Search size={18} className="ml-2" />
@@ -60,34 +99,23 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               <PopoverContent className="w-52 p-2 max-h-60 overflow-y-scroll">
                 <div>
                   <ul>
-                    <li>
-                      <Button
-                        className="w-full justify-start py-1 px-2"
-                        variant={"ghost"}>
-                        Beta
-                      </Button>
-                    </li>
-                    <li>
-                      <Button
-                        className="w-full justify-start py-1 px-2"
-                        variant={"ghost"}>
-                        Open Source
-                      </Button>
-                    </li>
-                    <li>
-                      <Button
-                        className="w-full justify-start py-1 px-2"
-                        variant={"ghost"}>
-                        In Development
-                      </Button>
-                    </li>
-                    <li>
-                      <Button
-                        className="w-full justify-start py-1 px-2"
-                        variant={"ghost"}>
-                        Completed
-                      </Button>
-                    </li>
+                    {Categories.map((category: string) => (
+                      <li key={category}>
+                        <Button
+                          className="w-full justify-start py-1 px-2"
+                          variant={"ghost"}
+                          onClick={() =>
+                            setSelectedCategory((prev) =>
+                              prev === category ? null : category,
+                            )
+                          }>
+                          {category}
+                          {selectedCategory === category && (
+                            <Check size={16} className="ml-2" />
+                          )}
+                        </Button>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </PopoverContent>
@@ -125,11 +153,11 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               variant={"outline"}
               className="rounded-full"
               onClick={() => {
-                setSelectedPrice({
-                  free: !selectedPrice.free,
+                setSelectedPrice((prev) => ({
+                  free: !prev.free,
                   paid: false,
                   freemium: false,
-                });
+                }));
               }}>
               Free{" "}
               {selectedPrice.free ? <Check size={16} className="ml-1" /> : null}
@@ -138,11 +166,11 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               variant={"outline"}
               className="rounded-full"
               onClick={() => {
-                setSelectedPrice({
+                setSelectedPrice((prev) => ({
                   free: false,
-                  paid: !selectedPrice.paid,
+                  paid: !prev.paid,
                   freemium: false,
-                });
+                }));
               }}>
               Paid{" "}
               {selectedPrice.paid ? <Check size={16} className="ml-1" /> : null}
@@ -151,11 +179,11 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               variant={"outline"}
               className="rounded-full"
               onClick={() => {
-                setSelectedPrice({
+                setSelectedPrice((prev) => ({
                   free: false,
                   paid: false,
-                  freemium: !selectedPrice.freemium,
-                });
+                  freemium: !prev.freemium,
+                }));
               }}>
               Freemium{" "}
               {selectedPrice.freemium ? (
@@ -167,7 +195,9 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
       </div>
       <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mx-auto px-4">
         {filteredEntries.map((toolName: any, index: number) => (
-          <Card className="h-full hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
+          <Card
+            key={toolName.id}
+            className="h-full hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
             <img
               src={toolName.data.Images[0]}
               alt={toolName.data.Name}
@@ -180,11 +210,19 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
             />
             <CardContent className="mt-4">
               <div className="flex justify-between">
-                <span className="text-blue-600 bg-blue-100 py-1 px-3 rounded-full text-sm">
+                <span className="text-blue-600 dark:text-blue-500 bg-blue-100 dark:bg-blue-500/15 py-1 px-3 rounded-full text-sm">
                   {toolName.data.Category}
                 </span>
-                <span className="text-green-600 bg-green-100 py-1 px-3 rounded-full text-sm">
-                  free
+                <span
+                  className={cn(
+                    "py-1 px-3 rounded-full text-sm",
+                    toolName.data.pricing === "Free"
+                      ? "text-green-600 bg-green-100/70 dark:bg-green-900/25"
+                      : toolName.data.pricing === "Paid plans"
+                        ? "text-red-600 bg-red-100/70 dark:bg-red-900/25"
+                        : "text-yellow-600 bg-yellow-100/70 dark:bg-yellow-900/25",
+                  )}>
+                  {toolName.data.pricing}
                 </span>
               </div>
               <h2 className="text-3xl font-semibold leading-snug tracking-tight mt-1">
@@ -204,11 +242,6 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               </ul>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <a
-                href={"#"}
-                className="hover:underline p-1 items-center gap-2 inline-flex">
-                Visit Site <ArrowRight size={16} />
-              </a>
               <Button asChild>
                 <a href={`/software/${toolName.id}`}>More Details</a>
               </Button>

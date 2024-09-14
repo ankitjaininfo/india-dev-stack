@@ -29,9 +29,6 @@ Stage: "Active Customers"
 HQ:
   - City: "San Francisco"
     Country: "USA"
-DC:
-  - City: "San Francisco"
-    Country: "USA"
 Customers:
   - "Software Development Teams"
   - "Engineering Managers"

@@ -1,35 +1,51 @@
 ---
-import { Picture } from "astro:assets";
-import heroImage from "assets/abstract1.png";
 import { Icon } from "astro-icon/components";
 import { Button } from "./ui/button";
+import img2 from "@assets/orangebrush.png";
+import { Picture } from "astro:assets";
 ---
 
 <main
-  class="flex flex-wrap-reverse flex-col min-h-svh justify-start items-center mx-auto place-items-center pt-16 pb-8 md:pt-24 md:pb-24">
+  class="flex flex-wrap-reverse flex-col justify-start min-h-[90svh] items-center mx-auto place-items-center pt-16 md:pt-24">
   <div
-    class="absolute top-0 z-[-2] h-svh w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,50,20,0.4),rgba(255,255,255,0))]">
+    class="absolute top-0 z-[-2] h-svh w-screen dark:brightness-100 dark:opacity-100 brightness-200 opacity-65 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,50,20,0.4),rgba(255,255,255,0))]">
   </div>
   <div
-    class="w-52 h-52 bottom-28 right-32 rounded-full bg-emerald-800/20 blur-3xl absolute">
+    class="w-80 h-80 bottom-0 -right-20 rounded-full bg-green-500/20 dark:bg-emerald-700/15 blur-3xl absolute">
   </div>
   <div
-    class="w-60 h-60 bottom-16 left-40 rounded-full bg-blue-800/15 blur-3xl absolute">
+    class="w-72 h-72 bottom-0 -left-20 rounded-full bg-blue-500/20 dark:bg-blue-700/10 blur-3xl absolute">
   </div>
 
+  <Picture
+    src={img2}
+    alt="orange brush"
+    height={500}
+    width={600}
+    loading={"lazy"}
+    class="absolute h-52 top-28 left-10 -rotate-45 -translate-x-1/2 z-10"
+  />
+
+  <Picture
+    src={img2}
+    alt="orange brush"
+    height={500}
+    width={600}
+    loading={"lazy"}
+    class="absolute h-52 bottom-28 right-8 -rotate-45 translate-x-1/2 z-10"
+  />
   <div
-    class="rounded-full p-1 px-2 border text-sm flex items-center cursor-pointer hover:scale-105 transition-all active:scale-95 active:rotate-2 duration-300 glow md:text-base">
+    class="rounded-full p-1 px-2 text-sm flex items-center cursor-pointer hover:scale-105 transition-all active:scale-95 active:rotate-2 duration-300 glow md:text-base backdrop-blur">
     <span class="text-white bg-primary px-2 mr-2 rounded-full">New</span> India Dev
     Stack <span><Icon name="bx:right-arrow-alt" class="mx-1" /> </span>
   </div>
-
   <div class="text-center max-w-6xl">
     <h1
       class="text-4xl bg-gradient-to-br from-foreground via-foreground/80 to-background/50 bg-clip-text text-transparent mt-6 md:text-5xl xl:text-7xl scale-105 font-bold lg:tracking-tight xl:tracking-tighter">
       Unleashing <span
         class="bg-gradient-to-r from-cyan-400 to-lime-500 bg-clip-text text-transparent">
-        India</span
-      >'s Innovation in Software Development
+        India
+      </span>'s Innovation in Software Development
     </h1>
     <p
       class="md:text-xl text-lg opacity-90 mt-4 text-muted-foreground max-w-2xl mx-auto">
@@ -38,13 +54,20 @@ import { Button } from "./ui/button";
     </p>
   </div>
   <div class="mt-8 flex flex-col sm:flex-row gap-3">
-    <Button client:idle size={"lg"}
-      >Explore
-      <Icon name="bx:search-alt" class="size-4 ml-2" />
-    </Button>
-    <Button client:idle variant={"outline"} size={"lg"}>
-      Join our Community
-      <Icon name="fluent:people-team-16-filled" class="size-4 ml-2" />
-    </Button>
+    <a href="/software">
+      <Button client:idle size={"lg"}
+        >Explore
+        <Icon name="bx:search-alt" class="size-4 ml-2" />
+      </Button>
+    </a>
+    <a
+      href="https://github.com/ankitjaininfo/india-dev-stack"
+      target="_blank"
+      rel="noopener noreferrer">
+      <Button client:idle variant={"outline"} size={"lg"}>
+        Add your DevTool
+        <Icon name="fluent:people-team-16-filled" class="size-4 ml-2" />
+      </Button>
+    </a>
   </div>
 </main>

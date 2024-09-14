@@ -8,7 +8,30 @@ export const getFormattedDate = (date) =>
     : "";
 
 export const tags = [
+  "Bug Reporting",
+  "AI",
+  "Software Debugging",
+  "Chrome Extension",
+  "API",
+  "Mocking",
+  "Service Virtualization",
+  "Testing",
+  "DORA Metrics",
+  "Engineering Efficiency",
+  "Open Source",
+  "Software Development",
+  "Collaboration",
+];
+
+export const Categories = [
   "development",
+  "design",
+  "collaboration",
+  "productivity",
+  "testing",
+  "security",
+  "miscellaneous",
+  "api",
   "blockchain",
   "analytics",
   "cloud-storage",
@@ -16,10 +39,4 @@ export const tags = [
   "devops",
   "cloud",
   "monitoring",
-  "miscellaneous",
-  "productivity",
-  "design",
-  "api",
-  "testing",
-  "security",
 ];
