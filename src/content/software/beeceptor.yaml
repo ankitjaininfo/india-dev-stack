@@ -33,9 +33,6 @@ Stage: "Active Customers"
 HQ:
   - City: "Hyderabad"
     Country: "India"
-DC:
-  - City: "Hyderabad"
-    Country: "India"
 Customers:
   - "Broadridge"
   - "New Relic"

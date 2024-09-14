@@ -11,7 +11,7 @@ Features:
   - "Supports incognito mode and allows annotations directly in the tool."
 Logo: "assets/images/betterbugs_logo.png"
 Demo: "https://www.betterbugs.io/demo"
-pricing: "Freemium"
+pricing: "Free"
 Images:
   - "/softwares/betterBugs.png"
 Makers:
@@ -25,9 +25,6 @@ Tags:
   - "Chrome Extension"
 Stage: "Active Customers"
 HQ:
-  - City: "Ahmedabad"
-    Country: "India"
-DC:
   - City: "Ahmedabad"
     Country: "India"
 Customers:

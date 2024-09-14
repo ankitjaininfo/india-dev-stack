@@ -9,6 +9,7 @@ import {
 } from "@components/ui/popover";
 import { tags } from "@utils/all";
 import { Card, CardContent, CardFooter, CardTitle } from "./ui/card";
+import { cn } from "@lib/utils";
 
 const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
   const [selectedPrice, setSelectedPrice] = useState({
@@ -180,11 +181,19 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
             />
             <CardContent className="mt-4">
               <div className="flex justify-between">
-                <span className="text-blue-600 bg-blue-100 py-1 px-3 rounded-full text-sm">
+                <span className="text-blue-600 dark:text-blue-500 bg-blue-100 dark:bg-blue-500/15 py-1 px-3 rounded-full text-sm">
                   {toolName.data.Category}
                 </span>
-                <span className="text-green-600 bg-green-100 py-1 px-3 rounded-full text-sm">
-                  free
+                <span
+                  className={cn(
+                    "py-1 px-3 rounded-full text-sm",
+                    toolName.data.pricing === "Free"
+                      ? "text-green-600 bg-green-100/70 dark:bg-green-900/25"
+                      : toolName.data.pricing === "Paid plans"
+                        ? "text-red-600 bg-red-100/70 dark:bg-red-900/25"
+                        : "text-yellow-600 bg-yellow-100/70 dark:bg-yellow-900/25",
+                  )}>
+                  {toolName.data.pricing}
                 </span>
               </div>
               <h2 className="text-3xl font-semibold leading-snug tracking-tight mt-1">

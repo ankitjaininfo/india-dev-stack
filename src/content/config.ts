@@ -29,12 +29,6 @@ const softwareCollection = defineCollection({
         Country: z.string(),
       })
       .array(),
-    DC: z
-      .object({
-        City: z.string(),
-        Country: z.string(),
-      })
-      .array(),
     Customers: z.array(z.string()),
   }),
 });
