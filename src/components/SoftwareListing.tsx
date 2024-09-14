@@ -7,7 +7,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@components/ui/popover";
-import { tags } from "@utils/all";
+import { Categories, tags } from "@utils/all";
 import { Card, CardContent, CardFooter, CardTitle } from "./ui/card";
 import { cn } from "@lib/utils";
 
@@ -17,8 +17,10 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
     paid: false,
     freemium: false,
   });
-
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
   const toggleTag = (tag: string) => {
     setSelectedTags((prevSelectedTags) => {
       if (prevSelectedTags.includes(tag.toLowerCase())) {
@@ -29,14 +31,48 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
     });
   };
 
-  const filteredEntries = softwareEntries.filter((entry) => {
+  const filterByPrice = (entry: any) => {
+    if (selectedPrice.free && entry.data.pricing.toLowerCase() === "free")
+      return true;
+    if (selectedPrice.paid && entry.data.pricing.toLowerCase() === "paid plans")
+      return true;
+    if (
+      selectedPrice.freemium &&
+      entry.data.pricing.toLowerCase() === "freemium"
+    )
+      return true;
+    if (!selectedPrice.free && !selectedPrice.paid && !selectedPrice.freemium)
+      return true;
+    return false;
+  };
+
+  const filterByTags = (entry: any) => {
     if (selectedTags.length === 0) return true;
     return selectedTags.every((tag) => {
       return entry.data.Tags.some((t: string) => {
         return t.toLowerCase() === tag.toLowerCase();
       });
     });
-  });
+  };
+
+  const filterByCategory = (entry: any) => {
+    if (!selectedCategory) return true;
+    return entry.data.Category.toLowerCase() === selectedCategory.toLowerCase();
+  };
+
+  const filterBySearch = (entry: any) => {
+    if (searchQuery === "") return true;
+    return entry.data.Name.toLowerCase().includes(searchQuery.toLowerCase());
+  };
+
+  const filteredEntries = softwareEntries.filter(
+    (entry) =>
+      filterByPrice(entry) &&
+      filterByTags(entry) &&
+      filterByCategory(entry) &&
+      filterBySearch(entry),
+  );
+
   return (
     <main className="mt-10">
       <div className="mx-auto max-w-3xl mb-10">
@@ -45,6 +81,8 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
             type="search"
             placeholder="Search for tools"
             className="w-full p-6"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
           <Button className="p-6">
             Find <Search size={18} className="ml-2" />
@@ -61,34 +99,23 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               <PopoverContent className="w-52 p-2 max-h-60 overflow-y-scroll">
                 <div>
                   <ul>
-                    <li>
-                      <Button
-                        className="w-full justify-start py-1 px-2"
-                        variant={"ghost"}>
-                        Beta
-                      </Button>
-                    </li>
-                    <li>
-                      <Button
-                        className="w-full justify-start py-1 px-2"
-                        variant={"ghost"}>
-                        Open Source
-                      </Button>
-                    </li>
-                    <li>
-                      <Button
-                        className="w-full justify-start py-1 px-2"
-                        variant={"ghost"}>
-                        In Development
-                      </Button>
-                    </li>
-                    <li>
-                      <Button
-                        className="w-full justify-start py-1 px-2"
-                        variant={"ghost"}>
-                        Completed
-                      </Button>
-                    </li>
+                    {Categories.map((category: string) => (
+                      <li key={category}>
+                        <Button
+                          className="w-full justify-start py-1 px-2"
+                          variant={"ghost"}
+                          onClick={() =>
+                            setSelectedCategory((prev) =>
+                              prev === category ? null : category,
+                            )
+                          }>
+                          {category}
+                          {selectedCategory === category && (
+                            <Check size={16} className="ml-2" />
+                          )}
+                        </Button>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </PopoverContent>
@@ -126,11 +153,11 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               variant={"outline"}
               className="rounded-full"
               onClick={() => {
-                setSelectedPrice({
-                  free: !selectedPrice.free,
+                setSelectedPrice((prev) => ({
+                  free: !prev.free,
                   paid: false,
                   freemium: false,
-                });
+                }));
               }}>
               Free{" "}
               {selectedPrice.free ? <Check size={16} className="ml-1" /> : null}
@@ -139,11 +166,11 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               variant={"outline"}
               className="rounded-full"
               onClick={() => {
-                setSelectedPrice({
+                setSelectedPrice((prev) => ({
                   free: false,
-                  paid: !selectedPrice.paid,
+                  paid: !prev.paid,
                   freemium: false,
-                });
+                }));
               }}>
               Paid{" "}
               {selectedPrice.paid ? <Check size={16} className="ml-1" /> : null}
@@ -152,11 +179,11 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               variant={"outline"}
               className="rounded-full"
               onClick={() => {
-                setSelectedPrice({
+                setSelectedPrice((prev) => ({
                   free: false,
                   paid: false,
-                  freemium: !selectedPrice.freemium,
-                });
+                  freemium: !prev.freemium,
+                }));
               }}>
               Freemium{" "}
               {selectedPrice.freemium ? (
@@ -168,7 +195,9 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
       </div>
       <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mx-auto px-4">
         {filteredEntries.map((toolName: any, index: number) => (
-          <Card className="h-full hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
+          <Card
+            key={toolName.id}
+            className="h-full hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
             <img
               src={toolName.data.Images[0]}
               alt={toolName.data.Name}
