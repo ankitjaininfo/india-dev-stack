@@ -1,7 +1,5 @@
-// 1. Import utilities from `astro:content`
 import { z, defineCollection } from "astro:content";
 
-// 2. Define your collection(s)
 const softwareCollection = defineCollection({
   type: "data",
   schema: z.object({
@@ -33,7 +31,19 @@ const softwareCollection = defineCollection({
   }),
 });
 
+const blogCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    author: z.string(),
+    pubDate: z.coerce.date(),
+    heroImage: z.string(),
+  }),
+});
+
 const teamCollection = defineCollection({
+  type: "content",
   schema: z.object({
     name: z.string(),
     link: z.string().url(),
@@ -41,11 +51,12 @@ const teamCollection = defineCollection({
     avatar: z.object({
       src: z.string(),
       alt: z.string(),
-    })
+    }),
   }),
 });
 
 export const collections = {
   software: softwareCollection,
   team: teamCollection,
+  blog: blogCollection,
 };

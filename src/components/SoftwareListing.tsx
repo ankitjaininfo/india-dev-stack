@@ -193,62 +193,64 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
           </div>
         </div>
       </div>
-      <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mx-auto px-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mx-auto px-4">
         {filteredEntries.map((toolName: any, index: number) => (
-          <Card
-            key={toolName.id}
-            className="h-full hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
-            <img
-              src={toolName.data.Images[0]}
-              alt={toolName.data.Name}
-              sizes="(max-width: 800px) 100vw, 800px"
-              width={800}
-              height={300}
-              loading={index <= 2 ? "eager" : "lazy"}
-              decoding={index <= 2 ? "sync" : "async"}
-              className="w-full h-52 rounded-md group-hover:scale-105 transition-all duration-300 object-cover object-center bg-white"
-            />
-            <CardContent className="mt-4">
-              <div className="flex justify-between">
-                <span className="text-blue-600 dark:text-blue-500 bg-blue-100 dark:bg-blue-500/15 py-1 px-3 rounded-full text-sm">
-                  {toolName.data.Category}
-                </span>
-                <span
-                  className={cn(
-                    "py-1 px-3 rounded-full text-sm",
-                    toolName.data.pricing === "Free"
-                      ? "text-green-600 bg-green-100/70 dark:bg-green-900/25"
-                      : toolName.data.pricing === "Paid plans"
-                        ? "text-red-600 bg-red-100/70 dark:bg-red-900/25"
-                        : "text-yellow-600 bg-yellow-100/70 dark:bg-yellow-900/25",
-                  )}>
-                  {toolName.data.pricing}
-                </span>
-              </div>
-              <h2 className="text-3xl font-semibold leading-snug tracking-tight mt-1">
-                {toolName.data.Name}
-              </h2>
+          <a href={"/software/" + toolName.id}>
+            <Card
+              key={toolName.id}
+              className="h-full flex flex-col hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
+              <img
+                src={toolName.data.Images[0]}
+                alt={toolName.data.Name}
+                sizes="(max-width: 800px) 100vw, 800px"
+                width={800}
+                height={300}
+                loading={index <= 2 ? "eager" : "lazy"}
+                decoding={index <= 2 ? "sync" : "async"}
+                className="w-full h-52 rounded-md group-hover:scale-105 transition-all duration-300 object-cover object-center bg-white"
+              />
+              <CardContent className="mt-4 flex-1">
+                <div className="flex justify-between">
+                  <span className="text-blue-600 dark:text-blue-500 bg-blue-100 dark:bg-blue-500/15 py-1 px-3 rounded-full text-sm">
+                    {toolName.data.Category}
+                  </span>
+                  <span
+                    className={cn(
+                      "py-1 px-3 rounded-full text-sm",
+                      toolName.data.pricing === "Free"
+                        ? "text-green-600 bg-green-100/70 dark:bg-green-900/25"
+                        : toolName.data.pricing === "Paid plans"
+                          ? "text-red-600 bg-red-100/70 dark:bg-red-900/25"
+                          : "text-yellow-600 bg-yellow-100/70 dark:bg-yellow-900/25",
+                    )}>
+                    {toolName.data.pricing}
+                  </span>
+                </div>
+                <h2 className="text-3xl font-semibold leading-snug tracking-tight mt-1">
+                  {toolName.data.Name}
+                </h2>
 
-              <span className="text-muted-foreground line-clamp-3">
-                {toolName.data.Description}
-              </span>
+                <span className="text-muted-foreground line-clamp-3">
+                  {toolName.data.Description}
+                </span>
 
-              <ul className="flex gap-3 flex-wrap mt-4 mb-2">
-                {toolName.data.Tags.map((tag: string) => (
-                  <li key={tag} className="text-xs text-muted-foreground/75">
-                    #{tag}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter className="flex justify-between">
-              <Button asChild>
-                <a href={`/software/${toolName.id}`}>More Details</a>
-              </Button>
-            </CardFooter>
-          </Card>
+                <ul className="flex gap-3 flex-wrap mt-4 mb-2">
+                  {toolName.data.Tags.map((tag: string) => (
+                    <li key={tag} className="text-xs text-muted-foreground/75">
+                      #{tag}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter className="flex">
+                <Button asChild>
+                  <a href={`/software/${toolName.id}`}>More Details</a>
+                </Button>
+              </CardFooter>
+            </Card>
+          </a>
         ))}
-      </ul>
+      </div>
     </main>
   );
 };
