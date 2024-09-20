@@ -4,6 +4,7 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Button } from "@components/ui/button";
 import { ModeToggle } from "@components/modeToggle";
 import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 const menuitems = [
   // {
@@ -69,13 +70,21 @@ const menuitems = [
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <ModeToggle client:idle />
-          <Button> Submit </Button>
+          <a
+            href="https://github.com/ankitjaininfo/india-dev-stack"
+            target="_blank">
+            <Button> Submit </Button>
+          </a>
         </div>
       </MenuItems>
     </Astronav>
     <div class="hidden lg:flex items-center gap-4">
       <ModeToggle client:idle />
-      <Button className="rounded-full"> Submit </Button>
+      <a
+        href="https://github.com/ankitjaininfo/india-dev-stack"
+        target="_blank">
+        <Button className="rounded-full"> Submit </Button>
+      </a>
     </div>
   </header>
 </Container>

@@ -8,7 +8,7 @@ import {
   PopoverTrigger,
 } from "@components/ui/popover";
 import { Categories, tags } from "@utils/all";
-import { Card, CardContent, CardFooter, CardTitle } from "./ui/card";
+import { Card, CardContent, CardFooter } from "./ui/card";
 import { cn } from "@lib/utils";
 
 const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
@@ -48,7 +48,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
 
   const filterByTags = (entry: any) => {
     if (selectedTags.length === 0) return true;
-    return selectedTags.every((tag) => {
+    return selectedTags.some((tag) => {
       return entry.data.Tags.some((t: string) => {
         return t.toLowerCase() === tag.toLowerCase();
       });
@@ -93,7 +93,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
             <Popover>
               <PopoverTrigger asChild>
                 <Button variant={"outline"} className="rounded-full">
-                  Filters <ListFilter className="ml-2" size={16} />
+                  Category <ListFilter className="ml-2" size={16} />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-52 p-2 max-h-60 overflow-y-scroll">
@@ -102,7 +102,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
                     {Categories.map((category: string) => (
                       <li key={category}>
                         <Button
-                          className="w-full justify-start py-1 px-2"
+                          className="w-full justify-start capitalize py-1 px-2"
                           variant={"ghost"}
                           onClick={() =>
                             setSelectedCategory((prev) =>
@@ -136,7 +136,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
                           variant={"ghost"}
                           onClick={() => toggleTag(tag)}>
                           {tag}
-                          {selectedTags.includes(tag) && (
+                          {selectedTags.includes(tag.toLowerCase()) && (
                             <Check size={16} className="ml-2" />
                           )}
                         </Button>
@@ -195,7 +195,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mx-auto px-4">
         {filteredEntries.map((toolName: any, index: number) => (
-          <a href={"/software/" + toolName.id}>
+          <a href={"/software/" + toolName.id} key={index}>
             <Card
               key={toolName.id}
               className="h-full flex flex-col hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
