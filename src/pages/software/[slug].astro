@@ -8,7 +8,6 @@ import ProductGallery from "@components/ProductGallery";
 import Badge from "@components/ui/badge.astro";
 import React from "react";
 
-// Generate a new path for every collection entry
 export async function getStaticPaths() {
   const softwareEntries = await getCollection("software");
   return softwareEntries.map((entry) => ({
@@ -29,6 +28,13 @@ const { entry } = Astro.props;
           <ProductGallery client:idle images={entry.data.Images} />
         </div>
         <div>
+          <div class="flex items-center gap-2 mb-4">
+            {
+              entry.data.Tags.map((tag) => (
+                <Badge variant="secondary">{tag}</Badge>
+              ))
+            }
+          </div>
           <div class="flex gap-2 md:gap-4 h-16 md:h-20">
             {
               entry.data.Logo && (
@@ -40,23 +46,16 @@ const { entry } = Astro.props;
               )
             }
             <h1
-              class="text-3xl md:text-5xl lg:text-6xl text-foreground font-bold mb-2">
+              class="text-3xl md:text-5xl lg:text-6xl text-foreground font-bold">
               {entry.data.Name}
             </h1>
           </div>
 
-          <div class="flex items-center gap-2 mt-2">
-            {
-              entry.data.Tags.map((tag) => (
-                <Badge variant="secondary">{tag}</Badge>
-              ))
-            }
-          </div>
           {
             entry.data.Tagline && (
-              <p class="italic text-foreground/75 text-base">
+              <div class="italic text-foreground/75 text-lg lg:text-xl">
                 "{entry.data.Tagline}"
-              </p>
+              </div>
             )
           }
           <p class="text-muted-foreground leading-snug mt-4">
