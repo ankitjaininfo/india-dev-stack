@@ -6,6 +6,7 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
 const teamMembers = await getCollection("team", ({ data }) => {
+  console.log(data);
   return data;
 });
 ---
@@ -31,7 +32,7 @@ const teamMembers = await getCollection("team", ({ data }) => {
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         teamMembers.map((teamMemberEntry) => (
-          <div class="group">
+          <a class="group" href={teamMemberEntry.data.link} target="_blank">
             <div class="w-full aspect-square">
               <Picture
                 src={teamMemberEntry.data.avatar.src}
@@ -49,7 +50,7 @@ const teamMembers = await getCollection("team", ({ data }) => {
                 {teamMemberEntry.data.title}
               </h3>
             </div>
-          </div>
+          </a>
         ))
       }
     </div>

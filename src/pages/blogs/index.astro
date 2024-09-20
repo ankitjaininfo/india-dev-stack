@@ -24,10 +24,12 @@ const blogs = await getCollection("blogs");
               alt="Blog Image"
               class="rounded-xl shadow"
             />
-            <h2 class="text-lg md:text-xl font-semibold mt-4 px-2">
+            <h2 class="text-lg md:text-xl font-semibold mt-4 px-2 line-clamp-1">
               {blog.data.title}
             </h2>
-            <p class="text-muted-foreground">{blog.data.description}</p>
+            <p class="text-muted-foreground px-2 line-clamp-2">
+              {blog.data.description}
+            </p>
           </a>
         ))
       }
