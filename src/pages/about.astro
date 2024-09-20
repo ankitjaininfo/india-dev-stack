@@ -6,7 +6,6 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
 const teamMembers = await getCollection("team", ({ data }) => {
-  console.log(data);
   return data;
 });
 ---
