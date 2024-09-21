@@ -18,20 +18,12 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [filteredEntries, setFilteredEntries] = useState(softwareEntries);
 
-  const getSearchParams = (url: string) => {
-    const urlObj = new URL(url);
-    const params: { [key: string]: string } = {};
-    urlObj.searchParams.forEach((value, key) => {
-      params[key] = value;
-    });
-    return params;
-  };
-
   useEffect(() => {
-    const url = window.location.href;
-    const searchParams = getSearchParams(url);
-    console.log(searchParams);
-    
+    const searchParams = new URLSearchParams(window.location.search);
+    setSelectedPrice(searchParams.getAll('price'));
+    setSelectedTags(searchParams.getAll('tag'));
+    setSelectedCategory(searchParams.get('category'));
+    setSearchQuery(searchParams.get('search') || '');
   }, []);
 
   useEffect(() => {
@@ -56,6 +48,16 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
       return priceMatch && tagMatch && categoryMatch && searchMatch;
     });
     setFilteredEntries(filtered);
+
+    // Update URL
+    const searchParams = new URLSearchParams();
+    selectedPrice.forEach(price => searchParams.append('price', price));
+    selectedTags.forEach(tag => searchParams.append('tag', tag));
+    if (selectedCategory) searchParams.set('category', selectedCategory);
+    if (searchQuery) searchParams.set('search', searchQuery);
+    
+    const newUrl = `${window.location.pathname}?${searchParams.toString()}`;
+    window.history.pushState({ path: newUrl }, '', newUrl);
   }, [
     selectedPrice,
     selectedTags,
