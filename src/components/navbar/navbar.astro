@@ -4,6 +4,7 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Button } from "@components/ui/button";
 import { ModeToggle } from "@components/modeToggle";
 import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 const menuitems = [
   // {
@@ -25,24 +26,24 @@ const menuitems = [
     path: "/about",
   },
   {
-    title: "Guest Posts",
-    path: "/guestposts",
+    title: "Blogs",
+    path: "/blogs",
   },
 ];
 ---
 
 <Container>
   <header
-    class="flex flex-col lg:flex-row justify-between items-center my-5"
+    class="flex flex-col lg:flex-row backdrop-blur z-50 justify-between items-center py-2 rounded-2xl lg:rounded-full left-1/2 px-2 md:px-6 fixed top-1 bg-background/20 border-b lg:w-[87%] w-11/12 mx-auto -translate-x-1/2"
     id="top">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <Picture
-          height={18}
-          width={18}
+          height={20}
+          width={20}
           src="/officialLogos/logo-base-256x256.png"
           alt="IndiaDevStack"
-          class="w-8 h-8"
+          class="size-8 duration-1000 hover:animate-spin"
         />
         <a href="/" class="text-lg"
           ><span class="font-bold">India</span><span
@@ -69,13 +70,21 @@ const menuitems = [
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <ModeToggle client:idle />
-          <Button> Submit </Button>
+          <a
+            href="https://github.com/ankitjaininfo/india-dev-stack"
+            target="_blank">
+            <Button> Submit </Button>
+          </a>
         </div>
       </MenuItems>
     </Astronav>
     <div class="hidden lg:flex items-center gap-4">
       <ModeToggle client:idle />
-      <Button> Submit </Button>
+      <a
+        href="https://github.com/ankitjaininfo/india-dev-stack"
+        target="_blank">
+        <Button className="rounded-full"> Submit </Button>
+      </a>
     </div>
   </header>
 </Container>
