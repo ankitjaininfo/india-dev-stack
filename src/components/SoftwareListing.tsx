@@ -49,7 +49,6 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
     });
     setFilteredEntries(filtered);
 
-    // Update URL
     const searchParams = new URLSearchParams();
     selectedPrice.forEach(price => searchParams.append('price', price));
     selectedTags.forEach(tag => searchParams.append('tag', tag));

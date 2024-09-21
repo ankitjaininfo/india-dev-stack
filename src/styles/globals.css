@@ -54,7 +54,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground selection:text-white selection:bg-emerald-500;
+    @apply bg-background text-foreground selection:text-white selection:bg-primary;
   }
 }
 ::-webkit-scrollbar {
