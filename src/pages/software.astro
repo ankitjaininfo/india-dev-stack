@@ -7,6 +7,8 @@ import Sectionhead from "@components/sectionhead.astro";
 
 const softwareEntries = await getCollection("software");
 
+// const url = Astro.request;
+// console.log(url);
 ---
 
 <Layout title="Softwares">
@@ -18,6 +20,6 @@ const softwareEntries = await getCollection("software");
         the right ones for your needs quickly.
       </Fragment>
     </Sectionhead>
-    <SoftwareListing client:load softwareEntries={softwareEntries}/>
+    <SoftwareListing client:only="react" softwareEntries={softwareEntries} />
   </Container>
 </Layout>

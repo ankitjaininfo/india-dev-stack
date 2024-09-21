@@ -1,7 +1,7 @@
 import { Input } from "@components/ui/input";
 import { Button } from "@components/ui/button";
 import { Check, ListFilter, Search, Tag } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Popover,
   PopoverContent,
@@ -12,66 +12,71 @@ import { Card, CardContent, CardFooter } from "./ui/card";
 import { cn } from "@lib/utils";
 
 const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
-  const [selectedPrice, setSelectedPrice] = useState({
-    free: false,
-    paid: false,
-    freemium: false,
-  });
+  const [selectedPrice, setSelectedPrice] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [filteredEntries, setFilteredEntries] = useState(softwareEntries);
+
+  const getSearchParams = (url: string) => {
+    const urlObj = new URL(url);
+    const params: { [key: string]: string } = {};
+    urlObj.searchParams.forEach((value, key) => {
+      params[key] = value;
+    });
+    return params;
+  };
+
+  useEffect(() => {
+    const url = window.location.href;
+    const searchParams = getSearchParams(url);
+    console.log(searchParams);
+    
+  }, []);
+
+  useEffect(() => {
+    const filtered = softwareEntries.filter((entry) => {
+      const priceMatch =
+        selectedPrice.length === 0 ||
+        selectedPrice.includes(entry.data.pricing.toLowerCase());
+      const tagMatch =
+        selectedTags.length === 0 ||
+        selectedTags.some((tag) =>
+          entry.data.Tags.map((t: string) => t.toLowerCase()).includes(
+            tag.toLowerCase(),
+          ),
+        );
+      const categoryMatch =
+        !selectedCategory ||
+        entry.data.Category.toLowerCase() === selectedCategory.toLowerCase();
+      const searchMatch =
+        searchQuery === "" ||
+        entry.data.Name.toLowerCase().includes(searchQuery.toLowerCase());
+
+      return priceMatch && tagMatch && categoryMatch && searchMatch;
+    });
+    setFilteredEntries(filtered);
+  }, [
+    selectedPrice,
+    selectedTags,
+    selectedCategory,
+    searchQuery,
+    softwareEntries,
+  ]);
+
+  const togglePrice = (price: string) => {
+    setSelectedPrice((prev) =>
+      prev.includes(price) ? prev.filter((p) => p !== price) : [...prev, price],
+    );
+  };
 
   const toggleTag = (tag: string) => {
-    setSelectedTags((prevSelectedTags) => {
-      if (prevSelectedTags.includes(tag.toLowerCase())) {
-        return prevSelectedTags.filter((t) => t !== tag.toLowerCase());
-      } else {
-        return [...prevSelectedTags, tag.toLowerCase()];
-      }
-    });
+    setSelectedTags((prev) =>
+      prev.includes(tag.toLowerCase())
+        ? prev.filter((t) => t !== tag.toLowerCase())
+        : [...prev, tag.toLowerCase()],
+    );
   };
-
-  const filterByPrice = (entry: any) => {
-    if (selectedPrice.free && entry.data.pricing.toLowerCase() === "free")
-      return true;
-    if (selectedPrice.paid && entry.data.pricing.toLowerCase() === "paid plans")
-      return true;
-    if (
-      selectedPrice.freemium &&
-      entry.data.pricing.toLowerCase() === "freemium"
-    )
-      return true;
-    if (!selectedPrice.free && !selectedPrice.paid && !selectedPrice.freemium)
-      return true;
-    return false;
-  };
-
-  const filterByTags = (entry: any) => {
-    if (selectedTags.length === 0) return true;
-    return selectedTags.some((tag) => {
-      return entry.data.Tags.some((t: string) => {
-        return t.toLowerCase() === tag.toLowerCase();
-      });
-    });
-  };
-
-  const filterByCategory = (entry: any) => {
-    if (!selectedCategory) return true;
-    return entry.data.Category.toLowerCase() === selectedCategory.toLowerCase();
-  };
-
-  const filterBySearch = (entry: any) => {
-    if (searchQuery === "") return true;
-    return entry.data.Name.toLowerCase().includes(searchQuery.toLowerCase());
-  };
-
-  const filteredEntries = softwareEntries.filter(
-    (entry) =>
-      filterByPrice(entry) &&
-      filterByTags(entry) &&
-      filterByCategory(entry) &&
-      filterBySearch(entry),
-  );
 
   return (
     <main className="mt-10">
@@ -149,47 +154,18 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
           </div>
 
           <div className="flex flex-wrap gap-2">
-            <Button
-              variant={"outline"}
-              className="rounded-full"
-              onClick={() => {
-                setSelectedPrice((prev) => ({
-                  free: !prev.free,
-                  paid: false,
-                  freemium: false,
-                }));
-              }}>
-              Free{" "}
-              {selectedPrice.free ? <Check size={16} className="ml-1" /> : null}
-            </Button>
-            <Button
-              variant={"outline"}
-              className="rounded-full"
-              onClick={() => {
-                setSelectedPrice((prev) => ({
-                  free: false,
-                  paid: !prev.paid,
-                  freemium: false,
-                }));
-              }}>
-              Paid{" "}
-              {selectedPrice.paid ? <Check size={16} className="ml-1" /> : null}
-            </Button>
-            <Button
-              variant={"outline"}
-              className="rounded-full"
-              onClick={() => {
-                setSelectedPrice((prev) => ({
-                  free: false,
-                  paid: false,
-                  freemium: !prev.freemium,
-                }));
-              }}>
-              Freemium{" "}
-              {selectedPrice.freemium ? (
-                <Check size={16} className="ml-1" />
-              ) : null}
-            </Button>
+            {["free", "paid plans", "freemium"].map((price) => (
+              <Button
+                key={price}
+                variant={"outline"}
+                className="rounded-full"
+                onClick={() => togglePrice(price)}>
+                {price.charAt(0).toUpperCase() + price.slice(1)}
+                {selectedPrice.includes(price) && (
+                  <Check size={16} className="ml-1" />
+                )}
+              </Button>
+            ))}
           </div>
         </div>
       </div>
