@@ -2,85 +2,92 @@
 import { Picture } from "astro:assets";
 ---
 
-<div
-  class="grid grid-cols-3 min-h-[400px] gap-4 p-4 max-w-5xl mt-28 mx-auto text-white">
-  <a
-    href="/software?category=development"
-    class="col-span-1 relative row-span-2 overflow-hidden bg-gradient-to-b from-orange-400/60 dark:from-orange-800/80 to-transparent rounded-xl p-4 flex flex-col justify-between">
-    <div class="z-10">
-      <h2 class="text-xl font-semibold mb-2">Development</h2>
-      <p class="text-sm">
-        Tools and technologies we use to build your website.
-      </p>
-    </div>
-    <Picture
-      width={500}
-      height={500}
-      class="w-full h-full object-cover absolute top-0 left-0 -z-10"
-      src="https://image.lexica.art/full_webp/1c3ce7d1-8ae2-4af7-97e1-82c1ebf4b4e6"
-      alt="Development"
-    />
-  </a>
-
-  <a
-    href="/software?category=design"
-    class="col-span-1 bg-gradient-to-br from-pink-400/70 dark:from-pink-500/70 to-transparent relative overflow-hidden rounded-xl p-4">
-    <Picture
-      width={500}
-      height={500}
-      class="w-full h-full object-cover absolute top-0 left-0 -z-10"
-      src="https://assets.lummi.ai/assets/Qmev8LeNk9N5wNnK6LWMB6SLmffzpAoip4r3qRCAQhoHqe?auto=format&w=800"
-      alt="Design"
-    />
-    <h2 class="text-lg font-semibold">Design</h2>
-
-    <p class="text-sm">Design tools for your website</p>
-  </a>
-
-  <a
-    href="/software?category=collaboration"
-    class="col-span-1 relative bg-gradient-to-b from-slate-200 text-black to-transparent overflow-hidden rounded-xl p-4">
-    <Picture
-      width={500}
-      height={500}
-      class="w-full h-full object-cover absolute top-0 left-0 -z-10"
-      src="https://assets.lummi.ai/assets/QmT29xfrcTojyQGGMWRpyJhgcwUsADbBaaCthJnaF2bqQR?auto=format&w=800"
-      alt="Collaboration"
-    />
-    <h2 class="text-lg font-semibold">Collaboration</h2>
-
-    <p class="text-sm">Tools required for collaboration.</p>
-  </a>
-
-  <div class="grid grid-cols-3 gap-4 col-span-2">
+<section class="mb-20">
+  <h2
+    class="text-center text-5xl font-semibold my-6 bg-gradient-to-br from-foreground via-foreground/90 to-background/50 bg-clip-text text-transparent">
+    Trending Categories
+  </h2>
+  <div
+    class="grid grid-cols-3 min-h-[500px] gap-4 p-4 max-w-5xl mx-auto text-white">
     <a
-      href="/software?category=testing"
-      class="col-span-2 bg-gradient-to-br from-emerald-700 overflow-hidden to-transparent relative rounded-xl p-4">
+      href="/software?category=development"
+      class="col-span-1 relative group row-span-1 overflow-hidden bg-gradient-to-b from-orange-400/60 dark:from-orange-800/80 to-transparent rounded-xl p-4 flex flex-col justify-between">
+      <div class="z-10">
+        <h2 class="text-xl md:text-3xl font-semibold mb-2">Development</h2>
+      </div>
       <Picture
         width={500}
         height={500}
-        class="w-full h-full object-cover absolute top-0 left-0 -z-10"
-        src="https://assets.lummi.ai/assets/QmUqvy5ayZbdVptWQHQSCynRDR6k8TPbn6vHQeMXY8vepR?auto=format&w=800"
-        alt="Testing"
+        class="w-full h-full group-hover:scale-110 transition-all duration-500 object-cover absolute top-0 left-0 -z-10"
+        src="https://image.lexica.art/full_webp/1c3ce7d1-8ae2-4af7-97e1-82c1ebf4b4e6"
+        alt="Development"
       />
-      <h2 class="text-lg font-semibold">Testing</h2>
-
-      <p class="text-sm">Tools required for Testing your website.</p>
     </a>
 
     <a
-      href="/software?category=security"
-      class="col-span-1 overflow-hidden relative bg-gradient-to-b from-purple-800 to-transparent rounded-xl p-4">
+      href="/software?category=design"
+      class="col-span-1 bg-gradient-to-br group from-pink-400/70 dark:from-pink-500/70 to-transparent relative overflow-hidden rounded-xl p-4">
       <Picture
         width={500}
         height={500}
-        class="w-full h-full object-cover absolute top-0 left-0 -z-10"
-        src="https://image.lexica.art/full_webp/4ca08b4a-9271-4525-9ce8-8499acc369a7"
-        alt="Security"
+        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 absolute top-0 left-0 -z-10"
+        src="https://assets.lummi.ai/assets/Qmev8LeNk9N5wNnK6LWMB6SLmffzpAoip4r3qRCAQhoHqe?auto=format&w=800"
+        alt="Design"
       />
-      <h2 class="text-lg font-semibold">Security</h2>
+      <h2 class="text-xl md:text-3xl font-semibold">Design</h2>
+    </a>
 
-      <p class="text-sm">Tools required for security.</p>
+    <a
+      href="/software?category=collaboration"
+      class="col-span-1 relative group bg-gradient-to-b from-slate-200 text-black to-transparent overflow-hidden rounded-xl p-4">
+      <Picture
+        width={500}
+        height={500}
+        class="w-full h-full group-hover:scale-110 transition-all duration-500 object-cover absolute top-0 left-0 -z-10"
+        src="https://assets.lummi.ai/assets/QmT29xfrcTojyQGGMWRpyJhgcwUsADbBaaCthJnaF2bqQR?auto=format&w=800"
+        alt="Collaboration"
+      />
+      <h2 class="text-xl md:text-3xl font-semibold">Collaboration</h2>
+    </a>
+
+    <div class="grid grid-cols-3 gap-4 col-span-2">
+      <a
+        href="/software?category=testing"
+        class="col-span-2 bg-gradient-to-br group from-emerald-700 overflow-hidden to-transparent relative rounded-xl p-4">
+        <Picture
+          width={500}
+          height={500}
+          class="w-full h-full group-hover:scale-110 transition-all duration-500 object-cover absolute top-0 left-0 -z-10"
+          src="https://assets.lummi.ai/assets/QmUqvy5ayZbdVptWQHQSCynRDR6k8TPbn6vHQeMXY8vepR?auto=format&w=800"
+          alt="Testing"
+        />
+        <h2 class="text-xl md:text-3xl font-semibold">Testing</h2>
+      </a>
+
+      <a
+        href="/software?category=security"
+        class="col-span-1 overflow-hidden relative group bg-gradient-to-b from-purple-800 to-transparent rounded-xl p-4">
+        <Picture
+          width={500}
+          height={500}
+          class="w-full h-full group-hover:scale-110 transition-all duration-500 object-cover absolute top-0 left-0 -z-10"
+          src="https://image.lexica.art/full_webp/4ca08b4a-9271-4525-9ce8-8499acc369a7"
+          alt="Security"
+        />
+        <h2 class="text-xl md:text-3xl font-semibold">Security</h2>
+      </a>
+    </div>
+    <a
+      href="/software?category=devops"
+      class="col-span-1 overflow-hidden group relative bg-gradient-to-br from-blue-800 to-transparent rounded-xl p-4">
+      <Picture
+        width={500}
+        height={500}
+        class="w-full h-full group-hover:scale-110 transition-all duration-500 object-cover absolute top-0 left-0 -z-10"
+        src="https://assets.lummi.ai/assets/QmRwKwas1rCENiEVU7prQxkeBsv63uNF6P83qV6PvqEE5A?auto=format&w=1500"
+        alt="Devops"
+      />
+      <h2 class="md:text-3xl text-xl font-semibold">DevOps</h2>
     </a>
   </div>
-</div>
+</section>
