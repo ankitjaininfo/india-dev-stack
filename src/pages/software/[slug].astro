@@ -42,11 +42,16 @@ const { entry } = Astro.props;
           <div class="flex gap-2 md:gap-4 h-16 md:h-20">
             {
               entry.data.Logo && (
-                <img
-                  src={entry.data.Logo}
-                  alt={entry.data.Name}
-                  class="size-10 lg:size-12 mt-2 shadow-sm dark:shadow-orange-600 rounded-lg"
-                />
+                <a
+                  href={entry.data.Website}
+                  target="_blank"
+                  title="visit website">
+                  <img
+                    src={entry.data.Logo}
+                    alt={entry.data.Name}
+                    class="size-10 lg:size-12 cursor-pointer hover:brightness-150 hover:saturate-150 mt-2 shadow-sm dark:shadow-orange-600 rounded-lg"
+                  />
+                </a>
               )
             }
             <h1
