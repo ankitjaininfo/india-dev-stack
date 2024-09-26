@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://india-dev-stack.vercel.app/sitemap-index.xml
+Sitemap: https://india-dev-stack.com/sitemap-index.xml
