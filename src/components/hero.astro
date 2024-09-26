@@ -23,7 +23,7 @@ import { Picture } from "astro:assets";
     height={500}
     width={600}
     loading={"lazy"}
-    class="absolute h-52 top-28 left-10 -rotate-45 -translate-x-1/2 z-10"
+    class="absolute hidden md:block h-52 top-28 left-10 -rotate-45 -translate-x-1/2 z-10"
   />
 
   <Picture
@@ -32,7 +32,7 @@ import { Picture } from "astro:assets";
     height={500}
     width={600}
     loading={"lazy"}
-    class="absolute h-52 bottom-28 right-8 -rotate-45 translate-x-1/2 z-10"
+    class="absolute hidden md:block h-52 bottom-28 right-8 -rotate-45 translate-x-1/2 z-10"
   />
   <div
     class="rounded-full p-1 px-2 text-sm flex items-center cursor-pointer hover:scale-105 transition-all active:scale-95 active:rotate-2 duration-300 glow md:text-base backdrop-blur">

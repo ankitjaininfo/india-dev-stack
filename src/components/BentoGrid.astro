@@ -4,11 +4,11 @@ import { Picture } from "astro:assets";
 
 <section class="mb-20">
   <h2
-    class="text-center text-5xl font-semibold my-6 bg-gradient-to-br from-foreground via-foreground/90 to-background/50 bg-clip-text text-transparent">
+    class="text-center text-3xl md:text-5xl font-semibold my-6 bg-gradient-to-br from-foreground via-foreground/90 to-background/50 bg-clip-text text-transparent">
     Trending Categories
   </h2>
   <div
-    class="grid grid-cols-3 min-h-[500px] gap-4 p-4 max-w-5xl mx-auto text-white">
+    class="grid grid-cols-1 md:grid-cols-3 min-h-[100vh] md:min-h-[500px] gap-4 p-4 max-w-5xl mx-auto text-white">
     <a
       href="/software?category=development"
       class="col-span-1 relative group row-span-1 overflow-hidden bg-gradient-to-b from-orange-400/60 dark:from-orange-800/80 to-transparent rounded-xl p-4 flex flex-col justify-between">
@@ -50,10 +50,10 @@ import { Picture } from "astro:assets";
       <h2 class="text-xl md:text-3xl font-semibold">Collaboration</h2>
     </a>
 
-    <div class="grid grid-cols-3 gap-4 col-span-2">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 col-span-1 md:col-span-2">
       <a
         href="/software?category=testing"
-        class="col-span-2 bg-gradient-to-br group from-emerald-700 overflow-hidden to-transparent relative rounded-xl p-4">
+        class="col-span-1 md:col-span-2 bg-gradient-to-br group from-emerald-700 overflow-hidden to-transparent relative rounded-xl p-4">
         <Picture
           width={500}
           height={500}
