@@ -1,4 +1,4 @@
-name: Upload assets to GCS
+name: Publish website to india-dev-stack.com
 on:
   push:
     tags:
@@ -32,7 +32,7 @@ jobs:
       - name: Build Astro
         run: npm run build
 
-      - name: Read GCP Credentials
+      - name: Read GCP credentials
         id: 'auth'
         uses: 'google-github-actions/auth@v2'
         with:
@@ -41,5 +41,5 @@ jobs:
       - name: 'Set up GCP SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
 
-      - name: 'Upload Using gcloud CLI (rsync)'
-        run: 'gsutil -m rsync -R -d dist gs://beeceptor-static-websites-hosting/india-dev-stack-com/'
+      - name: 'Upload using gcloud CLI (rsync)'
+        run: 'gsutil -m rsync -R -d dist gs://india-dev-stack-com/'
