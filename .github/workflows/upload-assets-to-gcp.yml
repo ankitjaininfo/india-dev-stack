@@ -1,0 +1,45 @@
+name: Upload assets to GCS
+on:
+  push:
+    tags:
+      - 'release-*'
+jobs:
+  build-n-upload:
+    runs-on: ubuntu-latest
+
+    # Add "id-token" with the intended permissions.
+    permissions:
+      contents: 'read'
+      id-token: 'write' 
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@master
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.19.0'
+      - name: Cache Node.js Modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Astro
+        run: npm run build
+
+      - name: Read GCP Credentials
+        id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+      - name: 'Set up GCP SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+
+      - name: 'Upload Using gcloud CLI (rsync)'
+        run: 'gsutil -m rsync -R -d dist gs://beeceptor-static-websites-hosting/india-dev-stack-com/'

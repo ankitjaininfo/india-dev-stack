@@ -3,7 +3,7 @@ title: How to Do Developer Marketing
 description: How to Developer Marketing
 pubDate: "2024-09-18T00:00:00+05:30"
 heroImage: "/opengraph.png"
-author: "Anish"
+author: "Ankit"
 ---
 
 # How to Develop a Marketing Strategy
