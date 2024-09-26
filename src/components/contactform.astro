@@ -1,17 +1,18 @@
 ---
-import Button from "./ui/button.astro";
+import { Button } from "./ui/button";
 ---
 
-<!-- To make this contact form work, create your free access key from https://web3forms.com/
-     Then you will get all form submissions in your email inbox. -->
 <form
   action="https://api.web3forms.com/submit"
   method="POST"
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-  <!-- Create your free access key from https://web3forms.com/ -->
+  <input
+    type="hidden"
+    name="access_key"
+    value="607647c9-f8dc-4678-ad71-f7862986c74c"
+  />
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
     <input
@@ -52,7 +53,7 @@ import Button from "./ui/button.astro";
       Please enter your message.
     </div>
   </div>
-  <Button type="submit" size="lg" block>Send Message</Button>
+  <Button type="submit" size="lg">Send Message</Button>
   <div id="result" class="mt-3 text-center"></div>
 </form>
 

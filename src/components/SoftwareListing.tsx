@@ -20,10 +20,10 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
-    setSelectedPrice(searchParams.getAll('price'));
-    setSelectedTags(searchParams.getAll('tag'));
-    setSelectedCategory(searchParams.get('category'));
-    setSearchQuery(searchParams.get('search') || '');
+    setSelectedPrice(searchParams.getAll("price"));
+    setSelectedTags(searchParams.getAll("tag"));
+    setSelectedCategory(searchParams.get("category"));
+    setSearchQuery(searchParams.get("search") || "");
   }, []);
 
   useEffect(() => {
@@ -50,13 +50,13 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
     setFilteredEntries(filtered);
 
     const searchParams = new URLSearchParams();
-    selectedPrice.forEach(price => searchParams.append('price', price));
-    selectedTags.forEach(tag => searchParams.append('tag', tag));
-    if (selectedCategory) searchParams.set('category', selectedCategory);
-    if (searchQuery) searchParams.set('search', searchQuery);
-    
+    selectedPrice.forEach((price) => searchParams.append("price", price));
+    selectedTags.forEach((tag) => searchParams.append("tag", tag));
+    if (selectedCategory) searchParams.set("category", selectedCategory);
+    if (searchQuery) searchParams.set("search", searchQuery);
+
     const newUrl = `${window.location.pathname}?${searchParams.toString()}`;
-    window.history.pushState({ path: newUrl }, '', newUrl);
+    window.history.pushState({ path: newUrl }, "", newUrl);
   }, [
     selectedPrice,
     selectedTags,
@@ -172,7 +172,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mx-auto px-4">
         {filteredEntries.map((toolName: any, index: number) => (
-          <a href={"/software/" + toolName.id} key={index}>
+          <a href={"/software/" + toolName.id + "/"} key={index}>
             <Card
               key={toolName.id}
               className="h-full flex flex-col hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
@@ -221,7 +221,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               </CardContent>
               <CardFooter className="flex">
                 <Button asChild>
-                  <a href={`/software/${toolName.id}`}>More Details</a>
+                  <a href={`/software/${toolName.id}/`}>More Details</a>
                 </Button>
               </CardFooter>
             </Card>

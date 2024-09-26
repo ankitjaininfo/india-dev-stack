@@ -4,7 +4,6 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Button } from "@components/ui/button";
 import { ModeToggle } from "@components/modeToggle";
 import { Picture } from "astro:assets";
-import { Icon } from "astro-icon/components";
 
 const menuitems = [
   // {
@@ -18,16 +17,16 @@ const menuitems = [
   //   ],
   // },
   {
-    title: "Tools",
-    path: "/software",
-  },
-  {
-    title: "About",
-    path: "/about",
+    title: "Softwares",
+    path: "/software/",
   },
   {
     title: "Blogs",
-    path: "/blogs",
+    path: "/blogs/",
+  },
+  {
+    title: "Contact Us",
+    path: "/contact/",
   },
 ];
 ---
@@ -39,8 +38,8 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <Picture
-          height={20}
-          width={20}
+          height={24}
+          width={24}
           src="/officialLogos/logo-base-256x256.png"
           alt="IndiaDevStack"
           class="size-8 duration-1000 hover:animate-spin"
