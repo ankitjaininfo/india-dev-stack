@@ -12,13 +12,14 @@ const blogs = await getCollection("blogs");
     <Sectionhead>
       <Fragment slot="title">Blogs</Fragment>
       <Fragment slot="desc">
-        Blogs are a great way to share your thoughts and ideas with the world.
+        Curated blogs from the worldwide tech ecosystem about the latest trends
+        and technologies.
       </Fragment>
     </Sectionhead>
-    <div class="grid grid-cols-3 gap-8 mt-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
       {
         blogs.map((blog) => (
-          <a href={"/blogs/" + blog.slug}>
+          <a href={"/blogs/" + blog.slug} class="hover:-translate-y-1 transition-all">
             <img
               src={blog.data.heroImage}
               alt="Blog Image"

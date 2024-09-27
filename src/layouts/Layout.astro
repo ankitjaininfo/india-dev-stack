@@ -90,14 +90,11 @@ const makeTitle = title
       }}
     />
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <Navbar />
     <slot />
     <Footer />
     <style is:global>
-      body {
-        overflow-x: hidden;
-      }
       img {
         content-visibility: auto;
       }
