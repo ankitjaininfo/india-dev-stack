@@ -16,16 +16,18 @@ const ProductGallery = ({ images }: { images: string[] }) => {
           delay: 6000,
         }),
       ]}
-      className="rounded-lg mx-8">
-      <CarouselContent>
+      className="rounded-lg h-full mx-6">
+      <CarouselContent className="h-full">
         {images.map((image, i) => (
-          <CarouselItem key={i} className="flex items-center">
+          <CarouselItem
+            key={i}
+            className="flex h-full overflow-hidden items-center">
             <img
               src={image}
               width={600}
               height={600}
               alt="Product Image"
-              className="object-cover shadow-lg max-h-[65%] rounded"
+              className="object-cover shadow-lg rounded"
             />
           </CarouselItem>
         ))}

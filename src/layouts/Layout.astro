@@ -65,10 +65,9 @@ const makeTitle = title
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/officialLogos/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
       description="India Dev Stack - Software directory for indie developers"
@@ -90,14 +89,11 @@ const makeTitle = title
       }}
     />
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <Navbar />
     <slot />
     <Footer />
     <style is:global>
-      body {
-        overflow-x: hidden;
-      }
       img {
         content-visibility: auto;
       }

@@ -8,9 +8,9 @@ import { Picture } from "astro:assets";
     Trending Categories
   </h2>
   <div
-    class="grid grid-cols-1 md:grid-cols-3 min-h-[100vh] md:min-h-[500px] gap-4 p-4 max-w-5xl mx-auto text-white">
+    class="grid grid-cols-1 md:grid-cols-3 min-h-[120vh] md:min-h-[500px] gap-4 p-4 max-w-5xl mx-auto text-white">
     <a
-      href="/software?category=development"
+      href="/software/?category=development"
       class="col-span-1 relative group row-span-1 overflow-hidden bg-gradient-to-b from-orange-400/60 dark:from-orange-800/80 to-transparent rounded-xl p-4 flex flex-col justify-between">
       <div class="z-10">
         <h2 class="text-xl md:text-3xl font-semibold mb-2">Development</h2>
@@ -25,7 +25,7 @@ import { Picture } from "astro:assets";
     </a>
 
     <a
-      href="/software?category=design"
+      href="/software/?category=design"
       class="col-span-1 bg-gradient-to-br group from-pink-400/70 dark:from-pink-500/70 to-transparent relative overflow-hidden rounded-xl p-4">
       <Picture
         width={500}
@@ -38,7 +38,7 @@ import { Picture } from "astro:assets";
     </a>
 
     <a
-      href="/software?category=collaboration"
+      href="/software/?category=collaboration"
       class="col-span-1 relative group bg-gradient-to-b from-slate-200 text-black to-transparent overflow-hidden rounded-xl p-4">
       <Picture
         width={500}
@@ -52,7 +52,7 @@ import { Picture } from "astro:assets";
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 col-span-1 md:col-span-2">
       <a
-        href="/software?category=testing"
+        href="/software/?category=testing"
         class="col-span-1 md:col-span-2 bg-gradient-to-br group from-emerald-700 overflow-hidden to-transparent relative rounded-xl p-4">
         <Picture
           width={500}
@@ -65,7 +65,7 @@ import { Picture } from "astro:assets";
       </a>
 
       <a
-        href="/software?category=security"
+        href="/software/?category=security"
         class="col-span-1 overflow-hidden relative group bg-gradient-to-b from-purple-800 to-transparent rounded-xl p-4">
         <Picture
           width={500}
@@ -78,7 +78,7 @@ import { Picture } from "astro:assets";
       </a>
     </div>
     <a
-      href="/software?category=devops"
+      href="/software/?category=devops"
       class="col-span-1 overflow-hidden group relative bg-gradient-to-br from-blue-800 to-transparent rounded-xl p-4">
       <Picture
         width={500}
