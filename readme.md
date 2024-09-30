@@ -60,12 +60,13 @@ India Dev Stack is a curated directory of software development tools created by 
   - `/public/logos`: Logos of software you add
   - `/public/software`: Pics for software entries
 
-- `components/`: Reusable UI components
-- `layouts/`: Page layouts
-- `pages/`: Astro pages
-- `styles/`: Global styles
-- `utils/`: Utility functions
-- `content/software/`: Software entries in Markdown format
+- `src/`:
+  - `components/`: Reusable UI components
+  - `content/software/`: Software entries in .yaml format
+  - `layouts/`: Page layouts
+  - `pages/`: Astro pages
+  - `styles/`: Global styles
+  - `utils/`: Utility functions
 
 ## Contributing
 
@@ -78,6 +79,5 @@ We welcome contributions to India Dev Stack! If you'd like to add a new software
 5. Submit a pull request
 
 For more details, please refer to our [Contribution Guidelines](CONTRIBUTING.md).
-
 
 ### Powered by [Beeceptor](https://beeceptor.com/)
