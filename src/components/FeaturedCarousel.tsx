@@ -40,7 +40,7 @@ const FeaturedCarousel = ({ entries }: any) => {
                     </p>
                   </div>
                   <Button asChild variant={"outline"}>
-                    <a href={"/software/" + entry.id}>
+                    <a href={"/software/" + entry.id + "/"}>
                       View Details
                       <ArrowRightIcon className="size-4 ml-2 group-hover:ml-4 transition-all" />
                     </a>

@@ -57,7 +57,6 @@ const makeTitle = title
   setDarkMode(document);
 
   document.addEventListener("astro:before-swap", (ev) => {
-    // Pass the incoming document to set the theme on it
     setDarkMode(ev.newDocument);
   });
 </script>
@@ -70,7 +69,7 @@ const makeTitle = title
     <ViewTransitions />
     <SEO
       title={makeTitle}
-      description="India Dev Stack - Software directory for indie developers"
+      description="A curated collection of dev-tools and technologies from India, built to fuel software development and streamline the SDLC process. Explore hundreds of solutions that can supercharge your workflows."
       canonical={canonicalURL}
       twitter={{
         creator: "@xevenbiswas",
