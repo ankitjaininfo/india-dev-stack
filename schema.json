@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "properties": {
+    "Name": { "type": "string" },
+    "Tagline": { "type": ["string", "null"] },
+    "Description": { "type": "string" },
+    "Website": { "type": "string", "format": "uri" },
+    "Features": { "type": "array", "items": { "type": "string" } },
+    "Logo": { "type": "string" },
+    "Demo": { "type": ["string", "null"], "format": "uri" },
+    "Pricing": { "type": "string", "enum": ["Free", "Paid plans", "Freemium"] },
+    "Images": { "type": "array", "items": { "type": "string" } },
+    "Makers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Profile": { "type": "string", "format": "uri" },
+          "Name": { "type": "string" }
+        },
+        "required": ["Profile", "Name"]
+      }
+    },
+    "Category": { "type": "string" },
+    "Tags": { "type": "array", "items": { "type": "string" } },
+    "Stage": {
+      "type": "string",
+      "enum": ["Active Customers", "In Development", "Active Beta"]
+    },
+    "HQ": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "City": { "type": "string" },
+          "Country": { "type": "string" }
+        },
+        "required": ["City", "Country"]
+      }
+    },
+    "Customers": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": [
+    "Name",
+    "Description",
+    "Website",
+    "Features",
+    "Logo",
+    "Pricing",
+    "Images",
+    "Makers",
+    "Category",
+    "Tags",
+    "Stage",
+    "HQ",
+    "Customers"
+  ]
+}

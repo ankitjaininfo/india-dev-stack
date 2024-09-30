@@ -2,6 +2,8 @@
 
 India Dev Stack is a curated directory of software development tools created by Indian founders. This platform showcases and supports the incredible innovation emerging from Indian developers in the dev tools space.
 
+![hero-section](public/opengraph.png)
+
 ## Table of Contents
 
 - [Features](#features)
