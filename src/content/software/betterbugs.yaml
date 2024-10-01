@@ -9,11 +9,12 @@ Features:
   - "AI Assistant for quick bug analysis and diagnosis."
   - "Integration with project management tools like Jira, Slack, and Trello."
   - "Supports incognito mode and allows annotations directly in the tool."
-Logo: "assets/images/betterbugs_logo.png"
+Logo: "/logos/betterbugs.png"
 Demo: "https://www.betterbugs.io/demo"
 pricing: "Free"
 Images:
-  - "/softwares/betterBugs.webp"
+  - "/thumbnails/betterbugs.webp"
+  - "/thumbnails/betterbugs-record-screen-desktop.jpg"
 Makers:
   - Profile: "https://www.linkedin.com/in/nishil-p-70639765/"
     Name: Nishil Patel
