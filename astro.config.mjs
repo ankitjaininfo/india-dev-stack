@@ -8,7 +8,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   image: sharpImageService(),
-  trailingSlash: 'always',
   site: "https://india-dev-stack.com",
   integrations: [
     tailwind({ applyBaseStyles: false }),
