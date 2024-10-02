@@ -56,6 +56,9 @@
   body {
     @apply bg-background text-foreground selection:text-white selection:bg-primary;
   }
+  strong {
+    @apply text-foreground;
+  }
 }
 ::-webkit-scrollbar {
   width: 5px;
