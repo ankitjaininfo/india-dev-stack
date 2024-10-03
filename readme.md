@@ -1,16 +1,8 @@
 # India Dev Stack
 
-India Dev Stack is a curated directory of software development tools created by Indian founders. This platform showcases and supports the incredible innovation emerging from Indian developers in the dev tools space.
+[India Dev Stack](https://india-dev-stack.com/?utm_source=github) is a curated directory of software development tools created by Indian founders. This platform showcases and supports the incredible innovation emerging from Indian developers in the dev tools space.
 
 ![hero-section](public/opengraph.png)
-
-## Table of Contents
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
 
 ## Features
 
@@ -20,6 +12,35 @@ India Dev Stack is a curated directory of software development tools created by 
 - Search and filter functionality
 - Responsive design for various devices
 - Dark mode support
+
+## How to submit your software
+
+We welcome contributions to [India Dev Stack](https://india-dev-stack.com/?utm_source=github)! If you'd like to add a new software tool, please follow these steps:
+
+1. Fork this repository
+2. Create a new YAML for your software in `/src/content/software/` with all the details. Ensure that you add right category, tags, description, demo link, top features, etc. The name of the file will be the slug in the URL.
+3. Add a logo (`/public/logos`) and thumbnails (`/public/thumbnails`) directory.
+4. Submit a pull request
+
+For more details, please refer to our [Contribution Guidelines](CONTRIBUTING.md).
+
+## Submission Criteria
+
+- At least one founder must be Indian or have a substantial presence or development center in India.
+- The tool must be dedicated to software development and testing, enhancing any stage of the SDLC, and boosting team productivity and effectiveness.
+
+#### Good Examples:
+
+- IDEs or Code Editors
+- Testing tools
+- Tools that enhance software development productivity
+- Project management tools for software teams
+- Tools for measuring software team productivity
+
+#### Bad Examples:
+
+- API products focused solely on integration
+- Tools whose ideal customer profiles are not CTOs, Engineering Managers, Developers, or QA personnel
 
 ## Technologies Used
 
@@ -54,30 +75,16 @@ India Dev Stack is a curated directory of software development tools created by 
 
 ## Project Structure
 
-- `public`:
+#### Static Content
 
-  - `/public/blog`: Pics for blog posts
-  - `/public/logos`: Logos of software you add
-  - `/public/software`: Pics for software entries
+- `public`:
+  - `/public/blog-assets`: Pics for blog posts
+  - `/public/logos`: Logos of the company
+  - `/public/thumbnails`: Upload thumbnails for software entries.
+
+#### Dynamic Content
 
 - `src/`:
-  - `components/`: Reusable UI components
-  - `content/software/`: Software entries in .yaml format
-  - `layouts/`: Page layouts
-  - `pages/`: Astro pages
-  - `styles/`: Global styles
-  - `utils/`: Utility functions
+  - `content/software/`: Software entries in .yaml format. One file, one entry.
+  - `content/blogs/`: You are invited to write new content for fellow founders.
 
-## Contributing
-
-We welcome contributions to India Dev Stack! If you'd like to add a new software tool or improve the platform, please follow these steps:
-
-1. Fork the repository
-2. Create a new yaml for your software with all the details and add it to the `content/software` directory
-3. Add a logo for your software in the `public/logos` directory and add the picture in the `public/software` directory
-4. Make your other necessary changes
-5. Submit a pull request
-
-For more details, please refer to our [Contribution Guidelines](CONTRIBUTING.md).
-
-### Powered by [Beeceptor](https://beeceptor.com/)
