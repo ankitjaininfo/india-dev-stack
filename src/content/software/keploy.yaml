@@ -1,0 +1,37 @@
+Name: "Keploy"
+Tagline: "AI-powered Open Source API Test & Mock Data Generator"
+Description: "Keploy is an open-source tool designed to create and automate API test cases, stubs, and data mocks for developers. It utilizes eBPF for code-less instrumentation, allowing it to record API calls and replay them as test cases, significantly reducing the time required for manual test creation. Keploy is built to integrate with CI/CD pipelines and provides high test coverage for backend testing."
+Website: "https://keploy.io"
+Features:
+  - "Automatically records API calls and generates test cases."
+  - "Supports complex distributed API flows as mocks and stubs."
+  - "eBPF-based code-less instrumentation for easy integration."
+  - "Integrates seamlessly with CI/CD pipelines for continuous testing."
+  - "Supports multiple programming languages like Go, Java, and Python."
+  - "TLS support for secure testing of HTTPS and database connections."
+  - "No need for dedicated test environments; mocks all dependencies."
+Logo: "/logos/keploy.png"
+Demo: "https://www.youtube.com/watch?v=gvWvpqWM48s"
+Pricing: "Free"
+Images:
+  - "/thumbnails/keploy-cli.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/neha-gup/"
+    Name: "Neha Gupta"
+  - Profile: "https://www.linkedin.com/in/slayerjain/"
+    Name: "Shubham Jain"
+Category: "Testing"
+Tags:
+  - "API"
+  - "Mocks"
+  - "Testing"
+  - "eBPF"
+  - "Automation"
+  - "Open Source"
+Stage: "Active Customers"
+HQ:
+  - City: "San Francisco"
+    Country: "USA"
+Customers:
+  - "Wednesday Solutions"
+  - "Nutanix"
