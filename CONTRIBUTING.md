@@ -54,9 +54,9 @@ Logo: "/logos/beeceptor_logo.jpeg"
 Demo: "https://www.youtube.com/watch?v=eauSgng86ac"
 pricing: "Freemium"
 Images:
-  - "/softwares/beeceptor-main.webp"
-  - "/softwares/beeceptor-local-tunnel.png"
-  - "/softwares/beeceptor-placement.png"
+  - "/thumbnails/beeceptor-main.webp"
+  - "/thumbnails/beeceptor-local-tunnel.png"
+  - "/thumbnails/beeceptor-placement.png"
 
 Makers:
   - Profile: "https://www.linkedin.com/in/ankitjaininfo/"
