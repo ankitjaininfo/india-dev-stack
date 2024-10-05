@@ -1,0 +1,33 @@
+Name: "Devzery"
+Tagline: "AI Powered End-To-End API Regression testing"
+Description: "Devzery is a comprehensive testing platform focused on AI-powered automated API regression testing, aimed at streamlining the software development lifecycle. It offers codeless test case generation, integration with CI/CD tools, and support for multiple programming languages, ensuring efficient testing, fast deployments, and high-quality product releases for small to medium-sized businesses."
+Website: "https://www.devzery.com"
+Features:
+  - "AI-powered automated API regression testing."
+  - "Codeless test case generation for rapid iteration."
+  - "Integration with CI/CD pipelines for continuous testing."
+  - "Middleware SDK support for multiple programming languages."
+  - "Open-source UI test case generator."
+  - "Detailed reporting and analysis of test metrics."
+  - "Slack notifications for asynchronous collaboration."
+Logo: "/logos/devzery.png"
+Pricing: "Freemium"
+Makers:
+  - Profile: "https://www.linkedin.com/in/nitish-varma/"
+    Name: "Nitish Varma"
+  - Profile: "https://www.linkedin.com/in/hemnaasubburaj/"
+    Name: "Hemnaa Subburaj"
+Category: "Testing"
+Tags:
+  - "API"
+  - "Regression"
+  - "Automation"
+  - "Testing"
+  - "CI/CD"
+  - "AI"
+Stage: "Active Beta"
+HQ:
+  - City: "Chennai"
+    Country: "India"
+Customers:
+  - "N/A"
