@@ -11,6 +11,8 @@ import { Categories, tags } from "@utils/all";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { cn } from "@lib/utils";
 
+const PLACEHOLDER_IMAGES = ["/thumbnails/placeholder-1.png", "/thumbnails/placeholder-2.png"];
+
 const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
   const [selectedPrice, setSelectedPrice] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -177,7 +179,9 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
               key={toolName.id}
               className="h-full flex flex-col hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
               <img
-                src={toolName.data.Images[0]}
+                src={toolName.data.Images && toolName.data.Images.length > 0 
+                    ? toolName.data.Images[0] 
+                    : PLACEHOLDER_IMAGES[Math.floor(Math.random() * PLACEHOLDER_IMAGES.length)]}
                 alt={toolName.data.Name}
                 sizes="(max-width: 800px) 100vw, 800px"
                 width={800}

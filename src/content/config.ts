@@ -11,7 +11,7 @@ const softwareCollection = defineCollection({
     Logo: z.string(),
     Demo: z.string().url().optional(),
     Pricing: z.enum(["Free", "Paid plans", "Freemium", "Free Trial"]),
-    Images: z.array(z.string()),
+    Images: z.array(z.string()).optional(),
     Makers: z.array(
       z.object({
         Profile: z.string().url(),
@@ -27,7 +27,7 @@ const softwareCollection = defineCollection({
         Country: z.string(),
       })
       .array(),
-    Customers: z.array(z.string()),
+    Customers: z.array(z.string()).optional(),
   }),
 });
 
