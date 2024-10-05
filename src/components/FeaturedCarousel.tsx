@@ -10,6 +10,8 @@ import { ArrowRightIcon } from "lucide-react";
 import { Card, CardContent } from "@components/ui/card";
 import { Button } from "./ui/button";
 
+const PLACEHOLDER_IMAGES = ["/thumbnails/placeholder-1.png", "/thumbnails/placeholder-2.png"];
+
 const FeaturedCarousel = ({ entries }: any) => {
   return (
     <Carousel
@@ -26,7 +28,7 @@ const FeaturedCarousel = ({ entries }: any) => {
             <CarouselItem key={entry.id} className="lg:basis-1/3 sm:basis-1/2">
               <Card className="h-full hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
                 <img
-                  src={entry.data.Images[0]}
+                  src={entry.data.Images && entry.data.Images.length > 0 ? entry.data.Images[0] : PLACEHOLDER_IMAGES[0]}
                   width={400}
                   height={500}
                   alt={entry.data.Name}
