@@ -8,7 +8,7 @@
     "Features": { "type": "array", "items": { "type": "string" } },
     "Logo": { "type": "string" },
     "Demo": { "type": ["string", "null"], "format": "uri" },
-    "Pricing": { "type": "string", "enum": ["Free", "Paid plans", "Freemium"] },
+    "Pricing": { "type": "string", "enum": ["Free", "Paid plans", "Freemium", "Free Trial"] },
     "Images": { "type": "array", "items": { "type": "string" } },
     "Makers": {
       "type": "array",

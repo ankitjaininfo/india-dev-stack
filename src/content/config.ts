@@ -10,7 +10,7 @@ const softwareCollection = defineCollection({
     Features: z.array(z.string()),
     Logo: z.string(),
     Demo: z.string().url().optional(),
-    pricing: z.enum(["Free", "Paid plans", "Freemium"]),
+    Pricing: z.enum(["Free", "Paid plans", "Freemium", "Free Trial"]),
     Images: z.array(z.string()),
     Makers: z.array(
       z.object({

@@ -11,7 +11,7 @@ Features:
   - "No-code interface with CORS support and templating for responses."
 Logo: "/logos/beeceptor.jpeg"
 Demo: "https://www.youtube.com/watch?v=eauSgng86ac"
-pricing: "Freemium"
+Pricing: "Freemium"
 Images:
   - "/thumbnails/beeceptor-main.webp"
   - "/thumbnails/beeceptor-local-tunnel.png"
