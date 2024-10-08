@@ -1,0 +1,32 @@
+Name: "HatchFast"
+Tagline: "No-Code Test Automation with Lightning Speed"
+Description: "HatchFast is an automation tool designed to streamline software testing by providing a no-code, lightning-fast solution. It enables end-to-end test management, integrates with CI/CD pipelines, and offers features such as intelligent element detection, in-built schedulers, and distributed test execution. HatchFast aims to improve productivity by automating repetitive test tasks and minimizing failures, helping teams deliver quality software faster."
+Website: "https://hatchfast.dev"
+Features:
+  - "No-code platform for test automation."
+  - "Integrates with CI/CD tools and Jira for seamless automation."
+  - "In-built WebDriver management and scheduler."
+  - "Distributed and parallel test execution."
+  - "Real-time defect analysis and triage."
+  - "Bottleneck analysis for optimized test runs."
+Logo: "/logos/hatchfast.png"
+Pricing: "Freemium"
+Makers:
+  - Profile: "https://www.linkedin.com/in/rajeshkalane/"
+    Name: "Rajesh Kalane"
+  - Profile: "https://www.linkedin.com/in/sachinbaiskar/"
+    Name: "Sachin Baiskar"
+Category: "Testing"
+Tags:
+  - "Automation"
+  - "No-code"
+  - "Testing"
+  - "CI/CD"
+  - "Defect Analysis"
+  - "Distributed Execution"
+Stage: "Active Customers"
+HQ:
+  - City: "Pune"
+    Country: "India"
+Customers:
+  - "N/A"
