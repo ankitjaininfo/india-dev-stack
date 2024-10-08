@@ -1,0 +1,32 @@
+Name: "Metz"
+Tagline: "Collaborative System Design with Code"
+Description: "Metz is an advanced tool for creating interactive diagrams using TypeScript code. It allows developers to visualize and simulate complex system designs as state machines. With Metz, you can express architecture through code, providing a more flexible and powerful approach to system design, documentation, and communication. It's ideal for teams looking to collaborate on engineering flows and architecture."
+Website: "https://metz.sh"
+Features:
+  - "Create interactive system diagrams with TypeScript."
+  - "Simulate system designs as state machines."
+  - "Collaborate on architecture like Figma, but for engineers."
+  - "Supports dynamic flows and async operations."
+  - "Run and visualize system behaviors with no-code UI."
+Logo: "/logos/metz-sh.jpeg"
+Demo: "https://try.metz.sh"
+Pricing: "Free"
+Images:
+  - "/thumbnails/metz-sh-designer.png"
+  - "/thumbnails/metz-sh-flow.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/iostreamer/"
+    Name: "Rahul Ramteke"
+Category: "Development"
+Tags:
+  - "System Design"
+  - "Visualization"
+  - "Code-first"
+  - "Architecture"
+  - "Collaboration"
+Stage: "In Development"
+HQ:
+  - City: "Bengaluru"
+    Country: "India"
+Customers:
+  - "N/A"
