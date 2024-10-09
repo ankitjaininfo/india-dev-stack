@@ -1,0 +1,30 @@
+Name: "iCodeTest"
+Tagline: "AI-powered Developer Productivity & Unit Test Generator"
+Description: "iCodeTest is an AI-powered tool designed to boost developer productivity by automating unit test generation. It helps software development teams focus on creating high-quality code with fewer iterations and reworks. By integrating with IDEs like IntelliJ, it enables seamless generation of unit tests, improving overall efficiency and minimizing technical debt."
+Website: "https://www.icodetest.com"
+Features:
+  - "AI-powered automatic unit test generation."
+  - "Integrates with IntelliJ IDEA for easy test creation."
+  - "Helps reduce technical debt and rework."
+  - "Improves development speed and code quality."
+  - "Offers seamless integration into existing workflows."
+Logo: "/logos/icodetest.png"
+Pricing: "Freemium"
+Images:
+  - "/thumbnails/icodetest.gif"
+Makers:
+  - Profile: "https://www.linkedin.com/in/harshal-kherde/"
+    Name: "Harshal Kherde"
+Category: "Developer Tools"
+Tags:
+  - "Testing"
+  - "Automation"
+  - "Productivity"
+  - "Unit Testing"
+  - "AI"
+Stage: "Active Customers"
+HQ:
+  - City: "Hyderabad"
+    Country: "India"
+Customers:
+  - "N/A"
