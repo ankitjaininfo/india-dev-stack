@@ -1,0 +1,32 @@
+Name: "CtrlB"
+Tagline: "Redefining Observability and Debugging with Real-time Data"
+Description: "CtrlB is an advanced observability platform designed for developers, allowing real-time analysis, troubleshooting, and debugging without the need for redeployment or restarts. It supports live debugging, adding logs, metrics, and traces on demand, and helps streamline observability by eliminating the need for multiple data stores and expensive licenses. The platform’s key feature, CtrlB Flow, enables sub-second queries across petabytes of data, offering real-time event streaming, data filtering, and advanced querying."
+Website: "https://ctrlb.ai"
+Features:
+  - "Real-time live debugging without restarts or redeployments."
+  - "Advanced querying with Lucene & SQL, instantly queryable data."
+  - "Schema-less data management and index-free setup."
+  - "Supports major logging and observability platforms like Splunk, DataDog, and Elastic."
+  - "Sub-second response times for querying across large datasets."
+Logo: "/logos/ctrlb.png"
+Pricing: "Freemium"
+Images:
+  - "/thumbnails/ctrlb.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/adarshsrivastava/"
+    Name: "Adarsh Srivastava"
+  - Profile: "https://www.linkedin.com/in/mayank-singh-chauhan/"
+    Name: "Mayank Singh Chauhan"
+Category: "DevOps"
+Tags:
+  - "Debugging"
+  - "Observability"
+  - "Real-time"
+  - "Data Streaming"
+  - "Logs"
+Stage: "Active Customers"
+HQ:
+  - City: "Bangalore"
+    Country: "India"
+Customers:
+  - "N/A"
