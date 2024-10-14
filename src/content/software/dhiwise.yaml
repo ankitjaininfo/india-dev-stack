@@ -1,0 +1,37 @@
+Name: "DhiWise"
+Tagline: "Empowering Developers with Design to Code Automation"
+Description: "DhiWise is a platform that helps developers convert Figma designs into clean, modular, and reusable code for mobile and web apps. It automates the application development lifecycle, offering support for React, Flutter, and Next.js. DhiWise's Smart Editor allows real-time editing of app designs and integrates APIs effortlessly. The platform prioritizes developer experience with features like Git sync, pre-built templates, and seamless design to code conversion."
+Website: "https://www.dhiwise.com"
+Features:
+  - "Convert Figma designs into React, Flutter, and Next.js code."
+  - "Smart Editor with real-time design rendering and code preview."
+  - "Supports API integrations, including Firebase and Supabase."
+  - "Pre-built templates and 1000+ screens for faster development."
+  - "Seamless Git integration for code synchronization."
+  - "No vendor lock-in; export and own your source code."
+Logo: "/logos/dhiwise.png"
+Demo: "https://www.youtube.com/watch?v=U34V7ziWvDc"
+Pricing: "Freemium"
+Images:
+  - "/thumbnails/dhiwise-editor.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/vishalvirani/"
+    Name: "Vishal Virani"
+  - Profile: "https://www.linkedin.com/in/rahul-shingala-a70619a3/"
+    Name: "Rahul Shingala"
+Category: "Development"
+Tags:
+  - "Figma to Code"
+  - "Automation"
+  - "Web Development"
+  - "Mobile App Development"
+  - "React"
+  - "Flutter"
+Stage: "Active Customers"
+HQ:
+  - City: "Surat"
+    Country: "India"
+Customers:
+  - "Nomad Creatives"
+  - "Intermorphic"
+  - "Third Eye Cyborg"
