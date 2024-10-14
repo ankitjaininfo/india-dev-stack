@@ -1,0 +1,31 @@
+Name: "Deployment.io"
+Tagline: "AI-Powered DevOps for Seamless Cloud Deployments"
+Description: "Deployment.io is an AI-powered DevOps platform built for startups and agile engineering teams to streamline cloud deployments on AWS. The platform automates continuous integration and delivery (CI/CD), simplifies infrastructure setup, and eliminates the need for manual scripting or extensive DevOps expertise. It provides one-click deployments for static sites, web services, and private services, with automatic environment previews and cost-saving features for AWS."
+Website: "https://deployment.io"
+Features:
+  - "AI-powered automation for CI/CD pipelines and deployments."
+  - "Deploy static sites, web services, and private services on AWS."
+  - "Create and manage environments quickly with built-in previews."
+  - "Real-time build and application logs for monitoring."
+  - "Cost-saving tools for managing cloud infrastructure."
+Logo: "/logos/deployment-io.png"
+Pricing: "Freemium"
+Images:
+  - "/thumbnails/deployment-io-dashboard.png"
+  - "/thumbnails/deployment-io-custom-domains.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/ankitaroratech/"
+    Name: "Ankit Arora"
+Category: "DevOps"
+Tags:
+  - "CI/CD"
+  - "Cloud Deployment"
+  - "DevOps Automation"
+  - "AWS"
+  - "AI"
+Stage: "Active Customers"
+HQ:
+  - City: "Delhi"
+    Country: "India"
+Customers:
+  - "N/A"
