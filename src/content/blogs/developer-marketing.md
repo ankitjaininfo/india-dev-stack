@@ -9,6 +9,7 @@ tags:
 ---
 
 # Introduction to Developer Marketing
+
 Developer marketing is about connecting with developers, a distinct and influential group that requires a very different approach than traditional consumers or businesses. Instead of glitzy ads and big promises, developers look for real value, transparency, and technical details. Understanding this difference is key to making an impact.
 
 ## What is Developer Marketing?
