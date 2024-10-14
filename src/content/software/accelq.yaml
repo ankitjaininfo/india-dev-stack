@@ -1,0 +1,35 @@
+Name: "ACCELQ"
+Tagline: "Codeless Test Automation for Web, API, Mobile, and Desktop"
+Description: "ACCELQ is an AI-powered codeless test automation platform that accelerates testing across web, API, mobile, and desktop applications. It simplifies test creation, management, and execution with a no-code approach, allowing manual testers and business analysts to automate without programming. ACCELQ integrates seamlessly into CI/CD pipelines and offers advanced capabilities like intelligent element handling, auto-healing scripts, and cloud-based execution, making it a preferred solution for Agile teams."
+Website: "https://www.accelq.com"
+Features:
+  - "Codeless automation for Web, API, Mobile, and Desktop applications."
+  - "AI-powered test automation with self-healing capabilities."
+  - "In-sprint automation for fast-paced Agile environments."
+  - "Integrates with Jira, Jenkins, Bamboo, and other CI/CD tools."
+  - "Predictive analytics and path analysis for comprehensive coverage."
+  - "Cross-browser, cross-platform execution with cloud or on-premise options."
+Logo: "/logos/accelq.jpeg"
+Demo: "https://www.youtube.com/watch?v=RT4SZB1bn9U"
+Pricing: "Paid plans"
+Images:
+  - "/thumbnails/accelq-dashboard.png"
+  - "/thumbnails/accelq-testcase.jpeg"
+Makers:
+  - Profile: "https://www.linkedin.com/in/mahendra-alladi/"
+    Name: "Mahendra Alladi"
+Category: "Testing"
+Tags:
+  - "Automation"
+  - "Codeless"
+  - "API Testing"
+  - "Mobile Testing"
+  - "Web Testing"
+Stage: "Active Customers"
+HQ:
+  - City: "Hyderabad"
+    Country: "India"
+Customers:
+  - "Siemens AG"
+  - "Salesforce"
+  - "BMC Software"
