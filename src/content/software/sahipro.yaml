@@ -1,0 +1,35 @@
+Name: "Sahi Pro"
+Tagline: "Enterprise-Grade Test Automation Across Platforms"
+Description: "Sahi Pro is an enterprise-grade test automation platform designed for functional testing of web, desktop, mobile, and SAP applications. It offers advanced features such as automatic waits, cross-browser compatibility, parallel execution, and AI-based element identification. Sahi Pro is built for testers, providing easy-to-use tools that require minimal programming knowledge and support for complex automation tasks in dynamic environments."
+Website: "https://www.sahipro.com"
+Features:
+  - "Automates testing of web, desktop, mobile, and SAP applications."
+  - "Supports complex applications using OCR and image recognition."
+  - "Cross-browser testing with intelligent element identification."
+  - "Inbuilt logging and detailed reporting for script analysis."
+  - "Business Driven Test Automation (BDTA) with a spreadsheet interface."
+Logo: "/logos/sahipro.png"
+Demo: "https://www.youtube.com/watch?v=P8EVvyXzqkg"
+Pricing: "Paid plans"
+Images:
+  - "/thumbnails/sahipro-features.png"
+  - "/thumbnails/sahipro-dashboard.png"
+  - "/thumbnails/sahipro-flowchart.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/narayanraman/"
+    Name: "Narayan Raman"
+Category: "Testing"
+Tags:
+  - "Automation"
+  - "Web Testing"
+  - "Desktop Testing"
+  - "Mobile Testing"
+  - "SAP Testing"
+Stage: "Active Customers"
+HQ:
+  - City: "Bangalore"
+    Country: "India"
+Customers:
+  - "CEVA Logistics"
+  - "MetricStream"
+  - "Mahindra Comviva"
