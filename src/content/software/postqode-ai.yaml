@@ -1,0 +1,27 @@
+Name: "PostQode"
+Tagline: "AI-Powered API Testing with Automated Contextual Test Generation"
+Description: "PostQode leverages advanced AI to transform API testing through automated test case generation and intelligent script creation. The platform enhances efficiency by significantly reducing manual effort, allowing teams to focus on faster releases and improving productivity. With features like human-in-the-loop review and natural language explanations, PostQode ensures high accuracy, reliability, and seamless testing workflows."
+Website: "https://postqode.ai"
+Features:
+  - "AI-driven test case generation from API specifications."
+  - "Automates complex API testing with context-specific scripts."
+  - "Human-in-the-loop feedback to improve accuracy."
+  - "Natural language explanations for code understanding."
+  - "Reduces testing time and boosts productivity by 5X."
+Logo: "/logos/postqode.png"
+Pricing: "Free"
+Makers:
+  - Profile: "https://www.linkedin.com/in/gopinathanandavar/"
+    Name: "Gopinathan A"
+Category: "Testing"
+Tags:
+  - "API Testing"
+  - "Automation"
+  - "AI"
+  - "Productivity"
+Stage: "Active Beta"
+HQ:
+  - City: "Bangalore"
+    Country: "India"
+Customers:
+  - "N/A"
