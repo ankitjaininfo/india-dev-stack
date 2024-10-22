@@ -1,0 +1,35 @@
+Name: "Squadcast"
+Tagline: "SRE-Driven Incident Management for Reliable Systems"
+Description: "Squadcast is an integrated reliability platform that centralizes on-call management, incident response, and SRE workflows. Designed for DevOps teams, it supports proactive incident management, automated alerting, and efficient collaboration. It offers features like ChatOps integrations, role-based access control (RBAC), runbooks, and customizable workflows, helping teams reduce mean time to resolution (MTTR) and achieve operational excellence."
+Website: "https://www.squadcast.com"
+Features:
+  - "Automated incident management and alert routing."
+  - "Seamless ChatOps integration with Slack, MS Teams, and more."
+  - "Customizable workflows for streamlined incident handling."
+  - "Role-based access control and multi-team management."
+  - "Integrated runbooks for faster incident resolution."
+  - "Comprehensive analytics with SLO tracking."
+Logo: "/logos/squadcast.png"
+Demo: "https://www.youtube.com/watch?v=6dGBS5NAsvs"
+Pricing: "Freemium"
+Images:
+  - "/thumbnails/squadcast-dashboard.jpeg"
+  - "/thumbnails/squadcast-incidents.jpeg"
+Makers:
+  - Profile: "https://www.linkedin.com/in/omiyosan/"
+    Name: "Amiya Adwitiya"
+Category: "DevOps"
+Tags:
+  - "Incident Response"
+  - "SRE"
+  - "Alerting"
+  - "Runbooks"
+Stage: "Active Customers"
+HQ:
+  - City: "Bengaluru"
+    Country: "India"
+Customers:
+  - "KFC"
+  - "AirAsia"
+  - "Publica.la"
+  - "Qure.ai"
