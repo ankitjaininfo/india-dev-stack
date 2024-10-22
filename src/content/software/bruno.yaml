@@ -1,0 +1,31 @@
+Name: "Bruno"
+Tagline: "Fast, Git-Friendly, and Open-Source API Client"
+Description: "Bruno is an open-source API client that aims to revolutionize API testing by providing a fast, offline-first, and Git-friendly alternative to traditional API tools like Postman. It leverages the plain-text Bru language for saving API requests and stores collections directly on your filesystem, making version control seamless. Bruno supports collaboration through Git and prioritizes user privacy by keeping data local, without cloud syncing."
+Website: "https://www.usebruno.com"
+Features:
+  - "Offline-first API client with local storage of collections."
+  - "Uses Bru markup language for plain text API collections."
+  - "Integrates seamlessly with Git and other version control systems."
+  - "Supports automated testing via scripting and CLI."
+  - "Open-source and free to use, with a focus on data privacy."
+Logo: "/logos/bruno.svg"
+Demo: "https://www.youtube.com/watch?v=wwXJW7_qyLA"
+Pricing: "Freemium"
+Images:
+  - "/thumbnails/bruno-dashboard.png"
+  - "/thumbnails/bruno-scripting.jpg"
+Makers:
+  - Profile: "https://www.linkedin.com/in/anoop-m-d-868099100/"
+    Name: "Anoop M D"
+Category: "Development"
+Tags:
+  - "API"
+  - "git"
+  - "Open-source"
+  - "Collaboration"
+Stage: "Active Customers"
+HQ:
+  - City: "Bangalore"
+    Country: "India"
+Customers:
+  - "N/A"
