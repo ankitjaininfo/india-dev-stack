@@ -195,12 +195,23 @@ const { entry } = Astro.props;
           </div>
         </div>
       </div>
-      <Button variant={"outline"}>
-        <a href="/software/" class="flex items-center text-foreground">
-          <Icon name="bx:arrow-back" class="size-4 mr-2" />
-          View All Software
-        </a>
-      </Button>
+      <div class="w-full mt-8 flex items-center justify-between">
+        <Button variant={"outline"}>
+          <a href="/software/" class="flex items-center text-foreground">
+            <Icon name="bx:arrow-back" class="size-4 mr-2" />
+            View All Software
+          </a>
+        </Button>
+        <Button variant={"link"}>
+          <a
+            target="_blank"
+            href=`https://github.com/ankitjaininfo/india-dev-stack/blob/main/src/content/software/${entry.id}.yaml`
+            class="flex items-center text-muted-foreground">
+            <Icon name="bx:edit" class="size-4 mr-2" />
+            Edit this page on Github
+          </a>
+        </Button>
+      </div>
     </div>
   </Container>
 </Layout>
