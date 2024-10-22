@@ -16,7 +16,7 @@ const blogs = await getCollection("blogs");
         and technologies.
       </Fragment>
     </Sectionhead>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+    <div class="grid sm:grid-cols-2 mb-32 lg:grid-cols-3 gap-8 mt-6">
       {
         blogs.map((blog) => (
           <a
@@ -24,8 +24,8 @@ const blogs = await getCollection("blogs");
             class="hover:-translate-y-1 transition-all">
             <img
               src={blog.data.heroImage}
-              alt="Blog Image"
-              class="rounded-xl shadow"
+              alt={blog.data.title}
+              class="rounded-xl shadow object-cover w-full h-64"
             />
             <h2 class="text-lg md:text-xl font-semibold mt-4 px-2 line-clamp-1">
               {blog.data.title}
