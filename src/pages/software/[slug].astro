@@ -25,7 +25,12 @@ const { entry } = Astro.props;
       <div
         class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto py-12 px-4 md:px-6">
         <div class="p-1 col-span-2 md:col-span-1 w-full max-h-[400px]">
-          <ProductGallery client:idle images={entry.data.Images} />
+          <ProductGallery
+            client:idle
+            images={entry.data.Images ?? [
+              "https://assets.lummi.ai/assets/QmS9Q6wSwsgAjqejZM41RqjdQdLrgmZhBfLkbxhtBZA233?auto=format&w=1500",
+            ]}
+          />
         </div>
         <div>
           <div class="flex items-center gap-2 mb-4 flex-wrap">
@@ -70,7 +75,9 @@ const { entry } = Astro.props;
           <p class="text-muted-foreground leading-snug mt-4">
             {entry.data.Description}
           </p>
-          <a target="_blank" href={entry.data.Website + "?ref=india-dev-stack"}>
+          <a
+            target="_blank"
+            href={entry.data.Website + "?utm_source=india-dev-stack"}>
             <Button>
               Visit Wesbite <Icon class="ml-2" name="bx:world" />
             </Button>
