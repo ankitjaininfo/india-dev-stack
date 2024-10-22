@@ -95,7 +95,7 @@ const { entry } = Astro.props;
               <div class="flex items-center gap-2">
                 <Icon name="fluent:currency-dollar-rupee-16-regular" />
                 <span class="text-foreground"> Pricing : </span>
-                {entry.data.pricing}
+                {entry.data.Pricing}
               </div>
               {
                 entry.data.Demo && (
@@ -124,7 +124,7 @@ const { entry } = Astro.props;
                   Customers :
                 </span>
 
-                {entry.data.Customers.join(", ")}
+                {entry.data.Customers?.join(", ")}
               </div>
             </div>
             <div class="col-span-2 gap-8">

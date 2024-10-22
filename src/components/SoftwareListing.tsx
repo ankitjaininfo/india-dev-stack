@@ -11,7 +11,10 @@ import { Categories, tags } from "@utils/all";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { cn } from "@lib/utils";
 
-const PLACEHOLDER_IMAGES = ["/thumbnails/placeholder-1.png", "/thumbnails/placeholder-2.png"];
+const PLACEHOLDER_IMAGES = [
+  "/thumbnails/placeholder-1.png",
+  "/thumbnails/placeholder-2.png",
+];
 
 const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
   const [selectedPrice, setSelectedPrice] = useState<string[]>([]);
@@ -32,7 +35,7 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
     const filtered = softwareEntries.filter((entry) => {
       const priceMatch =
         selectedPrice.length === 0 ||
-        selectedPrice.includes(entry.data.pricing.toLowerCase());
+        selectedPrice.includes(entry.data.Pricing.toLowerCase());
       const tagMatch =
         selectedTags.length === 0 ||
         selectedTags.some((tag) =>
@@ -173,15 +176,19 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
         </div>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mx-auto px-4">
-        {filteredEntries.map((toolName: any, index: number) => (
+        {filteredEntries.map((toolName, index: number) => (
           <a href={"/software/" + toolName.id + "/"} key={index}>
             <Card
               key={toolName.id}
               className="h-full flex flex-col hover:shadow-md group shadow transition-all duration-300 mb-1 overflow-hidden">
               <img
-                src={toolName.data.Images && toolName.data.Images.length > 0 
-                    ? toolName.data.Images[0] 
-                    : PLACEHOLDER_IMAGES[Math.floor(Math.random() * PLACEHOLDER_IMAGES.length)]}
+                src={
+                  toolName.data.Images && toolName.data.Images.length > 0
+                    ? toolName.data.Images[0]
+                    : PLACEHOLDER_IMAGES[
+                        Math.floor(Math.random() * PLACEHOLDER_IMAGES.length)
+                      ]
+                }
                 alt={toolName.data.Name}
                 sizes="(max-width: 800px) 100vw, 800px"
                 width={800}
@@ -198,13 +205,13 @@ const SoftwareListing = ({ softwareEntries }: { softwareEntries: any[] }) => {
                   <span
                     className={cn(
                       "py-1 px-3 rounded-full text-sm",
-                      toolName.data.pricing === "Free"
+                      toolName.data.Pricing === "Free"
                         ? "text-green-600 bg-green-100/70 dark:bg-green-900/25"
-                        : toolName.data.pricing === "Paid plans"
+                        : toolName.data.Pricing === "Paid plans"
                           ? "text-red-600 bg-red-100/70 dark:bg-red-900/25"
                           : "text-yellow-600 bg-yellow-100/70 dark:bg-yellow-900/25",
                     )}>
-                    {toolName.data.pricing}
+                    {toolName.data.Pricing}
                   </span>
                 </div>
                 <h2 className="text-3xl font-semibold leading-snug tracking-tight mt-1">
