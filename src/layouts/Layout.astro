@@ -8,16 +8,23 @@ import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
   title: string;
+  description?: string;
+  image?: string;
+  type?: "website" | "article";
+  tags?: string[];
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.png",
-  Astro.site
-).toString();
+const {
+  title,
+  description = "A curated collection of dev-tools and technologies from India, built to fuel software development and streamline the SDLC process. Explore hundreds of solutions that can supercharge your workflows.",
+  image = "/opengraph.png",
+  type = "website",
+  tags = [],
+} = Astro.props;
 
-const { title } = Astro.props;
+const resolvedImageWithDomain = new URL(image, Astro.site).toString();
 
 const makeTitle = title
   ? title + " | " + "India Dev Stack"
@@ -68,22 +75,37 @@ const makeTitle = title
     <ViewTransitions />
     <SEO
       title={makeTitle}
-      description="A curated collection of dev-tools and technologies from India, built to fuel software development and streamline the SDLC process. Explore hundreds of solutions that can supercharge your workflows."
+      description={description}
       canonical={canonicalURL}
       twitter={{
         creator: "@xevenbiswas",
         card: "summary_large_image",
+        title: makeTitle,
+        description: description,
+        image: resolvedImageWithDomain,
+        imageAlt: `${title} Screenshot`,
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
-          type: "website",
-          title: "India Dev Stack",
+          type: type,
+          title: makeTitle,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "India Dev Stack Screenshot",
+          alt: `${title} Screenshot`,
         },
+        optional: {
+          description: description,
+          siteName: "India Dev Stack",
+          locale: "en_US",
+        },
+        article:
+          type === "article"
+            ? {
+                tags: tags,
+              }
+            : undefined,
       }}
     />
   </head>

@@ -17,9 +17,25 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+
+const metaData = {
+  title: `${entry.data.Name} - ${entry.data.Tagline || "Software Tool"}`,
+  description: entry.data.Description,
+  ogImage: entry.data.Images?.[0] || entry.data.Logo,
+  canonical: new URL(`/software/${entry.id}`, Astro.site),
+  data: {
+    category: entry.data.Category,
+    tags: entry.data.Tags,
+  },
+};
 ---
 
-<Layout title={entry.data.Name}>
+<Layout
+  title={metaData.title}
+  description={metaData.description}
+  image={metaData.ogImage}
+  type={"article"}
+  tags={metaData.data.tags}>
   <Container>
     <div class="mx-auto prose prose-lg mt-6 max-w-7xl">
       <div
@@ -58,7 +74,7 @@ const { entry } = Astro.props;
                   <img
                     src={entry.data.Logo}
                     alt={entry.data.Name}
-                    class="size-10 lg:size-12 cursor-pointer hover:brightness-150 hover:saturate-150 mt-2 shadow-sm dark:shadow-orange-600 rounded-lg"
+                    class="size-8 lg:size-12 cursor-pointer hover:brightness-150 hover:saturate-150 mt-2 shadow-sm dark:shadow-orange-600 rounded-lg"
                   />
                 </a>
               )
