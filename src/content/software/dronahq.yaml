@@ -1,0 +1,37 @@
+Name: "DronaHQ"
+Tagline: "Build Internal Tools 10X Faster with Low-Code"
+Description: "DronaHQ is a low-code application development platform designed for rapid creation of internal tools, dashboards, workflows, and custom apps. It offers a drag-and-drop interface, pre-built templates, and 150+ UI components, making it easier for developers, product managers, and business teams to build apps without extensive coding. The platform supports integrations with databases, APIs, and popular enterprise software, enabling secure, scalable, and efficient app development."
+Website: "https://www.dronahq.com"
+Features:
+  - "Drag-and-drop builder with 150+ UI components."
+  - "Integrate with 70+ data sources and APIs."
+  - "Role-based access control (RBAC) and SSO support."
+  - "Cross-platform app deployment for web and mobile."
+  - "Real-time collaboration with version control."
+Logo: "/logos/dronahq.png"
+Demo: "https://www.youtube.com/watch?v=H5XFpWuWa3o"
+Pricing: "Freemium"
+Images:
+  - "/thumbnails/dronahq-ui-builder.png"
+  - "/thumbnails/dronahq-connector.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/jinendedhia/"
+    Name: "Jinen Dedhia"
+  - Profile: "https://www.linkedin.com/in/divyeshkharade/"
+    Name: "Divyesh Kharade"
+Category: "Development"
+Tags:
+  - "Low-Code"
+  - "Internal Tools"
+  - "Automation"
+  - "Database Integration"
+  - "APIs"
+Stage: "Active Customers"
+HQ:
+  - City: "Mumbai"
+    Country: "India"
+Customers:
+  - "Mondelez"
+  - "Selkirk Sport"
+  - "Purplle"
+  - "Urban Ladder"
