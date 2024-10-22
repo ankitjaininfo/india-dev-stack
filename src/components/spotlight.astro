@@ -4,6 +4,12 @@ import FeaturedCarousel from "./FeaturedCarousel";
 import Container from "./container.astro";
 
 const softwareEntries = await getCollection("software");
+
+const featuredEntriestags = ["beeceptor", "keploy", "hatchfast"];
+
+const featuredEntries = softwareEntries.filter((entry) =>
+  featuredEntriestags.includes(entry.id)
+);
 ---
 
 <Container>
@@ -22,7 +28,7 @@ const softwareEntries = await getCollection("software");
           introduced innovative features in the development process.
         </p>
       </div>
-      <FeaturedCarousel entries={softwareEntries} client:visible />
+      <FeaturedCarousel entries={featuredEntries} client:visible />
     </div>
   </section>
 </Container>
