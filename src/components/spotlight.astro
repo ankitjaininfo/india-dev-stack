@@ -3,10 +3,33 @@ import { getCollection } from "astro:content";
 import FeaturedCarousel from "./FeaturedCarousel";
 import Container from "./container.astro";
 
+// Import necessary modules
+import fs from 'fs';
+import path from 'path';
+
+// Define the path to the software content directory
+const softwareDir = path.resolve('./src/content/software');
+
+// Read the files in the directory
+const files = fs.readdirSync(softwareDir);
+
+// Get file creation times and sort files by creation date
+const recentFiles = files
+  .map(file => ({
+    name: file,
+    time: fs.statSync(path.join(softwareDir, file)).birthtime
+  }))
+  .sort((a, b) => b.time - a.time) // Sort by creation time, newest first
+  .slice(0, 3) // Pick the top 3 most recent files
+  .map(file => file.name.replace(/\.[^/.]+$/, "")); // Remove file extension
+
+// Populate the featuredEntriestags variable with recent file names
+const featuredEntriestags = recentFiles;
+
+// Log the featured entries tags
+console.log("Recent Entries:", featuredEntriestags);
+
 const softwareEntries = await getCollection("software");
-
-const featuredEntriestags = ["beeceptor", "keploy", "hatchfast"];
-
 const featuredEntries = softwareEntries.filter((entry) =>
   featuredEntriestags.includes(entry.id)
 );
