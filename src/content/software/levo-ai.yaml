@@ -1,0 +1,36 @@
+Name: "Levo"
+Tagline: "Accelerate Secure API Development with Automated Testing"
+Description: "Levo is an API security platform designed to automate API discovery, documentation, and testing. It provides comprehensive visibility into internal, external, and third-party APIs. With automated penetration testing integrated into CI/CD pipelines, Levo identifies vulnerabilities like authorization abuses and business logic flaws. It supports API observability, governance, and compliance to ensure secure deployments."
+Website: "https://www.levo.ai"
+Features:
+  - "Automated API discovery, documentation, and security testing."
+  - "Runs security tests alongside unit and integration tests in CI/CD."
+  - "Real-time sensitive data classification and leak notifications."
+  - "Observability with API catalogs and changelog tracking."
+  - "Integrates with CI/CD tools like Jenkins, GitHub, and Docker."
+Logo: "/logos/levo-ai.png"
+Demo: "https://www.youtube.com/watch?v=2DM6MiiVxMY"
+Pricing: "Freemium"
+Images:
+  - "/thumbnails/levo-ai-dashboard.png"
+  - "/thumbnails/levo-ai-results.png"
+  - "/thumbnails/levo-ai-chart.svg"
+Makers:
+  - Profile: "https://www.linkedin.com/in/buchireddy/"
+    Name: "Buchi Reddy"
+  - Profile: "https://www.linkedin.com/in/harishnataraj/"
+    Name: "Harish Nataraj"
+Category: "Security"
+Tags:
+  - "API Security"
+  - "CI/CD"
+  - "Automation"
+  - "Observability"
+  - "Compliance"
+Stage: "Active Customers"
+HQ:
+  - City: "Hyderabad"
+    Country: "India"
+Customers:
+  - "AngelOne"
+  - "Zluri"
