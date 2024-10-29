@@ -1,0 +1,36 @@
+Name: "HyperTest"
+Tagline: "Automated, No-Code Integration Testing for Modern APIs"
+Description: "HyperTest is a no-code test automation platform that generates end-to-end API integration tests by leveraging real user activity and network traffic. It eliminates the need to write or maintain test scripts, catching critical failures like contract mismatches, data errors, and API performance issues. HyperTest supports CI/CD integration and aims to enhance release velocity by ensuring higher test coverage and faster deployments."
+Website: "https://www.hypertest.co"
+Features:
+  - "No-code, auto-generated end-to-end API tests."
+  - "Integration with CI/CD pipelines like Jenkins, GitHub, and Bitbucket."
+  - "Catches contract failures, data errors, and API slowness."
+  - "Supports API discovery and documentation."
+  - "Specializes in backward compatibility testing."
+Logo: "/logos/hypertest.png"
+Demo: "https://www.youtube.com/watch?v=Arb5VpQEW0Y"
+Pricing: "Freemium"
+Images:
+  - "/thumbnails/hypertest-dashboard.png"
+  - "/thumbnails/hypertest-report.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/shailendra-singh-6540b8b/"
+    Name: "Shailendra Singh"
+Category: "Testing"
+Tags:
+  - "Integration Testing"
+  - "API"
+  - "No-Code"
+  - "Automation"
+  - "Regression Testing"
+Stage: "Active Customers"
+HQ:
+  - City: "Delhi"
+    Country: "India"
+Customers:
+  - "Nykaa"
+  - "Shiprocket"
+  - "Cashify"
+  - "Airmeet"
+  - "Moglix"
