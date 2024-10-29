@@ -1,0 +1,36 @@
+Name: "BrowserStack"
+Tagline: "App & Browser Testing Made Easy"
+Description: "BrowserStack is a cloud-based testing platform that offers manual and automated testing for websites and mobile applications across 3,500+ real browsers and devices. It supports automated testing frameworks like Selenium, Cypress, and Appium, facilitating continuous integration with popular CI/CD tools like Jenkins, GitHub, and GitLab. The platform provides secure, real-time testing environments, enabling developers to ensure cross-browser compatibility, reduce bugs, and accelerate release cycles."
+Website: "https://www.browserstack.com"
+Features:
+  - "Cross-browser testing across 3,500+ real devices and browsers."
+  - "Automated testing with Selenium, Cypress, and Appium support."
+  - "Visual testing with Percy integration."
+  - "Integration with major CI/CD tools for continuous testing."
+  - "Geolocation testing and network throttling capabilities."
+  - "Live and automated testing for mobile apps via real devices."
+Logo: "/logos/browserstack.png"
+Demo: "https://www.youtube.com/watch?v=AJX7m_pqQmE"
+Pricing: "Paid plans"
+Images:
+  - "/thumbnails/browserstack-in-action.gif"
+  - "/thumbnails/browserstack-screenshot.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/ritesh-arora-88937b7/"
+    Name: "Ritesh Arora"
+  - Profile: "https://www.linkedin.com/in/nakulaggarwal/"
+    Name: "Nakul Aggarwal"
+Category: "Testing"
+Tags:
+  - "Cross-Browser Testing"
+  - "Mobile Testing"
+  - "Automation"
+  - "CI/CD"
+  - "Visual Testing"
+Stage: "Active Customers"
+HQ:
+  - City: "Mumbai"
+    Country: "India"
+Customers:
+  - "Booking.com"
+  - "Leaf"
