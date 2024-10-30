@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-const blogs = await getCollection("blogs");
+const blogs = (await getCollection("blogs")).sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
 ---
 
 <Layout title="Blogs">
