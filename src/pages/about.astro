@@ -13,56 +13,26 @@ const teamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About Us</Fragment>
+      <Fragment slot="title">About IndiaDevStack</Fragment>
       <Fragment slot="desc">
-        Discover our mission, values, and the dedicated team behind the platform
-        that empowers developers to showcase their innovative software and
-        tools.
       </Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl">
-        Empowering Developers with a Showcase Platform
-      </h2>
-      <p class="text-lg leading-relaxed text-muted-foreground">
-        Our platform is dedicated to highlighting the creativity and skill
-        within the developer community by providing a space to share and
-        discover outstanding software and tools.
-      </p>
-    </div>
-
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl">Our Mission</h2>
       <p class="text-lg leading-relaxed text-muted-foreground">
-        Our mission is to create a dynamic platform where developers can
-        showcase their work, connect with peers, and inspire the tech community.
-        We aim to celebrate innovation and support developers in sharing their
-        unique contributions with the world.
+        IndiaDevStack is a thriving community dedicated to empowering DevTools founders, developers, and QA professionals from India. We are here to help founders and teams build tools that developers and QA engineers not only rely on but genuinely love using.
       </p>
     </div>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl">Our Values</h2>
-      <ul
-        class="list-disc list-inside text-lg leading-relaxed text-muted-foreground">
-        <li>
-          Innovation: We foster creativity and encourage developers to push the
-          boundaries of technology.
-        </li>
-        <li>
-          Collaboration: We believe in the power of community and open
-          communication to drive progress.
-        </li>
-        <li>
-          Integrity: We uphold honesty and transparency in all interactions and
-          content on our platform.
-        </li>
-        <li>
-          Inclusivity: We welcome developers of all backgrounds and skill
-          levels, ensuring an inclusive and accessible platform.
-        </li>
-      </ul>
+      <p class="text-lg leading-relaxed text-muted-foreground">
+        Our mission is simple: to ignite the spark of innovation in India's tech ecosystem. We aim to bring together brilliant minds, encouraging them to innovate faster, learn from one another, and share their expertise. By cultivating a collaborative community, we strive to drive India’s contribution to the global technology landscape.
+        <br />
+        <br />
+        We believe that the future of software, AI, and SaaS will be driven by Indian talent. We are passionate about supporting DevTools creators on their journey—from ideation to global impact. Whether you're a developer, founder, or QA professional, IndiaDevStack is here to provide you with resources, guideance, and a platform to showcase your work. We are committed to transforming how the tech world works, starting with the talent right here in India.
+      </p>
     </div>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
@@ -78,7 +48,7 @@ const teamMembers = await getCollection("team", ({ data }) => {
       {
         teamMembers.map((teamMemberEntry) => (
           <a class="group" href={teamMemberEntry.data.link} target="_blank">
-            <div class="w-full aspect-square">
+            <!--div class="w-full aspect-square">
               <Picture
                 src={teamMemberEntry.data.avatar.src}
                 alt={teamMemberEntry.data.avatar.alt}
@@ -87,7 +57,7 @@ const teamMembers = await getCollection("team", ({ data }) => {
                 height={400}
                 class="w-full rounded-md transition group-hover:-translate-y-1 shadow group-hover:shadow-xl object-cover object-center aspect-square"
               />
-            </div>
+            </div-->
             <div class="mt-4 text-center">
               <h2 class="text-lg">{teamMemberEntry.data.name}</h2>
               <h3 class="text-sm text-stone-500">
@@ -97,18 +67,6 @@ const teamMembers = await getCollection("team", ({ data }) => {
           </a>
         ))
       }
-    </div>
-
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl">Join Our Community</h2>
-      <p class="text-lg leading-relaxed text-muted-foreground">
-        Are you a developer with innovative software or tools to share? We
-        invite you to join our community and showcase your work. Visit our <a
-          href="https://github.com/ankitjaininfo/india-dev-stack"
-          target="_blank"
-          class="text-blue-500">submission page</a
-        > to get started and become part of a vibrant network of developers.
-      </p>
     </div>
   </Container>
 </Layout>
