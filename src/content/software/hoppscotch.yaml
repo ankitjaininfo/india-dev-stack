@@ -1,0 +1,38 @@
+Name: "Hoppscotch"
+Tagline: "Open-source API development ecosystem"
+Description: "Hoppscotch is a lightweight, web-based API development suite designed for ease of use and accessibility. It offers functionalities for developers with a minimalist, unobtrusive UI, supporting RESTful, GraphQL, and real-time APIs."
+Website: "https://hoppscotch.io"
+Features:
+  - "Supports RESTful, GraphQL, and real-time APIs."
+  - "Cross-platform compatibility: Web, Mac, Windows, Linux, and CLI."
+  - "Self-hosting capabilities for enhanced data control."
+  - "Real-time collaboration with team workspaces."
+  - "Environment variables and pre-request scripts for dynamic testing."
+  - "Extensive keyboard shortcuts for efficient navigation."
+  - "Open-source with a community-driven development approach."
+Logo: "/logos/hoppscotch.png"
+Demo: "https://www.youtube.com/watch?v=jmUUEYK5joc"
+Pricing: "Free"
+Images:
+  - "/thumbnails/hoppscotch-interface.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/liyasthomas/"
+    Name: "Liyas Thomas"
+Category: "Development"
+Tags:
+  - "API"
+  - "Testing"
+  - "Open-source"
+  - "Collaboration"
+  - "Development"
+Stage: "Active Customers"
+HQ:
+  - City: "Kochi"
+    Country: "India"
+Customers:
+  - "accenture"
+  - "ClearTax"
+  - "DeliveryHero"
+  - "Intel"
+  - "ByteDance"
+  - "Zoho"
