@@ -1,0 +1,36 @@
+Name: "GoCodeo"
+Tagline: "AI-Powered Automated Testing & Code Generation"
+Description: "GoCodeo is an AI-driven platform that automates unit testing and code generation, enabling developers to detect and correct software bugs early in the development lifecycle. It integrates seamlessly with popular IDEs and CI/CD tools, offering features like real-time test generation, execution, and code correction suggestions to enhance code quality and developer productivity."
+Website: "https://www.gocodeo.com/"
+Features:
+  - "Autonomous bug detection and code correction."
+  - "Real-time, relevant test code generation."
+  - "Seamless integration with popular IDEs and CI/CD tools."
+  - "Simplified regression testing with AI."
+  - "Code health metrics and coverage reports."
+  - "Customizable training on company-specific benchmarks."
+  - "Deployment options for data security, including VPC."
+Logo: "/logos/gocodeo.png"
+Demo: "https://www.youtube.com/watch?v=Rf7zdrgmDt8"
+Pricing: "Paid plans"
+Images:
+  - "/thumbnails/gocodeo-dashboard.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/meghana-jagadeesh/"
+    Name: "Meghana Jagadeesh"
+Category: "Testing"
+Tags:
+  - "AI"
+  - "Testing"
+  - "Automation"
+  - "Code Generation"
+  - "Integration"
+Stage: "Active Customers"
+HQ:
+  - City: "Bangalore"
+    Country: "India"
+Customers:
+  - "Flipkart"
+  - "Intuit"
+  - "WorkSpan"
+  - "Freshworks"
