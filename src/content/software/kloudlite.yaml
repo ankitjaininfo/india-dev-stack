@@ -1,0 +1,37 @@
+Name: "Kloudlite"
+Tagline: "Seamless Development for Distributed Applications"
+Description: "Kloudlite is an open-source platform that integrates local and remote Kubernetes environments, providing developers with unified development workspaces. It streamlines workflows for building, testing, and deploying distributed applications, ensuring full development and production parity."
+Website: "https://kloudlite.io/"
+Features:
+  - "Unified remote-local development environments."
+  - "Seamless integration with Kubernetes clusters."
+  - "Real-time application and service interception."
+  - "Collaborative development capabilities."
+  - "Open-source with no vendor lock-in."
+  - "Secure by design with built-in security layers."
+  - "Supports ephemeral and stateless environments."
+Logo: "/logos/kloudlite.png"
+Pricing: "Free"
+Images:
+  - "/thumbnails/kloudlite-placement.png"
+  - "/thumbnails/kloudlite-cycle.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/karthik1988/"
+    Name: "Karthik Thirumalasetti"
+  - Profile: "https://www.linkedin.com/in/aditya2311/"
+    Name: "Aditya Sharma"
+Category: "Development"
+Tags:
+  - "Kubernetes"
+  - "Open-source"
+  - "Collaboration"
+  - "Development"
+  - "Security"
+Stage: "Active Customers"
+HQ:
+  - City: "Hyderabad"
+    Country: "India"
+Customers:
+  - "Anscer Robotics"
+  - "Fibr"
+  - "Plaxonic"
