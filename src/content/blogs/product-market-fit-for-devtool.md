@@ -4,6 +4,8 @@ description: Top ten insights that tells you have got product market fit for you
 pubDate: "2024-10-29T15:00:00+05:30"
 heroImage: "/blog-assets/pmf-achieved.webp"
 author: "Ankit Jain"
+tags: 
+    - Coaching
 ---
 
 # Breaking Down PMF: The Developer Tool Edition
