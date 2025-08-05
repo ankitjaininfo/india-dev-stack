@@ -1,0 +1,33 @@
+Name: "ClrSlate"
+Tagline: "AI‑Native Platform PaaS for DevOps and Infrastructure Orchestration"
+Description: "ClrSlate is a cloud‑agnostic platform engineering PaaS that simplifies DevOps and infrastructure workflows with drag‑and‑drop modular pipelines, AI agents, and centralized observability. It helps teams build reusable infrastructure, automate platform tasks, and scale securely across brownfield and greenfield environments."  
+Website: "https://clrslate.io"
+Features:
+  - "AI‑powered workflow engine for infrastructure automation"
+  - "Drag‑and‑drop modular pipelines for DevOps tasks"
+  - "AI agents for 24×7 virtual DevOps monitoring and maintenance"
+  - "Central dashboard for CI/CD, compliance, access control, and observability"
+  - "Cloud‑agnostic support across AWS, Azure, and GCP"
+  - "Reusable infrastructure blueprints and software catalog"
+Logo: "/logos/clrslate.png"
+Pricing: "Paid plans"
+Images:
+  - "/thumbnails/clrslate-workflows.png"
+  - "/thumbnails/clrslate-dashboard.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/piyush-rathi/"
+    Name: "Piyush Rathi"
+Category: "DevOps"
+Tags:
+  - "Platform Engineering"
+  - "DevOps Automation"
+  - "Cloud‑agnostic"
+  - "AI Agents"
+  - "Infrastructure"
+  - "AI‑Native"
+Stage: "In Development"
+HQ:
+  - City: "Bengaluru"
+    Country: "India"
+Customers:
+  - "N/A"
