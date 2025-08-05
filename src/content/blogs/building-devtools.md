@@ -8,6 +8,8 @@ tags:
     - Coaching
 ---
 
+# How to Build a Developer Tools Startup
+
 Nicolas Dessaigne’s talk at Y Combinator Startup School focuses on building developer tools startups. He covers key topics like forming a founding team, choosing the right idea, building an MVP, go-to-market strategies, and selling to developers. He emphasizes the importance of learning quickly, launching early, and leveraging a developer-first approach in both product and marketing.
 
 Here are the highlights:
