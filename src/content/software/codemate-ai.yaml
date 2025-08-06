@@ -1,0 +1,34 @@
+Name: "CodeMate.ai"
+Tagline: "Personalized, secure AI pair‑programmer that fixes and reviews code"
+Description: "CodeMate AI is an AI-powered coding assistant that integrates deeply with your codebase, docs and repositories to perform real-time error fixing, code reviews, optimization, test‑case generation, documentation and interactive chat—helping developers ship quality code much faster."  
+Website: "https://codemate.ai"
+Features:
+  - "Fix syntax, logic, runtime and performance issues instantly"  
+  - "Review code per best practices or custom metrics"  
+  - "Suggest optimizations to improve efficiency and maintainability"  
+  - "Generate unit tests and docstrings automatically"  
+  - "Chat with your entire codebase, docs and Git repos contextually"  
+  - "Swagger agent: convert OpenAPI specs into backend code routes"  
+Logo: "/logos/codemate-ai.jpeg"
+Demo: "https://www.youtube.com/watch?v=Tj8KKNL1Ke4"
+Pricing: "Paid plans"
+Images:
+  - "/thumbnails/codemate-chat.gif"
+  - "/thumbnails/codemate-playground.gif"
+Makers:
+  - Profile: "https://www.linkedin.com/in/theayushsinghal/"
+    Name: "Ayush Singhal"
+Category: "Development"
+Tags:
+  - "AI"
+  - "Productivity"
+  - "Code Review"
+  - "Test Generation"
+  - "Optimization"
+  - "Chatbot"
+Stage: "Active Customers"
+HQ:
+  - City: "Delhi"
+    Country: "India"
+Customers:
+  - "N/A"
