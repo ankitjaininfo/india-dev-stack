@@ -1,0 +1,33 @@
+Name: "Swytchcode"
+Tagline: "AI-powered platform that transforms API docs into ready‑to‑use code"
+Description: "Swytchcode is an AI-driven tool for API publishers and consumers that instantly generates working integration code, mock tests, and workflow templates in minutes. It delivers accurate, one‑shot code across 15+ languages, reducing onboarding friction, developer support costs, and integration time."  
+Website: "https://www.swytchcode.com"
+Features:
+  - "Generates production‑ready API integration code in seconds"
+  - "Supports 15+ programming languages and SDK flavors"
+  - "Auto‑generate workflows and mock tests from API docs"
+  - "Drag‑and‑drop interface for building multi‑API workflows"
+  - "Smart testing and validation for generated code"
+Logo: "/logos/swytchcode.jpeg"
+Pricing: "Paid plans"
+Images:
+  - "/thumbnails/swytchcode.png"
+Makers:
+  - Profile: "https://www.linkedin.com/in/adityarohit/"
+    Name: "Aditya Rohit"
+Category: "Developer Tools"
+Tags:
+  - "API"
+  - "Integration"
+  - "Code Generation"
+  - "AI"
+  - "Workflow"
+  - "Developer Experience"
+Stage: "Active Customers"
+HQ:
+  - City: "Noida"
+    Country: "India"
+Customers:
+  - "Lyrid"
+  - "TransactBridge"
+  - "P3iD Technologies"
