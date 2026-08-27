@@ -22,8 +22,6 @@ Images:
 Makers:
   - Profile: "https://www.linkedin.com/in/ankitjaininfo/"
     Name: Ankit Jain
-  - Profile: "https://www.linkedin.com/in/artibandi/"
-    Name: Arti Bandi
 Category: "Testing"
 Tags:
   - "API"
@@ -40,6 +38,7 @@ HQ:
   - City: "Hyderabad"
     Country: "India"
 Customers:
+  - "Broadridge"
   - "Atlassian"
   - "New Relic"
   - "Salesforce"
