@@ -1,7 +1,7 @@
 Name: "Hoppscotch"
-Tagline: "Open-source API development ecosystem"
-Description: "Hoppscotch is a lightweight, web-based API development suite designed for ease of use and accessibility. It offers functionalities for developers with a minimalist, unobtrusive UI, supporting RESTful, GraphQL, and real-time APIs."
-Website: "https://hoppscotch.io"
+Tagline: "Free, open-source alternative to Postman"
+Description: "Hoppscotch is a free, open-source API development and testing ecosystem widely used as a lightweight alternative to Postman. Its web, desktop, and CLI clients help developers build, test, debug, and share REST, GraphQL, and real-time APIs, with cloud and self-hosted deployment options."
+Website: "https://hoppscotch.com"
 Features:
   - "Supports RESTful, GraphQL, and real-time APIs."
   - "Cross-platform compatibility: Web, Mac, Windows, Linux, and CLI."
@@ -12,7 +12,7 @@ Features:
   - "Open-source with a community-driven development approach."
 Logo: "/logos/hoppscotch.png"
 Demo: "https://www.youtube.com/watch?v=jmUUEYK5joc"
-Pricing: "Free"
+Pricing: "Freemium"
 Images:
   - "/thumbnails/hoppscotch-interface.png"
 Makers:
