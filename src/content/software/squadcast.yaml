@@ -28,6 +28,21 @@ Stage: "Active Customers"
 HQ:
   - City: "Bengaluru"
     Country: "India"
+Lifecycle:
+  - Event: "Acquired"
+    Date: "2025-03-03"
+    By:
+      Name: "SolarWinds"
+      Website: "https://www.solarwinds.com"
+    Announcement: "https://www.solarwinds.com/company/newsroom/press-releases/solarwinds-acquires-squadcast-unifying-observability-and-incident-response"
+    ProductStatus: "Integrated"
+    Note: "Squadcast joined SolarWinds and was subsequently integrated into SolarWinds Incident Response."
+  - Event: "Rebranded"
+    Date: "2026-01-21"
+    NewName: "SolarWinds Incident Response"
+    Announcement: "https://thwack.solarwinds.com/discussion/151708/solarwinds-incident-response-2025-highlights-and-january-product-update"
+    ProductStatus: "Integrated"
+    Note: "The Squadcast product is now offered as SolarWinds Incident Response."
 Customers:
   - "KFC"
   - "AirAsia"

@@ -29,5 +29,14 @@ Stage: "Active Beta"
 HQ:
   - City: "Chennai"
     Country: "India"
+Lifecycle:
+  - Event: "Acquired"
+    Date: "2025-11-12"
+    By:
+      Name: "VideoDB"
+      Website: "https://videodb.io"
+    Announcement: "https://www.devzery.com/post/videodb-acquires-devzery-expanding-our-ai-infra-stack-with-developer-first-testing-automation"
+    ProductStatus: "Active"
+    Note: "Devzery continues to be supported as part of VideoDB's AI infrastructure platform."
 Customers:
   - "N/A"

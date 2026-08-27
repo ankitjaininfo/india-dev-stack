@@ -35,6 +35,13 @@ HQ:
     Country: "USA"
   - City: "Bengaluru"
     Country: "India"
+Lifecycle:
+  - Event: "Rebranded"
+    Date: "2025-03-12"
+    NewName: "Cekura"
+    Announcement: "https://www.linkedin.com/posts/cekuraai_rebranding-voiceai-conversationalai-activity-7305477259866386432-KJUh"
+    ProductStatus: "Active"
+    Note: "Vocera rebranded as Cekura to reflect its focus on testing and monitoring conversational AI agents."
 Customers:
   - "Deloitte"
   - "PwC"

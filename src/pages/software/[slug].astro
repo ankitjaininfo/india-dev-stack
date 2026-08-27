@@ -213,6 +213,69 @@ const metaData = {
               }
             </div>
           </div>
+          {
+            entry.data.Lifecycle && entry.data.Lifecycle.length > 0 && (
+              <section
+                class="md:col-span-2 mt-6"
+                aria-labelledby="lifecycle-heading">
+                <h3
+                  id="lifecycle-heading"
+                  class="text-xl lg:text-2xl mb-3 font-semibold text-foreground">
+                  Lifecycle
+                </h3>
+                <div class="space-y-3">
+                  {entry.data.Lifecycle.map((event) => (
+                    <div class="rounded-lg border border-border bg-muted/30 p-4">
+                      <div class="flex flex-wrap items-center gap-2">
+                        <Badge variant="secondary">{event.Event}</Badge>
+                        {event.ProductStatus && (
+                          <span class="text-sm text-muted-foreground">
+                            Product status: {event.ProductStatus}
+                          </span>
+                        )}
+                      </div>
+                      <p class="my-2 text-foreground">
+                        {new Date(`${event.Date}T00:00:00`).toLocaleDateString(
+                          "en-IN",
+                          {
+                            day: "numeric",
+                            month: "long",
+                            year: "numeric",
+                          },
+                        )}
+                        {event.By && (
+                          <>
+                            {" · By "}
+                            <a
+                              href={event.By.Website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="font-medium text-foreground underline underline-offset-4">
+                              {event.By.Name}
+                            </a>
+                          </>
+                        )}
+                        {event.NewName && <> · New name: {event.NewName}</>}
+                      </p>
+                      {event.Note && (
+                        <p class="my-2 text-sm text-muted-foreground">
+                          {event.Note}
+                        </p>
+                      )}
+                      <a
+                        href={event.Announcement}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1 text-sm font-medium text-foreground underline underline-offset-4">
+                        View announcement
+                        <Icon name="bx:link-external" class="size-4" />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )
+          }
         </div>
       </div>
       <div class="w-full mt-8 flex items-center justify-between">

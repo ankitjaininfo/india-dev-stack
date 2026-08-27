@@ -33,6 +33,13 @@ Stage: "Active Customers"
 HQ:
   - City: "Noida"
     Country: "India"
+Lifecycle:
+  - Event: "Rebranded"
+    Date: "2026-01-12"
+    NewName: "TestMu AI"
+    Announcement: "https://www.testmuai.com/blog/what-is-lambdatest/"
+    ProductStatus: "Active"
+    Note: "LambdaTest rebranded as TestMu AI; its team, infrastructure, accounts, and testing platform continue under the new name."
 Customers:
   - "Microsoft"
   - "Nvidia"

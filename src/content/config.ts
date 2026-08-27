@@ -27,6 +27,32 @@ const softwareCollection = defineCollection({
         Country: z.string(),
       })
       .array(),
+    Lifecycle: z
+      .array(
+        z.object({
+          Event: z.enum([
+            "Acquired",
+            "Merged",
+            "Rebranded",
+            "Discontinued",
+            "Dissolved",
+          ]),
+          Date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+          By: z
+            .object({
+              Name: z.string(),
+              Website: z.string().url(),
+            })
+            .optional(),
+          NewName: z.string().optional(),
+          Announcement: z.string().url(),
+          ProductStatus: z
+            .enum(["Active", "Integrated", "Discontinued"])
+            .optional(),
+          Note: z.string().optional(),
+        }),
+      )
+      .optional(),
     Customers: z.array(z.string()).optional(),
   }),
 });
