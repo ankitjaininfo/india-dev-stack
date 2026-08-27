@@ -34,12 +34,12 @@ jobs:
 
       - name: Read GCP credentials
         id: 'auth'
-        uses: 'google-github-actions/auth@v2'
+        uses: 'google-github-actions/auth@v3'
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
       - name: 'Set up GCP SDK'
-        uses: 'google-github-actions/setup-gcloud@v2'
+        uses: 'google-github-actions/setup-gcloud@v3'
 
       - name: 'Upload using gcloud CLI (rsync)'
-        run: 'gsutil -m rsync -R -d dist gs://india-dev-stack-com/'
+        run: 'gcloud storage rsync dist gs://india-dev-stack-com/ --recursive --delete-unmatched-destination-objects'
